@@ -7,7 +7,13 @@
 
 ul{
     list-style: none;
+    padding: 0px;
 }
+
+h1, h2, h3, p, a, ul, li{
+    margin: 0px;
+}
+
 
 /* Color pallette*/
 
@@ -47,7 +53,10 @@ h2{
 h3{
     font-size: 25px;
     font-weight: 400;
+    line-height: 29px;
+    margin: 10px;
 }
+
 p{
     font-weight: 400;
     font-size: 18px;
@@ -97,6 +106,7 @@ p.small.bold{
     font-size: 26px;
 }
 
+/* --- Mobile First ---- */
 
 /* Header */ 
 header{
@@ -109,18 +119,56 @@ header{
     border-bottom: 3px solid var(--secondary3);
     background-color: var(--secondary0);
     padding: 7px 13px;
+    z-index: 1;
 }
-
 
 /* Home hero*/
 
 .home-release img{
     width: 100%;
     height: auto;
-    box-shadow: 0 0 60px 90px rgba(233, 163, 88, 1);
+    box-shadow: 0px 0px 60px 90px #E9A358;
 }
 
+/* Cards - Carrousel recommended*/
 
+.card-big .open{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--primary-3);
+    box-shadow: inset 0px 0px 7px var(--secondary2);
+    border-radius: 20px;
+}
+
+.card-big img{
+    width: 100%;
+    height: auto;
+}
+.carrousel-recommended, .home-carrousel{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+}
+.btn-previous, .btn-next{
+    position:absolute;
+    top: 35%;
+}
+
+.btn-previous{
+    left:0;
+}
+
+.btn-next{
+    transform: rotate(180deg);
+    right:0;
+}
+
+.recommended, .carrousel{
+    margin-top: 110px;
+}
 /* Footer */
 
 footer{
@@ -130,18 +178,48 @@ footer{
 
 footer nav, footer div{
     display: flex;
-    justify-content: center;
-    padding: 0px 30px 15px 30px;
+    justify-content: space-between;
+    padding: 0px 20px 15px 20px;
+}
+
+footer nav{
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+footer nav ul{
+    padding: 10px 10px;
 }
 
 footer div{
+    padding: 10px 0;
     box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.2) inset;
     align-items: center;
+    flex-direction: column;
 }
 
 .slim-footer{
     background-color: var(--secondary0);
     box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25) inset;
-
+    text-align: center;
 }
 
+@media screen and (min-width: 660px) {
+
+    /* Card recommended */
+    .card-big img, .card-big .open{
+        width: 380px;
+        height: 280px;        
+    }
+
+
+    /* Footer */
+    
+    footer nav, footer div{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center; 
+    }
+    
+
+}
