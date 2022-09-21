@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Rubik:wght@300;400;700;800&display=swap');
+
+/* Styles reseting */
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Color pallette*/
+
+:root{
+    --primary-3: rgba(241, 250, 250, 1);
+    --primary-2: rgba(234, 246, 246, 1);
+    --primary-1: rgba(222, 247, 246, 1);
+    --primary0: rgba(177, 228, 227, 1);
+
+    --secondary-3: rgba(243, 228, 249, 1);
+
+    --secondary0: rgba(214, 191, 221, 1);
+    --secondary1: rgba(179, 143, 191, 1);
+    --secondary2: rgba(142, 94, 157, 1);
+    --secondary3: rgba(113, 58, 130, 1);
+}
+
+/* Fonts and tipography */ 
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary3);
+    background-color: var(--primary-1);
+}
+h1{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+p{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+p.small{
+    font-weight: 300;
+    font-size: 13px;
+}
+
+p.small.bold{
+    font-weight: 400;
+}
+
+.card, .btn{
+    font-family: 'Rubik', sans-serif;   
+}
+
+.card{
+    font-weight: 800;
+}
+
+.btn{
+    font-weight: 700;
+}
+.card.titleBig{
+    font-size: 30px;       
+}
+
+.card.titleSmall{
+    font-size: 20px;
+}
+
+.btn.txtMedium{
+    font-size: 13px;
+}
+
+.btn.txtBig{
+    font-size: 18px;
+}
+
+.btn.txtSmall{
+    font-size: 26px;
+}
+
+
+/* Header */ 
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--secondary3);
+    background-color: var(--secondary0);
+    padding: 7px 13px;
+}
+
+
+/* Home hero*/
+
+.home-release img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 60px 90px rgba(233, 163, 88, 1);
+}
+
+
+/* Footer */
+
+footer{
+    background-color: var(--secondary-3);
+    border-top: 3px solid var(--secondary3);
+}
+
+footer nav, footer div{
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px 15px 30px;
+}
+
+footer div{
+    box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.2) inset;
+    align-items: center;
+}
+
+.slim-footer{
+    background-color: var(--secondary0);
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+
