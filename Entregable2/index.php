@@ -42,21 +42,10 @@
 
         <section class="recommended">
             <h3>Recommended for you</h3>
-            <div class="carrousel-recommended">
+            <div class="carrousel-container">
                 <img id="previous" class="btn-previous" src="img/icons/right-arrow.svg" alt="div-previous">
-                <article class="card-big">
-                    <div class="open">
-                        <img id="image-recommended"></img>
-                        <p id="name" class="bold"> </p>
-                    </div>
-                    <div hidden class="hover">
-                        <img id="image-recommended-hover"></img>
-                        <p id="name" class="card titleBig"> </p>
-                        <p id="price" class="small"></p>
-                        <button class="btn txtMedium"></button>
-                    </div>
-                </article>
-
+                <div class="carrousel-recommended">
+                </div>
                 <img id="next" class="btn-next" src="img/icons/right-arrow.svg" alt="div-next">
             </div>
         </section>
@@ -104,7 +93,7 @@
                 <source media="(min-width: 660px)" srcset="img/logo/big.svg">
                 <img src="img/logo/small.svg" alt="GameZone">
             </picture>
-            <nav>
+            <nav class="small">
                 <ul>
                     <li class="bold">Overview</li>
                     <li>What is Game Zone?</li>
@@ -133,7 +122,7 @@
             </nav>
         </div>
         <div class="slim-footer">
-            <p class="bold">Copyright Ⓒ 2022. Game Zone is a Registered Trademark. All Rights Reserved.</p>
+            <p class="small bold">Copyright Ⓒ 2022. Game Zone is a Registered Trademark. All Rights Reserved.</p>
         </div>
     </footer>
 

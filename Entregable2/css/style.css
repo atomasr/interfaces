@@ -40,18 +40,18 @@ body{
     background-color: var(--primary-1);
 }
 h1{
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 400;
 }
 
 h2{
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 h3{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 29px;
     margin: 10px;
@@ -59,19 +59,19 @@ h3{
 
 p{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .bold{
     font-weight: 500;
 }
 
-p.small{
+.small{
     font-weight: 300;
-    font-size: 13px;
+    font-size: 11px;
 }
 
-p.small.bold{
+.small.bold{
     font-weight: 400;
 }
 
@@ -87,23 +87,23 @@ p.small.bold{
     font-weight: 700;
 }
 .card.titleBig{
-    font-size: 30px;       
+    font-size: 20px;       
 }
 
 .card.titleSmall{
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .btn.txtMedium{
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .btn.txtBig{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .btn.txtSmall{
-    font-size: 26px;
+    font-size: 24px;
 }
 
 /* --- Mobile First ---- */
@@ -118,8 +118,13 @@ header{
     justify-content: space-between;
     border-bottom: 3px solid var(--secondary3);
     background-color: var(--secondary0);
-    padding: 7px 13px;
+    padding: 5px 13px;
     z-index: 1;
+}
+
+header img, header picture{
+    height: 27px;
+    width: auto;
 }
 
 /* Home hero*/
@@ -132,6 +137,9 @@ header{
 
 /* Cards - Carrousel recommended*/
 
+.card-big{
+    margin: 0 6px;
+}
 .card-big .open{
     display: flex;
     flex-direction: column;
@@ -143,14 +151,14 @@ header{
 }
 
 .card-big img{
-    width: 100%;
+    width: 250px;
     height: auto;
 }
-.carrousel-recommended, .home-carrousel{
+.carrousel-recommended{
     display: flex;
     flex-direction: row;
-    position: relative;
-    justify-content: center;
+    position:relative;
+    z-index: -1;
 }
 .btn-previous, .btn-next{
     position:absolute;
@@ -169,6 +177,12 @@ header{
 .recommended, .carrousel{
     margin-top: 110px;
 }
+.carrousel-container{
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
 /* Footer */
 
 footer{
@@ -204,14 +218,12 @@ footer div{
     text-align: center;
 }
 
+footer img{
+    height: 30px;
+    width: auto;
+}
+
 @media screen and (min-width: 660px) {
-
-    /* Card recommended */
-    .card-big img, .card-big .open{
-        width: 380px;
-        height: 280px;        
-    }
-
 
     /* Footer */
     
@@ -219,6 +231,10 @@ footer div{
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center; 
+    }
+    footer img{
+        height: 90px;
+        width: auto;
     }
     
 
