@@ -122,11 +122,6 @@ header{
     z-index: 1;
 }
 
-header img, header picture{
-    height: 27px;
-    width: auto;
-}
-
 /* Home hero*/
 
 .home-release img{
@@ -151,9 +146,12 @@ header img, header picture{
 }
 
 .card-big img{
-    width: 250px;
+    min-width: 290px;
+    max-width: 380px;
+    width: 100%;
     height: auto;
 }
+
 .carrousel-recommended{
     display: flex;
     flex-direction: row;
@@ -162,7 +160,7 @@ header img, header picture{
 }
 .btn-previous, .btn-next{
     position:absolute;
-    top: 35%;
+    top: 40%;
 }
 
 .btn-previous{
@@ -218,24 +216,22 @@ footer div{
     text-align: center;
 }
 
-footer img{
-    height: 30px;
-    width: auto;
-}
-
 @media screen and (min-width: 660px) {
 
+    /* Cards - Carrousel recommended*/
+    .card-big img{
+        width: 380px;
+        height: auto;
+    }
+
     /* Footer */
-    
+
     footer nav, footer div{
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center; 
     }
-    footer img{
-        height: 90px;
-        width: auto;
-    }
+
     
 
 }
