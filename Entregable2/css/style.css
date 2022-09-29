@@ -1,115 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Rubik:wght@300;400;700;800&display=swap');
 
 /* Styles reseting */
-*{
+
+* {
     box-sizing: border-box;
 }
 
-ul{
+ul {
     list-style: none;
     padding: 0px;
 }
 
-h1, h2, h3, p, a, ul, li{
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li {
     margin: 0px;
 }
 
 
 /* Color pallette*/
 
-:root{
+:root {
     --primary-3: rgba(241, 250, 250, 1);
     --primary-2: rgba(234, 246, 246, 1);
     --primary-1: rgba(222, 247, 246, 1);
     --primary0: rgba(177, 228, 227, 1);
-
+    --primary1: rgba(128, 199, 196, 1);
     --secondary-3: rgba(243, 228, 249, 1);
-
     --secondary0: rgba(214, 191, 221, 1);
     --secondary1: rgba(179, 143, 191, 1);
     --secondary2: rgba(142, 94, 157, 1);
     --secondary3: rgba(113, 58, 130, 1);
+    --atention0: rgba(255, 210, 101, 1);
+    --atention-3: rgba(255, 242, 212, 1);
 }
 
-/* Fonts and tipography */ 
-body{
+
+/* Fonts and tipography */
+
+body {
     width: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--secondary3);
     background-color: var(--primary-1);
 }
-h1{
+
+h1 {
     font-size: 36px;
     font-weight: 400;
 }
 
-h2{
+h2 {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     font-size: 24px;
 }
 
-h3{
+h3 {
     font-size: 18px;
     font-weight: 400;
     line-height: 29px;
     margin: 10px;
 }
 
-p{
+p {
     font-weight: 400;
     font-size: 14px;
 }
 
-.bold{
+.bold {
     font-weight: 500;
 }
 
-.small{
+.small {
     font-weight: 300;
     font-size: 11px;
 }
 
-.small.bold{
+.small.bold {
     font-weight: 400;
 }
 
-.card, .btn{
-    font-family: 'Rubik', sans-serif;   
+.card,
+.btn {
+    font-family: 'Rubik', sans-serif;
 }
 
-.card{
+.card {
     font-weight: 800;
 }
 
-.btn{
+.btn {
     font-weight: 700;
 }
-.card.titleBig{
-    font-size: 20px;       
+
+p.titleBig {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    text-shadow: 2px 2px 4px #FFF2D4;
+    height: 115px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.card.titleSmall{
+p.bodySmall {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 50;
+    font-size: 13px;
+    line-height: 15px;
+    color: white;
+    height: 26px;
+}
+
+p.bodyBold {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card.titleSmall {
     font-size: 14px;
 }
 
-.btn.txtMedium{
-    font-size: 11px;
+.btn.txtMedium {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-size: 18px;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    color: var(--secondary3);
 }
 
-.btn.txtBig{
+.btn.txtBig {
     font-size: 16px;
 }
 
-.btn.txtSmall{
+.btn.txtSmall {
     font-size: 24px;
 }
 
+
 /* --- Mobile First ---- */
 
-/* Header */ 
-header{
+
+/* Header */
+
+header {
     position: sticky;
     top: 0;
     width: 100%;
@@ -122,21 +170,25 @@ header{
     z-index: 1;
 }
 
+
 /* Home hero*/
 
-.home-release img{
+.home-release img {
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 60px 90px #E9A358;
 }
 
+
 /* Cards - Carrousel recommended*/
 
-.card-big{
-    margin: 0 6px;
+.card-big {
+    margin: 0 13px;
 }
-.card-big .open{
+
+.close {
     display: flex;
+    opacity: 1;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -145,93 +197,178 @@ header{
     border-radius: 20px;
 }
 
-.card-big img{
-    min-width: 290px;
-    max-width: 380px;
-    width: 100%;
-    height: auto;
+.close:hover {
+    opacity: 0 !important;
+    display: none !important;
 }
 
-.carrousel-recommended{
+.open {
+    background: var(--primary1);
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
-    position:relative;
+}
+
+.open .imageBig {
+    width: 169px;
+    height: 280px;
+}
+
+.open .contentBig {
+    width: 211px;
+    height: 280px;
+}
+
+.card-big img {
+    width: 380px;
+    height: 246px;
+}
+
+.gameNameBig {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5.7px;
+}
+
+.playButton {
+    width: 99px;
+    height: 48px;
+    background-color: var(--atention0);
+    border-radius: 100px;
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.vectorPlay {
+    filter: invert(23%) sepia(23%) saturate(2608%) hue-rotate(250deg) brightness(100%) contrast(84%) drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.iconPlay {
+    width: 35px;
+    height: 35px;
+    background-color: var(--atention-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.bottomDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+    padding-right: 13px;
+}
+
+.open .iconPlay img {
+    width: 18px;
+    height: 20px;
+}
+
+.iconHeart {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 61px;
+    padding-top: 20px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.open .iconHeart img {
+    width: 33px;
+    height: 33px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(89deg) brightness(105%) contrast(101%) drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.carrousel-recommended {
+    display: flex;
+    flex-direction: row;
+    position: relative;
     z-index: -1;
 }
-.btn-previous, .btn-next{
-    position:absolute;
+
+.btn-previous,
+.btn-next {
+    position: absolute;
     top: 40%;
 }
 
-.btn-previous{
-    left:0;
+.btn-previous {
+    left: 0;
 }
 
-.btn-next{
+.btn-next {
     transform: rotate(180deg);
-    right:0;
+    right: 0;
 }
 
-.recommended, .carrousel{
+.recommended,
+.carrousel {
     margin-top: 110px;
 }
-.carrousel-container{
+
+.carrousel-container {
     overflow: hidden;
     position: relative;
     justify-content: center;
+    padding: 0 20px;
 }
+
 
 /* Footer */
 
-footer{
+footer {
     background-color: var(--secondary-3);
     border-top: 3px solid var(--secondary3);
 }
 
-footer nav, footer div{
+footer nav,
+footer div {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px 15px 20px;
 }
 
-footer nav{
+footer nav {
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
-footer nav ul{
+footer nav ul {
     padding: 10px 10px;
 }
 
-footer div{
+footer div {
     padding: 10px 0;
     box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.2) inset;
     align-items: center;
     flex-direction: column;
 }
 
-.slim-footer{
+.slim-footer {
     background-color: var(--secondary0);
     box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25) inset;
     text-align: center;
 }
 
 @media screen and (min-width: 660px) {
-
     /* Cards - Carrousel recommended*/
-    .card-big img{
+    .card-big img {
         width: 380px;
         height: auto;
     }
-
     /* Footer */
-
-    footer nav, footer div{
+    footer nav,
+    footer div {
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center; 
+        justify-content: center;
     }
-
-    
-
 }
