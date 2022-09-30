@@ -102,28 +102,46 @@ function loadCarrousel() {
 
         let bottomDiv = document.createElement('div');
         bottomDiv.classList.add("bottomDiv");
+
+
         let price = document.createElement('p');
         price.innerHTML = carrousel[index].price;
         price.classList.add("bodyBold");
-        let cents = document.createElement('span');
-        cents.innerHTML = carrousel[index].cents;
-        cents.classList.add("bodyBoldSmall");
-        price.appendChild(cents);
-        bottomDiv.appendChild(price);
         let button = document.createElement('button');
         let buttonText = document.createElement('p');
-        buttonText.innerHTML = "Play";
-        buttonText.classList.add("btn");
-        buttonText.classList.add("txtMedium");
+
+        if (carrousel[index].price != "Free") {
+            let cents = document.createElement('span');
+            cents.innerHTML = carrousel[index].cents;
+            cents.classList.add("bodyBoldSmall");
+            price.appendChild(cents);
+            buttonText.innerHTML = "Buy";
+            buttonText.classList.add("btn");
+            buttonText.classList.add("txtMedium");
+            let iconBuy = document.createElement("div");
+            let vectorBuy = document.createElement("img");
+            vectorBuy.src = `img/icons/buy.svg`;
+            vectorBuy.classList.add("vectorButton");
+            iconBuy.appendChild(vectorBuy);
+            iconBuy.classList.add("iconButton");
+            button.appendChild(iconBuy);
+            button.classList.add("buyButton");
+        } else {
+            buttonText.innerHTML = "Play";
+            buttonText.classList.add("btn");
+            buttonText.classList.add("txtMedium");
+            let iconPlay = document.createElement("div");
+            let vectorPlay = document.createElement("img");
+            vectorPlay.src = `img/icons/play.svg`;
+            vectorPlay.classList.add("vectorButton");
+            iconPlay.appendChild(vectorPlay);
+            iconPlay.classList.add("iconButton");
+            button.appendChild(iconPlay);
+            button.classList.add("playButton");
+        }
         button.appendChild(buttonText);
-        let iconPlay = document.createElement("div");
-        let vectorPlay = document.createElement("img");
-        vectorPlay.src = `img/icons/play.svg`;
-        vectorPlay.classList.add("vectorPlay");
-        iconPlay.appendChild(vectorPlay);
-        iconPlay.classList.add("iconPlay");
-        button.appendChild(iconPlay);
-        button.classList.add("playButton");
+
+        bottomDiv.appendChild(price);
         bottomDiv.appendChild(button);
 
         content.appendChild(bottomDiv);
