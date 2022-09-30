@@ -85,6 +85,7 @@ function loadCarrousel() {
         let iconHeart = document.createElement("div");
         let vectorHeart = document.createElement("img");
         vectorHeart.src = `img/icons/heart-regular.svg`;
+        vectorHeart.setAttribute("id", "vectorHeart");
         iconHeart.classList.add("iconHeart");
         iconHeart.appendChild(vectorHeart);
         content.appendChild(iconHeart);
