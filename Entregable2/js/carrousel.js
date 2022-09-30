@@ -7,35 +7,40 @@ let carrousel = [{
         "hover": "01B",
         "name": "Jurassic Park",
         "category": "Survival",
-        "price": "Free"
+        "price": "Free",
+        "cents": ""
     },
     {
         "picture": "02A",
         "hover": "02B",
         "name": "Star Wars",
         "category": "Role-playing",
-        "price": "Free"
+        "price": "Free",
+        "cents": ""
     },
     {
         "picture": "03a",
         "hover": "03B",
         "name": "Super Mario",
         "category": "Platformer",
-        "price": "Free"
+        "price": "Free",
+        "cents": ""
     },
     {
         "picture": "04A",
         "hover": "04B",
         "name": "Pac-man",
         "category": "Survival",
-        "price": "$0.98"
+        "price": "$0.",
+        "cents": "98"
     },
     {
         "picture": "05A",
         "hover": "05B",
         "name": "Mortal Kombat",
         "category": "Battle",
-        "price": "Free"
+        "price": "Free",
+        "cents": ""
     },
 ]
 
@@ -99,6 +104,10 @@ function loadCarrousel() {
         let price = document.createElement('p');
         price.innerHTML = carrousel[index].price;
         price.classList.add("bodyBold");
+        let cents = document.createElement('span');
+        cents.innerHTML = carrousel[index].cents;
+        cents.classList.add("bodyBoldSmall");
+        price.appendChild(cents);
         bottomDiv.appendChild(price);
         let button = document.createElement('button');
         let buttonText = document.createElement('p');
