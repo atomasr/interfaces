@@ -302,7 +302,8 @@ header {
 /* Cards - Carrousel recommended*/
 
 .card-big,
-.card-small {
+.card-small,
+.card-character {
     margin: 0 13px;
 }
 
@@ -467,11 +468,16 @@ header {
 }
 
 .carrousel-recommended,
-.carrousel-examples {
+.carrousel-examples,
+.carrousel-characters {
     display: flex;
     flex-direction: row;
     position: relative;
     z-index: -1;
+}
+
+.carrousel-characters {
+    margin: 35px 0px 70px 0px;
 }
 
 .btn-previous,
@@ -825,6 +831,66 @@ footer div {
 
 .gameFeature div p {
     width: 185px;
+}
+
+.card-character {
+    border-radius: 20px;
+}
+
+.card-character .close {
+    width: 306px;
+    height: 590px;
+    background: linear-gradient(180deg, #FFF2D4 0%, #B38FBF 100%);
+    box-shadow: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-character .close img {
+    width: 250px;
+    height: 250px;
+}
+
+.card-character .close h2 {
+    width: 306px;
+    height: 133px;
+    margin-top: 40px;
+    font-size: 36px;
+    text-shadow: none;
+    font-weight: 300;
+}
+
+.card-character .open {
+    width: 306px;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(180deg, #B1E4E3 0%, #4F9E9B 100%);
+}
+
+.card-character .open img {
+    width: 212px;
+    height: 212px;
+}
+
+.card-character .open h2 {
+    height: 68px;
+    font-size: 36px;
+    text-shadow: none;
+    font-weight: 300;
+    text-align: center;
+}
+
+.card-character .open p {
+    width: 212px;
+    height: 242px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--primary-3);
 }
 
 @media screen and (min-width: 660px) {
