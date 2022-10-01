@@ -66,7 +66,7 @@ function loadCarrousel() {
         img.src = `img/recommended/${carrousel[index].picture}.svg`;
         let gameName = document.createElement("p");
         gameName.innerHTML = carrousel[index].name;
-        gameName.classList.add("gameNameBig")
+        gameName.classList.add("gameName")
         card.appendChild(img);
         card.appendChild(gameName);
         cardBig.appendChild(card);
@@ -109,7 +109,7 @@ function loadCarrousel() {
         price.classList.add("bodyBold");
         let button = document.createElement('button');
         let buttonText = document.createElement('p');
-
+        button.appendChild(buttonText);
         if (carrousel[index].price != "Free") {
             let cents = document.createElement('span');
             cents.innerHTML = carrousel[index].cents;
@@ -139,7 +139,6 @@ function loadCarrousel() {
             button.appendChild(iconPlay);
             button.classList.add("playButton");
         }
-        button.appendChild(buttonText);
 
         bottomDiv.appendChild(price);
         bottomDiv.appendChild(button);

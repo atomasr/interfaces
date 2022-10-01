@@ -99,16 +99,24 @@ p {
     font-weight: 700;
 }
 
-p.titleBig {
-    font-size: 30px;
+p.titleBig,
+p.titleSmall {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
-    font-size: 30px;
     line-height: 36px;
     text-shadow: 2px 2px 4px #FFF2D4;
-    height: 115px;
     display: table-cell;
     vertical-align: middle;
+}
+
+p.titleBig {
+    font-size: 30px;
+    height: 115px;
+}
+
+p.titleSmall {
+    font-size: 18px;
+    height: 77px;
 }
 
 p.bodySmall {
@@ -121,6 +129,10 @@ p.bodySmall {
     height: 26px;
 }
 
+.contentSmall p.bodySmall {
+    height: 21px;
+}
+
 p.bodyBold {
     font-family: 'Roboto';
     font-style: normal;
@@ -131,8 +143,16 @@ p.bodyBold {
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
+.contentSmall p.bodyBold {
+    font-size: 13px;
+}
+
 span.bodyBoldSmall {
     font-size: 16px;
+}
+
+.contentSmall span.bodyBoldSmall {
+    font-size: 11px;
 }
 
 .card.titleSmall {
@@ -145,6 +165,10 @@ span.bodyBoldSmall {
     font-size: 18px;
     text-shadow: 1px 1px 0px #FFFFFF;
     color: var(--secondary3);
+}
+
+.contentSmall .btn.txtMedium {
+    font-size: 13px;
 }
 
 .btn.txtBig {
@@ -261,7 +285,8 @@ header {
 
 /* Cards - Carrousel recommended*/
 
-.card-big {
+.card-big,
+.card-small {
     margin: 0 13px;
 }
 
@@ -294,9 +319,19 @@ header {
     height: 280px;
 }
 
+.open .imageSmall {
+    width: 111px;
+    height: 194px;
+}
+
 .open .contentBig {
     width: 211px;
     height: 280px;
+}
+
+.open .contentSmall {
+    width: 139px;
+    height: 194px;
 }
 
 .card-big img {
@@ -304,7 +339,13 @@ header {
     height: 246px;
 }
 
-.gameNameBig {
+.card-small img {
+    width: 250px;
+    height: 159px;
+    margin-bottom: 2px;
+}
+
+.gameName {
     font-weight: 500;
     font-size: 18px;
     padding: 5.7px;
@@ -323,6 +364,12 @@ header {
     align-items: center;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contentSmall .playButton,
+.contentSmall .buyButton {
+    width: 65px;
+    height: 33px;
 }
 
 .playButton:hover,
@@ -345,6 +392,11 @@ header {
     filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
 }
 
+.contentSmall .iconButton {
+    width: 23px;
+    height: 23px;
+}
+
 .bottomDiv {
     display: flex;
     flex-direction: row;
@@ -354,28 +406,52 @@ header {
     padding-right: 13px;
 }
 
+.contentSmall .bottomDiv {
+    height: 54px;
+}
+
 .open .iconButton img {
-    width: 18px;
+    width: 20px;
     height: 20px;
+}
+
+.open .contentSmall .iconButton img {
+    width: 16px;
+    height: 16px;
 }
 
 .iconHeart {
     display: flex;
     justify-content: right;
     align-items: center;
+    cursor: pointer;
     height: 61px;
     padding-top: 20px;
     padding-right: 25px;
-    cursor: pointer;
+}
+
+.contentSmall .iconHeart {
+    height: 42px;
+    padding-top: 20px;
+    padding-right: 25px;
 }
 
 .iconHeart .vectorHeart {
-    width: 33px;
-    height: 33px;
     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(89deg) brightness(105%) contrast(101%) drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
 }
 
-.carrousel-recommended {
+.contentBig .iconHeart .vectorHeart {
+    width: 33px;
+    height: 33px;
+}
+
+.contentSmall .iconHeart .vectorHeart {
+    width: 20px;
+    height: 20px;
+}
+
+.carrousel-recommended,
+.carrousel-examples {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -452,6 +528,10 @@ footer div {
     /* Cards - Carrousel recommended*/
     .card-big img {
         width: 380px;
+        height: auto;
+    }
+    .card-small img {
+        width: 250px;
         height: auto;
     }
     /* Footer */
