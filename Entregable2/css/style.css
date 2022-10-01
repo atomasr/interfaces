@@ -38,6 +38,7 @@ li {
     --atention0: rgba(255, 210, 101, 1);
     --atention-3: rgba(255, 242, 212, 1);
     --tertiary-3: rgba(245, 222, 225, 1);
+    --tertiary3: rgba(114, 62, 69, 1);
 }
 
 
@@ -667,31 +668,24 @@ footer div {
 
 /* ------------------ Release ------------------------- */
 
-.gameStory {
-    background-color: var(--secondary3);
-    box-shadow: 0px 0px 20px 50px #713A82;
-    text-align: center;
-    margin: 100px 0px 100px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.gameStory p {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 30px;
-    color: var(--tertiary-3);
-    width: 50%;
-}
-
 .hero {
     position: relative;
     z-index: 0;
     width: 100%;
     height: auto;
     overflow: auto;
+    text-align: center;
+}
+
+.hero .limitedEdition {
+    color: var(--tertiary3);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
 }
 
 .hero img {
@@ -720,7 +714,70 @@ footer div {
 
 .hero img:nth-child(5) {
     z-index: 0;
-    box-shadow: 0px 0px 50px 100px #E9A457;
+    box-shadow: 0px 0px 60px 110px #E9A457;
+}
+
+.trailerButton {
+    width: 306px;
+    height: 68px;
+    background-color: var(--atention0);
+    border-radius: 100px;
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 73%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trailerButton:hover {
+    background-color: var(--secondary0);
+}
+
+.trailerButton p {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--secondary3);
+    text-shadow: 1px 1px 0px #FFFFFF;
+}
+
+.trailerButton .iconButton {
+    width: 48px;
+    height: 48px;
+}
+
+.trailerButton .iconButton .vectorButton {
+    width: 27px;
+    height: 27px;
+}
+
+.gameStory {
+    background-color: var(--secondary3);
+    box-shadow: 0px 0px 20px 50px #713A82;
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameStory p {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    color: var(--tertiary-3);
+    width: 50%;
 }
 
 @media screen and (min-width: 660px) {
