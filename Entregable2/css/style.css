@@ -103,10 +103,10 @@ p.titleBig,
 p.titleSmall {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
-    line-height: 36px;
     text-shadow: 2px 2px 4px #FFF2D4;
     display: table-cell;
     vertical-align: middle;
+    text-overflow: ellipsis;
 }
 
 p.titleBig {
@@ -116,6 +116,7 @@ p.titleBig {
 
 p.titleSmall {
     font-size: 18px;
+    width: 130px;
     height: 77px;
 }
 
@@ -474,9 +475,13 @@ header {
     right: 0;
 }
 
-.recommended,
-.carrousel {
+.recommended {
     margin-top: 110px;
+}
+
+.carrousel {
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .carrousel-container {
