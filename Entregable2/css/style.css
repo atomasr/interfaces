@@ -37,6 +37,7 @@ li {
     --secondary3: rgba(113, 58, 130, 1);
     --atention0: rgba(255, 210, 101, 1);
     --atention-3: rgba(255, 242, 212, 1);
+    --tertiary-3: rgba(245, 222, 225, 1);
 }
 
 
@@ -661,6 +662,65 @@ footer div {
 
 .charDetail div p {
     padding: 4px 0;
+}
+
+
+/* ------------------ Release ------------------------- */
+
+.gameStory {
+    background-color: var(--secondary3);
+    box-shadow: 0px 0px 20px 50px #713A82;
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameStory p {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    color: var(--tertiary-3);
+    width: 50%;
+}
+
+.hero {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.hero img {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.hero img:first-child {
+    position: relative;
+    z-index: -4;
+}
+
+.hero img:nth-child(2) {
+    z-index: -3;
+}
+
+.hero img:nth-child(3) {
+    z-index: -2;
+}
+
+.hero img:nth-child(4) {
+    z-index: -1;
+}
+
+.hero img:nth-child(5) {
+    z-index: 0;
+    box-shadow: 0px 0px 50px 100px #E9A457;
 }
 
 @media screen and (min-width: 660px) {
