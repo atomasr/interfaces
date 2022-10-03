@@ -30,6 +30,7 @@ li {
     --primary-1: rgba(222, 247, 246, 1);
     --primary0: rgba(177, 228, 227, 1);
     --primary1: rgba(128, 199, 196, 1);
+    --primary3: rgba(50, 135, 132, 1);
     --secondary-3: rgba(243, 228, 249, 1);
     --secondary0: rgba(214, 191, 221, 1);
     --secondary1: rgba(179, 143, 191, 1);
@@ -73,6 +74,10 @@ h3 {
 p, a, span {
     font-weight: 400;
     font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: var(--secondary3);
 }
 
 .bold {
@@ -329,7 +334,7 @@ header {
     cursor: pointer;
 }
 
-.vectorPlay {
+.iconPlay>img {
     filter: invert(23%) sepia(23%) saturate(2608%) hue-rotate(250deg) brightness(100%) contrast(84%) drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
 }
 
@@ -449,40 +454,73 @@ footer div {
 
 /* ------------------ GameDetail ------------------------- */
 
-.game{
-    position: relative;
-    width: 100%;
-    height: 550px;
+.gameCover>img{
+    position: absolute;
 }
 
-.gameCover{
+.shareNav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 20px;
+    gap: 5px;
+    background: var(--primary0);
+    border-radius: 0px 0px 20px 20px;
     position: absolute;
-    width: 100%;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    height: 64px;
 }
+.gameOnLine{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    filter: blur(3px);
+}
+
+.player{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.theGame img:last-child{
+    position: absolute;
+    left: 47%;
+    top: 47%;
+}
+
 .gameInfo{
     position: absolute;
-    display: flex;
     width: 100%;
-    height: 550px;
+    height: 419px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.gameInfo h1{
+
+.gameInfo h1, .gameInfo .btnBig{
     margin: 10px 0;
+    position: absolute;
 }
-.btnBig{
+.gameInfo .btnBig{
     width: 200px;
     height: 97px;
     margin: 38px 0;
+    top: 65%;
 }
-.gameInfo img{
+.gameInfo>img{
     width: 60px;
     height: 54.8px;
     margin: 10px 0;
-    right: 435px;
-    top: 111px;
+    position:absolute;
+    left: 65%;
+    top: 25%;
+}
+
+.gameInfo>h1{
+    top: 50%;
 }
 
 .iconBig{
@@ -499,8 +537,8 @@ footer div {
     position: absolute;
     width: 150px;
     height: 55px;
-    left: 1186px;
-    top: -1px;
+    right:0;
+    top:0;
     background: var(--primary-2);
     border-width: 0px 3px 3px 3px;
     border-style: solid;
@@ -515,7 +553,7 @@ footer div {
     color: var(--primary1);
 }
 
-.breadcrumb {
+.breadcrumb{
     display: flex;
     align-items: center;
     padding: 15px 0;
@@ -525,8 +563,17 @@ footer div {
     margin: 0px 2px 0px 10px;
 }
 
-.howToPlay{
+.howToPlay, .theGame, .gameCover{
     position:relative;
+}
+.theGame{
+    height: 770px;
+}
+
+
+.gameCover{
+    width: 100%;
+    height: 663px;
 }
 
 .howToPlay ul > li{
@@ -560,6 +607,96 @@ footer div {
     padding: 4px 0;
 }
 
+
+.fanCarrousel{
+    display: flex;
+    padding: 60px 0;
+    justify-content: space-evenly;
+}
+
+
+/*Community*/
+.commentForm{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.commentForm>div{
+    box-sizing: border-box;
+    background: var(--primary-3);
+    border: 2px solid var(--primary0);
+    border-radius: 10px;
+    color: var(--secondary0);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 11px;
+    width: 80%;
+}
+
+.commentForm .btn{
+    color: var(--secondary3);
+    background-color: var(--primary0);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 0px #FFFFFF;
+    width: 120px;
+    height: 57px;
+    justify-content: space-evenly;
+    margin: 11px;
+}
+
+.comment{
+    left: 5%;
+    background: var(--primary-3);
+    box-shadow: inset 0px 0px 7px #328784;
+    border-radius: 10px;
+    height: 118px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    margin-left: 11px;
+    padding: 10px;
+}
+
+.comment.reply{
+    margin: 11px;
+    margin-left: 13%;
+    color: var(--secondary1);
+}
+
+.comment>img{
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+}
+.comment .small{
+    color: var(--primary3);
+}
+
+.comment>div{
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    justify-content: space-between;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.commentIcons{
+    align-items: flex-end;
+}
+.commentIcons div{
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+}
+.commentIcons>img{
+    width: 23px;
+    height: 21px;
+}
 
 @media screen and (min-width: 660px) {
     /* Cards - Carrousel recommended*/
