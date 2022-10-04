@@ -233,29 +233,48 @@ header {
     align-items: flex-start;
     justify-content: center;
     position: absolute;
-    left:0;
     top: 60px;
+}
+.menu-navegation.show{
+    left:0;
     background: var(--primary0);
     height: auto;
     gap: 2px;
     border-width: 0px 2px 2px 0px;
     border-style: solid;
-    border-color: #328784;    
+    border-color: var(--primary3); 
+}
+.menu-user.show {
+    right: 0;
+    background: var(--secondary-3);
+    border: 1px solid var(--secondary2);
+    border-bottom: 3px solid var(--secondary2);
 }
 
 .menu-navegation.show li, .menu-user.show li{
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 185px;
 }
 
-.menu-navegation.show li:hover{
+.menu-user.show li{
+    width: 150px;
+    height: 37px;
+    justify-content: center;
+}
+
+.menu-user.show li:first-child{
+    border-bottom: 1px solid var(--secondary2);
+}
+.menu-navegation.show li:hover, .menu-user.show li:hover{
     background: var(--primary-1);
-    border-right: 6px solid #713A82;
+}
+.menu-navegation.show li:hover{
+    border-right: 6px solid var(--secondary2);
 }
 
 .menu-navegation.show li div{
-    background: #F1FAFA;
+    background: var(--primary-3);
     border-radius: 5px;
     margin: 9px;
     width: 154px;
@@ -269,7 +288,7 @@ header {
 }
 
 
-.menu-navegation.show li img{
+.menu-navegation.show li img, .menu-user.show li img{
     padding: 3px 12px;
 }
 
@@ -658,6 +677,10 @@ footer div {
     width: 25%;
     height: 64px;
 }
+
+.shareNav img:hover{
+    filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%);
+}
 .gameOnLine{
     display: flex;
     justify-content: space-evenly;
@@ -874,6 +897,11 @@ footer div {
     height: 75px;
     margin: 10px;
 }
+
+.comment .vectorHeart{
+    filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%);
+}
+
 .comment .small{
     color: var(--primary3);
 }
