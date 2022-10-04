@@ -597,12 +597,17 @@ header {
 }
 
 .carrousel-container {
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
     justify-content: center;
     padding: 0 20px;
     z-index: 0;
 }
+
+.carrousel-container::-webkit-scrollbar{
+    display: none;
+}
+
 
 
 /* Footer */
@@ -673,7 +678,7 @@ footer div {
     border-radius: 0px 0px 20px 20px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 2vw;
     width: 25%;
     height: 64px;
 }
@@ -684,7 +689,7 @@ footer div {
 .gameOnLine{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 98%;
     filter: blur(3px);
 }
 
@@ -747,7 +752,7 @@ footer div {
     position: absolute;
     width: 150px;
     height: 55px;
-    right:0;
+    right:2vw;
     top:0;
     background: var(--primary-2);
     border-width: 0px 3px 3px 3px;
@@ -782,6 +787,9 @@ footer div {
     height: 770px;
 }
 
+.howToPlay, .theGame, .whoWillYouBe, .fanCarrousel, #community, .breadcrumb{
+    margin-left: 40cd px;
+}
 
 .gameCover{
     width: 100%;
@@ -792,13 +800,16 @@ footer div {
 
 .howToPlay ul>li {
     position: relative;
-    margin-left: 50px;
+    margin-left: 70px;
     padding: 10px 5px;
+}
+.howToPlay>h3{
+    padding-top: 20px;
 }
 
 .howToPlay ul>li::before {
     content: ' ';
-    background-image: url(/img/gameDetail/vectorLi.svg);
+    background-image: url(/img/icons/vectorLi.svg);
     position: absolute;
     width: 26.09px;
     height: 21.28px;
@@ -809,7 +820,6 @@ footer div {
 .charDetail {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
     overflow: scroll;
 }
 
@@ -837,7 +847,7 @@ footer div {
     justify-content: space-around;
 }
 .fanCarrousel>img{
-    width: 23vw;
+    width: 22vw;
 }
 
 /*Community*/
