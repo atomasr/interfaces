@@ -3,249 +3,249 @@
 /* Data carrousel recommended*/
 
 let carrousel1 = [{
-    "picture": "01A",
-    "hover": "01B",
-    "name": "Among Us",
-    "category": "Multiplayer",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "02A",
-    "hover": "02B",
-    "name": "Fornite",
-    "category": "Multiplayer",
-    "price": "$1.",
-    "cents": "99"
-},
-{
-    "picture": "03a",
-    "hover": "03B",
-    "name": "Minecraft",
-    "category": "Multiplayer",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "04A",
-    "hover": "04B",
-    "name": "Fall Guys",
-    "category": "Multiplayer",
-    "price": "$0.",
-    "cents": "99"
-},
-{
-    "picture": "05A",
-    "hover": "05B",
-    "name": "League Of Legends",
-    "category": "Multiplayer",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "06A",
-    "hover": "06B",
-    "name": "Valorant",
-    "category": "Multiplayer",
-    "price": "$1.",
-    "cents": "99"
-},
+        "picture": "01A",
+        "hover": "01B",
+        "name": "Among Us",
+        "category": "Multiplayer",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "02A",
+        "hover": "02B",
+        "name": "Fornite",
+        "category": "Multiplayer",
+        "price": "$1.",
+        "cents": "99"
+    },
+    {
+        "picture": "03a",
+        "hover": "03B",
+        "name": "Minecraft",
+        "category": "Multiplayer",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "04A",
+        "hover": "04B",
+        "name": "Fall Guys",
+        "category": "Multiplayer",
+        "price": "$0.",
+        "cents": "99"
+    },
+    {
+        "picture": "05A",
+        "hover": "05B",
+        "name": "League Of Legends",
+        "category": "Multiplayer",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "06A",
+        "hover": "06B",
+        "name": "Valorant",
+        "category": "Multiplayer",
+        "price": "$1.",
+        "cents": "99"
+    },
 ]
 let carrousel2 = [{
-    "picture": "07A",
-    "hover": "07B",
-    "name": "Tetris",
-    "category": "Puzzle",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "08A",
-    "hover": "08B",
-    "name": "Breaking Bad: 4 in Line",
-    "category": "Classic",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "09A",
-    "hover": "09B",
-    "name": "Cut The Rope",
-    "category": "Puzzle",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "10A",
-    "hover": "10B",
-    "name": "Bubble Shooter",
-    "category": "Party",
-    "price": "$0.",
-    "cents": "25"
-},
-{
-    "picture": "11A",
-    "hover": "11B",
-    "name": "Scrabble Go",
-    "category": "Party",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "12A",
-    "hover": "12B",
-    "name": "Wordle",
-    "category": "Party",
-    "price": "$1.",
-    "cents": "99"
-},
+        "picture": "07A",
+        "hover": "07B",
+        "name": "Tetris",
+        "category": "Puzzle",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "08A",
+        "hover": "08B",
+        "name": "Breaking Bad: 4 in Line",
+        "category": "Classic",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "09A",
+        "hover": "09B",
+        "name": "Cut The Rope",
+        "category": "Puzzle",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "10A",
+        "hover": "10B",
+        "name": "Bubble Shooter",
+        "category": "Party",
+        "price": "$0.",
+        "cents": "25"
+    },
+    {
+        "picture": "11A",
+        "hover": "11B",
+        "name": "Scrabble Go",
+        "category": "Party",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "12A",
+        "hover": "12B",
+        "name": "Wordle",
+        "category": "Party",
+        "price": "$1.",
+        "cents": "99"
+    },
 ]
 let carrousel3 = [{
-    "picture": "13A",
-    "hover": "13B",
-    "name": "Assassin's Creed: Valhalla",
-    "category": "Role-playing",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "14A",
-    "hover": "14B",
-    "name": "Persona 5",
-    "category": "Role-playing",
-    "price": "$5.",
-    "cents": "25"
-},
-{
-    "picture": "15A",
-    "hover": "15B",
-    "name": "Pokémon Arceus",
-    "category": "Role-playing",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "16A",
-    "hover": "16B",
-    "name": "Cyberpunk 2077",
-    "category": "Role-playing",
-    "price": "$89.",
-    "cents": "95"
-},
-{
-    "picture": "17A",
-    "hover": "17B",
-    "name": "Final Fantasy VII",
-    "category": "Role-playing",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "18A",
-    "hover": "18B",
-    "name": "South Park",
-    "category": "Role-playing",
-    "price": "$25.",
-    "cents": "99"
-},
+        "picture": "13A",
+        "hover": "13B",
+        "name": "Assassin's Creed: Valhalla",
+        "category": "Role-playing",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "14A",
+        "hover": "14B",
+        "name": "Persona 5",
+        "category": "Role-playing",
+        "price": "$5.",
+        "cents": "25"
+    },
+    {
+        "picture": "15A",
+        "hover": "15B",
+        "name": "Pokémon Arceus",
+        "category": "Role-playing",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "16A",
+        "hover": "16B",
+        "name": "Cyberpunk 2077",
+        "category": "Role-playing",
+        "price": "$89.",
+        "cents": "95"
+    },
+    {
+        "picture": "17A",
+        "hover": "17B",
+        "name": "Final Fantasy VII",
+        "category": "Role-playing",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "18A",
+        "hover": "18B",
+        "name": "South Park",
+        "category": "Role-playing",
+        "price": "$25.",
+        "cents": "99"
+    },
 ]
 let carrousel4 = [{
-    "picture": "19A",
-    "hover": "19B",
-    "name": "Microsoft Flight Simulator",
-    "category": "Simulation",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "20A",
-    "hover": "20B",
-    "name": "The Sims",
-    "category": "Simulation",
-    "price": "$22.",
-    "cents": "22"
-},
-{
-    "picture": "21A",
-    "hover": "21B",
-    "name": "Cooking Simulator",
-    "category": "Simulation",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "22A",
-    "hover": "22B",
-    "name": "Arma III",
-    "category": "Simulation",
-    "price": "$11.",
-    "cents": "99"
-},
-{
-    "picture": "23A",
-    "hover": "23B",
-    "name": "Euro Truck Simulator 2",
-    "category": "Simulation",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "24A",
-    "hover": "24B",
-    "name": "Thief Simulator",
-    "category": "Simulation",
-    "price": "$13.",
-    "cents": "99"
-},
+        "picture": "19A",
+        "hover": "19B",
+        "name": "Microsoft Flight Simulator",
+        "category": "Simulation",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "20A",
+        "hover": "20B",
+        "name": "The Sims",
+        "category": "Simulation",
+        "price": "$22.",
+        "cents": "22"
+    },
+    {
+        "picture": "21A",
+        "hover": "21B",
+        "name": "Cooking Simulator",
+        "category": "Simulation",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "22A",
+        "hover": "22B",
+        "name": "Arma III",
+        "category": "Simulation",
+        "price": "$11.",
+        "cents": "99"
+    },
+    {
+        "picture": "23A",
+        "hover": "23B",
+        "name": "Euro Truck Simulator 2",
+        "category": "Simulation",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "24A",
+        "hover": "24B",
+        "name": "Thief Simulator",
+        "category": "Simulation",
+        "price": "$13.",
+        "cents": "99"
+    },
 ]
 let carrousel5 = [{
-    "picture": "25A",
-    "hover": "25B",
-    "name": "Valheim",
-    "category": "Survival",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "26A",
-    "hover": "26B",
-    "name": "Frost Punk",
-    "category": "Survival",
-    "price": "$12.",
-    "cents": "33"
-},
-{
-    "picture": "27A",
-    "hover": "27B",
-    "name": "Terraria",
-    "category": "Survival",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "28A",
-    "hover": "28B",
-    "name": "Astroneer",
-    "category": "Survival",
-    "price": "$18.",
-    "cents": "99"
-},
-{
-    "picture": "29A",
-    "hover": "29B",
-    "name": "Among Trees",
-    "category": "Survival",
-    "price": "Free",
-    "cents": ""
-},
-{
-    "picture": "30A",
-    "hover": "30B",
-    "name": "Resident Evil 4",
-    "category": "Horror",
-    "price": "$100.",
-    "cents": "00"
-},
+        "picture": "25A",
+        "hover": "25B",
+        "name": "Valheim",
+        "category": "Survival",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "26A",
+        "hover": "26B",
+        "name": "Frost Punk",
+        "category": "Survival",
+        "price": "$12.",
+        "cents": "33"
+    },
+    {
+        "picture": "27A",
+        "hover": "27B",
+        "name": "Terraria",
+        "category": "Survival",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "28A",
+        "hover": "28B",
+        "name": "Astroneer",
+        "category": "Survival",
+        "price": "$18.",
+        "cents": "99"
+    },
+    {
+        "picture": "29A",
+        "hover": "29B",
+        "name": "Among Trees",
+        "category": "Survival",
+        "price": "Free",
+        "cents": ""
+    },
+    {
+        "picture": "30A",
+        "hover": "30B",
+        "name": "Resident Evil 4",
+        "category": "Horror",
+        "price": "$100.",
+        "cents": "00"
+    },
 ]
 
 let carrousels = [carrousel1, carrousel2, carrousel3, carrousel4, carrousel5];
@@ -304,7 +304,7 @@ function loadCarrousels() {
             let price = document.createElement('p');
             price.innerHTML = carrousels[indice][index].price;
             price.classList.add("bodyBold");
-            let button = document.createElement('button');
+            let button = document.createElement('a');
             let buttonText = document.createElement('p');
             button.appendChild(buttonText);
             if (carrousels[indice][index].price != "Free") {
@@ -324,6 +324,7 @@ function loadCarrousels() {
                 button.appendChild(iconBuy);
                 button.classList.add("buyButton");
             } else {
+                button.setAttribute('href', 'gameDetail.html');
                 buttonText.innerHTML = "Play";
                 buttonText.classList.add("btn");
                 buttonText.classList.add("txtMedium");
@@ -352,7 +353,7 @@ function loadCarrousels() {
 
 loadCarrousels();
 
-window.addEventListener("load", function (event) {
+window.addEventListener("load", function(event) {
     /* Button behaviour for carousel navigation */
     let btnsNext = document.querySelectorAll(".btn-next.example");
     let btnsPrevious = document.querySelectorAll('.btn-previous.example');
