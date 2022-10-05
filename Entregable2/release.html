@@ -13,21 +13,52 @@
 <body>
     <header>
         <nav class="hamburguer-menu">
-            <img src="img/icons/menu.svg" alt="menu">
-            <ul hidden>
-                <li></li>
+            <img id="btn-menu" src="img/icons/menu.svg" alt="menu">
+            <ul class="menu-navegation small bold">
+                <div>
+                    <li>
+                        <div>
+                            <img src="img/icons/menu/Magnified.svg" alt="Search">
+                        </div>
+
+                    </li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/New.svg" alt="New">New</li>
+                    <li><img src="img/icons/menu/Favorite.svg" alt="Favorites">Favorites</li>
+                    <li><img src="img/icons/menu/Last seen.svg" alt="Last seen">Last seen</li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/Headphones.svg" alt="Multiplayer">Multiplayer</li>
+                    <li><img src="img/icons/menu/Puzzle.svg" alt="Puzzles">Puzzles</li>
+                    <li><img src="img/icons/menu/Dragon.svg" alt="Role-playing">Role-playing</li>
+                    <li><img src="img/icons/menu/Ball.svg" alt="Sports">Sports</li>
+                    <li><img src="img/icons/menu/Ghost.svg" alt="Survival">Survival</li>
+                    <li><img src="img/icons/menu/Castle.svg" alt="Platformer">Platformer</li>
+                    <li><img src="img/icons/menu/Brush.svg" alt="Art">Art</li>
+                    <li><img src="img/icons/menu/Car.svg" alt="Action">Action</li>
+                    <li><img src="img/icons/menu/Sword.svg" alt="Battle">Battle</li>
+                </div>
+                <li>
+                    <img src="img/icons/menu/Facebook.svg" alt="Facebook">
+                    <img src="img/icons/menu/Twitter.svg" alt="Twitter">
+                    <img src="img/icons/menu/Instagram.svg" alt="Instagram">
+                    <img src="img/icons/menu/Twitch.svg" alt="Twitch">
+                </li>
             </ul>
         </nav>
-        <picture>
-            <source media="(max-width: 660px)" srcset="img/logo/xsmall.svg">
-            <source media="(min-width: 660px)" srcset="img/logo/small.svg">
-            <img src="img/logo/xsmall.svg" alt="GameZone">
-        </picture>
-        <nav class="user-menu">
-            <img src="img/icons/user.svg" alt="user">
-            <ul hidden>
+        <a href="index.html">
+            <picture>
+                <source media="(max-width: 660px)" srcset="img/logo/xsmall.svg">
+                <source media="(min-width: 660px)" srcset="img/logo/small.svg">
+                <img src="img/logo/xsmall.svg" alt="GameZone">
+            </picture>
+        </a>
+        <nav class="user-menu small bold">
+            <img id="btn-user" src="img/icons/user.svg" alt="user">
+            <ul class="menu-user">
                 <li>My account</li>
-                <li>Sign out</li>
+                <li><img src="img/icons/menu/signOut.svg" alt="Sign out">Sign out</li>
             </ul>
         </nav>
     </header>
@@ -184,9 +215,11 @@
     </main>
 
     <footer class="slim-footer">
-        <img src="img/logo/xsmall.svg">
+        <a href="index.html"><img src="img/logo/xsmall.svg"></a>
         <p>Copyright Ⓒ 2022. Game Zone is a Registered Trademark. All Rights Reserved.</p>
     </footer>
+
+    <script type="text/javascript" src="js/menuNav.js"></script>
 </body>
 
 </html>

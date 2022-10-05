@@ -80,6 +80,7 @@ span {
     font-weight: 400;
     font-size: 16px;
 }
+
 a {
     text-decoration: none;
     color: var(--secondary3);
@@ -229,11 +230,13 @@ header {
     visibility: visible;
 }
 
-.menu-navegation, .menu-user {
+.menu-navegation,
+.menu-user {
     display: none;
 }
 
-.menu-navegation.show, .menu-user.show {
+.menu-navegation.show,
+.menu-user.show {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -241,15 +244,17 @@ header {
     position: absolute;
     top: 60px;
 }
-.menu-navegation.show{
-    left:0;
+
+.menu-navegation.show {
+    left: 0;
     background: var(--primary0);
     height: auto;
     gap: 2px;
     border-width: 0px 2px 2px 0px;
     border-style: solid;
-    border-color: var(--primary3); 
+    border-color: var(--primary3);
 }
+
 .menu-user.show {
     right: 0;
     background: var(--secondary-3);
@@ -257,29 +262,33 @@ header {
     border-bottom: 3px solid var(--secondary2);
 }
 
-.menu-navegation.show li, .menu-user.show li{
+.menu-navegation.show li,
+.menu-user.show li {
     display: flex;
     align-items: center;
     width: 185px;
 }
 
-.menu-user.show li{
+.menu-user.show li {
     width: 150px;
     height: 37px;
     justify-content: center;
 }
 
-.menu-user.show li:first-child{
+.menu-user.show li:first-child {
     border-bottom: 1px solid var(--secondary2);
 }
-.menu-navegation.show li:hover, .menu-user.show li:hover{
+
+.menu-navegation.show li:hover,
+.menu-user.show li:hover {
     background: var(--primary-1);
 }
-.menu-navegation.show li:hover{
+
+.menu-navegation.show li:hover {
     border-right: 6px solid var(--secondary2);
 }
 
-.menu-navegation.show li div{
+.menu-navegation.show li div {
     background: var(--primary-3);
     border-radius: 5px;
     margin: 9px;
@@ -293,10 +302,11 @@ header {
     border-bottom: 1px solid var(--primary3);
 }
 
-
-.menu-navegation.show li img, .menu-user.show li img{
+.menu-navegation.show li img,
+.menu-user.show li img {
     padding: 3px 12px;
 }
+
 
 /* Home hero*/
 
@@ -465,6 +475,7 @@ header {
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .iconPlay>img {
     filter: invert(23%) sepia(23%) saturate(2608%) hue-rotate(250deg) brightness(100%) contrast(84%) drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.25));
 }
@@ -574,12 +585,32 @@ header {
     z-index: -1;
 }
 
-::-webkit-scrollbar{
+.carrousel-characters {
+    margin: 35px 0px 90px 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+.carrousel-recommended::-webkit-scrollbar,
+.carrousel-examples::-webkit-scrollbar {
     display: none;
 }
 
-.carrousel-characters {
-    margin: 35px 0px 70px 0px;
+.carrousel-characters::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carrousel-characters::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 10px;
+}
+
+.carrousel-characters::-webkit-scrollbar-thumb {
+    background: var(--secondary1);
+    border-radius: 10px;
+}
+
+.carrousel-characters::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary2);
 }
 
 .btn-previous,
@@ -607,17 +638,16 @@ header {
     margin-bottom: 80px;
 }
 
-.carrousel-container { 
+.carrousel-container {
     position: relative;
     justify-content: center;
     padding: 0 10px;
     z-index: 0;
 }
 
-.carrousel-container::-webkit-scrollbar{
+.carrousel-container::-webkit-scrollbar {
     display: none;
 }
-
 
 
 /* Footer */
@@ -673,13 +703,13 @@ footer div {
 
 /* ------------------ GameDetail ------------------------- */
 
-.gameCover>img{
+.gameCover>img {
     position: absolute;
     width: 100vw;
 }
 
-.shareNav{
-    display:flex;
+.shareNav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2px 20px;
@@ -693,28 +723,29 @@ footer div {
     height: 64px;
 }
 
-.shareNav img:hover{
+.shareNav img:hover {
     filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%);
 }
-.gameOnLine{
+
+.gameOnLine {
     display: flex;
     justify-content: space-evenly;
     width: 98%;
     filter: blur(3px);
 }
 
-.player{
+.player {
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.theGame img:last-child{
+.theGame img:last-child {
     position: absolute;
     left: 47%;
     top: 47%;
 }
 
-.gameInfo{
+.gameInfo {
     position: absolute;
     width: 100%;
     height: 419px;
@@ -723,27 +754,29 @@ footer div {
     align-items: center;
 }
 
-
-.gameInfo h1, .gameInfo .btnBig{
+.gameInfo h1,
+.gameInfo .btnBig {
     margin: 10px 0;
     position: absolute;
 }
-.gameInfo .btnBig{
+
+.gameInfo .btnBig {
     width: 200px;
     height: 97px;
     margin: 38px 0;
     top: 65%;
 }
-.gameInfo>img{
+
+.gameInfo>img {
     width: 60px;
     height: 54.8px;
     margin: 10px 0;
-    position:absolute;
+    position: absolute;
     left: 65%;
     top: 25%;
 }
 
-.gameInfo>h1{
+.gameInfo>h1 {
     top: 50%;
 }
 
@@ -762,8 +795,8 @@ footer div {
     position: absolute;
     width: 150px;
     height: 55px;
-    right:2vw;
-    top:0;
+    right: 2vw;
+    top: 0;
     background: var(--primary-2);
     border-width: 0px 3px 3px 3px;
     border-style: solid;
@@ -779,7 +812,7 @@ footer div {
     color: var(--primary1);
 }
 
-.breadcrumb{
+.breadcrumb {
     display: flex;
     align-items: center;
     padding: 15px 0;
@@ -790,18 +823,26 @@ footer div {
     margin: 0px 2px 0px 10px;
 }
 
-.howToPlay, .theGame, .gameCover{
-    position:relative;
+.howToPlay,
+.theGame,
+.gameCover {
+    position: relative;
 }
-.theGame{
+
+.theGame {
     height: 770px;
 }
 
-.howToPlay, .theGame, .whoWillYouBe, .fanCarrousel, #community, .breadcrumb{
+.howToPlay,
+.theGame,
+.whoWillYouBe,
+.fanCarrousel,
+#community,
+.breadcrumb {
     margin-left: 40cd px;
 }
 
-.gameCover{
+.gameCover {
     width: 100%;
     height: 663px;
     background-image: url(../img/gameDetail/BBShow.svg);
@@ -813,7 +854,8 @@ footer div {
     margin-left: 70px;
     padding: 10px 5px;
 }
-.howToPlay>h3{
+
+.howToPlay>h3 {
     padding-top: 20px;
 }
 
@@ -836,6 +878,7 @@ footer div {
 .charDetail::-webkit-scrollbar {
     display: none;
 }
+
 .charDetail>div {
     display: flex;
     flex-direction: column;
@@ -848,25 +891,28 @@ footer div {
     padding: 4px 0;
     width: 105px;
     text-align: center;
-    
 }
 
-.fanCarrousel{
+.fanCarrousel {
     display: flex;
     padding: 60px 0;
     justify-content: space-around;
 }
-.fanCarrousel>img{
+
+.fanCarrousel>img {
     width: 22vw;
 }
 
+
 /*Community*/
-.commentForm{
+
+.commentForm {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.commentForm>div{
+
+.commentForm>div {
     box-sizing: border-box;
     background: var(--primary-3);
     border: 2px solid var(--primary0);
@@ -881,7 +927,7 @@ footer div {
     width: 80%;
 }
 
-.commentForm .btn{
+.commentForm .btn {
     color: var(--secondary3);
     background-color: var(--primary0);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -892,7 +938,7 @@ footer div {
     margin: 11px;
 }
 
-.comment{
+.comment {
     left: 5%;
     background: var(--primary-3);
     box-shadow: inset 0px 0px 7px #328784;
@@ -906,27 +952,27 @@ footer div {
     padding: 10px;
 }
 
-.comment.reply{
+.comment.reply {
     margin: 11px;
     margin-left: 13%;
     color: var(--secondary1);
 }
 
-.comment>img{
+.comment>img {
     width: 75px;
     height: 75px;
     margin: 10px;
 }
 
-.comment .vectorHeart{
+.comment .vectorHeart {
     filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%);
 }
 
-.comment .small{
+.comment .small {
     color: var(--primary3);
 }
 
-.comment>div{
+.comment>div {
     display: flex;
     flex-direction: column;
     height: 75px;
@@ -935,22 +981,25 @@ footer div {
     width: 100%;
 }
 
-.commentIcons{
+.commentIcons {
     align-items: flex-end;
 }
-.commentIcons div{
+
+.commentIcons div {
     display: flex;
     justify-content: space-between;
     width: 18%;
 }
-.commentIcons>img{
+
+.commentIcons>img {
     width: 23px;
     height: 21px;
 }
 
-#community{
+#community {
     margin-bottom: 20vh;
 }
+
 
 /* ------------------ Release ------------------------- */
 
@@ -969,7 +1018,7 @@ footer div {
     font-size: 50px;
     position: absolute;
     width: 100%;
-    top: 70%;
+    top: 68%;
 }
 
 .hero img {
@@ -1015,7 +1064,7 @@ footer div {
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
-    top: 78%;
+    top: 75%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -1071,6 +1120,11 @@ footer div {
     justify-content: space-around;
     align-items: center;
     margin-top: 35px;
+}
+
+.gameFeatures h2,
+.characterCards h2:first-child {
+    padding-left: 30px;
 }
 
 .gameFeature {
