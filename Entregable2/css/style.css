@@ -302,8 +302,11 @@ header {
     border-bottom: 1px solid var(--primary3);
 }
 
-.menu-navegation.show li img,
 .menu-user.show li img {
+    padding-right: 12px;
+}
+
+.menu-navegation.show li img {
     padding: 3px 12px;
     width: 48px;
 }
@@ -1123,7 +1126,7 @@ footer div {
     right: 25%;
     font-size: 20px;
     cursor: pointer;
-    filter: invert(99%) sepia(86%) saturate(368%) hue-rotate(107deg) brightness(90%) contrast(98%);
+    filter: invert(93%) sepia(13%) saturate(189%) hue-rotate(144deg) brightness(108%) contrast(96%);
 }
 
 .video-container.show {
