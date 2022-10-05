@@ -127,6 +127,10 @@ p.titleSmall {
     margin-bottom: 20px;
 }
 
+.contentSmall p.titleSmall {
+    margin-bottom: 17px;
+}
+
 p.titleBig {
     font-size: 30px;
     height: 82px;
@@ -545,8 +549,9 @@ header {
 }
 
 .open .contentSmall .iconButton img {
-    width: 16px;
-    height: 16px;
+    padding-top: 1px;
+    width: 14px;
+    height: 14px;
 }
 
 .iconHeart {
@@ -645,7 +650,6 @@ header {
 .carrousel-container {
     position: relative;
     justify-content: center;
-    padding: 0 10px;
     z-index: 0;
 }
 
