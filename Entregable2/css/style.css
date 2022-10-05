@@ -417,7 +417,45 @@ header {
 }
 
 .open:hover {
+    transition-duration: 1s;
     opacity: 1;
+}
+
+@keyframes swing {
+    15% {
+        transform: translateX(4px);
+    }
+    30% {
+        transform: translateX(-4px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    65% {
+        transform: translateX(-3px);
+    }
+    80% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.buyButton:hover .vectorButton {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+}
+
+.playButton:not(:hover) .vectorButton,
+.open:not(:hover) {
+    transition-duration: 0.5s;
+}
+
+.open:hover>img {
+    transform: scale(1);
+    transition-duration: 1s;
+    transition-delay: 0.5s;
 }
 
 .open {
@@ -433,9 +471,11 @@ header {
 .open .imageBig {
     width: 169px;
     height: 280px;
+    transform: scale(0.9);
 }
 
 .open .imageSmall {
+    transform: scale(0.9);
     width: 111px;
     height: 194px;
 }
@@ -505,7 +545,13 @@ header {
 
 .playButton:hover,
 .buyButton:hover {
+    transition-duration: 1s;
     background-color: var(--secondary0);
+}
+
+.playButton:hover .vectorButton {
+    transform: scale(1.25);
+    transition-duration: 1s;
 }
 
 .vectorButton {
@@ -871,7 +917,7 @@ footer div {
 
 .howToPlay ul>li::before {
     content: ' ';
-    background-image: url(/img/icons/vectorLi.svg);
+    background-image: url(../img/icons/vectorLi.svg);
     position: absolute;
     width: 26.09px;
     height: 21.28px;
