@@ -167,15 +167,15 @@ let scrollTotal = slider.scrollWidth;
 let cardBigWidth = cardBig[0].offsetWidth;
 
 let pos = 0;
-let actual = 0;
+let size = width;
 
 function backward() {
-  if ((actual -= cardBigWidth) <= 0) {
+  if (size <= width) {
     pos = 0;
-    actual = 0;
+    size = width;
   } else {
     pos -= cardBigWidth;
-    actual = pos;
+    size -= cardBigWidth;
 
   };
   slider.scrollTo({
@@ -186,12 +186,12 @@ function backward() {
 }
 
 function forward() {
-  if ((actual += cardBigWidth) >= scrollTotal) {
+  if ((size + cardBigWidth) > (scrollTotal + cardBigWidth)) {
     pos = 0;
-    actual = 0;
+    size = width;
   } else {
     pos += cardBigWidth;
-    actual = pos;
+    size += cardBigWidth;
   };
   slider.scrollTo({
     top: 0,
