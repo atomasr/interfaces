@@ -305,6 +305,7 @@ header {
 .menu-navegation.show li img,
 .menu-user.show li img {
     padding: 3px 12px;
+    width: 48px;
 }
 
 
