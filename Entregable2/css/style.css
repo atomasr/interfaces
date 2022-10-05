@@ -124,7 +124,7 @@ p.titleSmall {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 p.titleBig {
@@ -635,8 +635,8 @@ header {
 }
 
 .carrousel {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .carrousel-container {
@@ -649,6 +649,11 @@ header {
 .carrousel-container::-webkit-scrollbar {
     display: none;
 }
+
+main{
+    margin-bottom: 20vh;
+}
+
 
 
 /* Footer */
@@ -668,6 +673,7 @@ footer div {
 footer nav {
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 footer nav ul {
