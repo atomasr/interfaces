@@ -327,9 +327,7 @@ header {
 .countdown {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 15%;
+    align-items: center;
 }
 
 .soon {
@@ -338,7 +336,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--secondary2);
-    border-radius: 20px 0px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     width: 291px;
     height: 70px;
 }
@@ -365,7 +363,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     background-color: var(--secondary-3);
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 20px 20px;
     width: 291px;
     height: 79px;
     text-align: center;
@@ -657,10 +655,9 @@ header {
     display: none;
 }
 
-main{
+main {
     margin-bottom: 20vh;
 }
-
 
 
 /* Footer */
@@ -680,7 +677,6 @@ footer div {
 footer nav {
     flex-direction: row;
     flex-wrap: wrap;
-    
 }
 
 footer nav ul {
@@ -1272,5 +1268,16 @@ footer div {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
+    }
+    .countdown {
+        position: absolute;
+        right: 0;
+        top: 15%;
+    }
+    .soon {
+        border-radius: 20px 0px 0px 0px;
+    }
+    .timer {
+        border-radius: 0px 0px 0px 10px;
     }
 }
