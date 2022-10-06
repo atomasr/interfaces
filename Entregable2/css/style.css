@@ -232,6 +232,8 @@ header {
 
 .show {
     visibility: visible;
+    transform: translate(0%);
+    transition-duration: 10s;
 }
 
 .menu-navegation,
@@ -779,8 +781,12 @@ footer div {
     height: 64px;
 }
 
+.shareNav img {
+    filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%) drop-shadow(1px 1px 0px #FFFFFF);
+}
+
 .shareNav img:hover {
-    filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%);
+    filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%) drop-shadow(1px 1px 0px #FFFFFF);
 }
 
 .gameOnLine {
@@ -799,6 +805,7 @@ footer div {
     position: absolute;
     left: 47%;
     top: 47%;
+    filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%);
 }
 
 .gameInfo {
@@ -890,12 +897,15 @@ footer div {
 }
 
 .howToPlay,
-.theGame,
-.whoWillYouBe,
-.fanCarrousel,
+.theGame h3,
+.whoWillYouBe h3,
 #community,
 .breadcrumb {
-    margin-left: 40cd px;
+    margin-left: 43px;
+}
+
+.theGame img:last-child:hover {
+    filter: invert(89%) sepia(22%) saturate(2489%) hue-rotate(197deg) brightness(80%) contrast(84%);
 }
 
 .gameCover {
