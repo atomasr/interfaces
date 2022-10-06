@@ -1004,6 +1004,12 @@ footer div {
     margin: 11px;
 }
 
+.commentForm .btn img {
+    filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%) drop-shadow(1px 1px 0px #FFFFFF);
+    width: 24px;
+    height: 24px;
+}
+
 .comment {
     left: 5%;
     background: var(--primary-3);
