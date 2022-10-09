@@ -317,9 +317,10 @@ header {
     width: 48px;
 }
 
+
 /* Progress bar on loading*/
 
-#loading{
+#loading {
     position: fixed;
     top: 0;
     left: 0;
@@ -329,23 +330,25 @@ header {
     z-index: 5;
 }
 
-#progressBar{
+#progressBar {
     background-color: var(--secondary0);
     border-radius: 10px;
     width: 300px;
-    height:20px;
+    height: 20px;
     position: absolute;
-    top:50vh;
-    left:35vw;
-    filter:blur(0px);
+    top: 50vh;
+    left: 35vw;
+    filter: blur(0px);
     z-index: 10;
 }
-#progressBar>div{
-    height:100%;
+
+#progressBar>div {
+    height: 100%;
     background-color: var(--secondary1);
     border-radius: 10px;
     text-align: center;
 }
+
 
 /* Home hero*/
 
@@ -1033,10 +1036,25 @@ footer div {
     margin: 11px;
 }
 
+.commentForm .btn:hover {
+    background-color: var(--secondary0);
+    box-shadow: 0px 0px 10px 0px var(--secondary0);
+}
+
 .commentForm .btn img {
     filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%) drop-shadow(1px 1px 0px #FFFFFF);
     width: 24px;
     height: 24px;
+}
+
+.commentForm .commentInput img {
+    filter: invert(27%) sepia(22%) saturate(1937%) hue-rotate(243deg) brightness(92%) contrast(88%) drop-shadow(1px 1px 0px #FFFFFF);
+}
+
+.commentForm .commentInput img:hover {
+    transition: 0.5s;
+    filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%) drop-shadow(1px 1px 0px #FFFFFF);
+    cursor: pointer;
 }
 
 .comment {
@@ -1057,6 +1075,12 @@ footer div {
     margin: 11px;
     margin-left: 13%;
     color: var(--secondary1);
+}
+
+.reply .commentIcons img,
+.reply .commentIcons p {
+    filter: invert(60%) sepia(54%) saturate(218%) hue-rotate(240deg) brightness(93%) contrast(84%);
+    text-shadow: none;
 }
 
 .comment>img {
@@ -1092,9 +1116,14 @@ footer div {
     width: 18%;
 }
 
+.commentIcons p {
+    cursor: pointer;
+}
+
 .commentIcons>img {
     width: 23px;
     height: 21px;
+    cursor: pointer;
 }
 
 #community {
