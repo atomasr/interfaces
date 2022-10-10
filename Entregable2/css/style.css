@@ -992,6 +992,10 @@ footer div {
 }
 
 .fanCarrousel {
+    position: relative;
+}
+
+.fanCarrousel div {
     display: flex;
     padding: 60px 0;
     justify-content: space-around;
@@ -999,6 +1003,23 @@ footer div {
 
 .fanCarrousel>img {
     width: 22vw;
+}
+
+.fanCarrousel div:first-child {
+    position: relative;
+}
+
+.fanCarrousel div:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    opacity: 0;
+    transition-duration: 2s;
+}
+
+.fanCarrousel div:nth-child(2).show {
+    opacity: 1;
+    transition-duration: 2s;
 }
 
 
