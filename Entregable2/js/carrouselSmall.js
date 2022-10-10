@@ -19,7 +19,7 @@ let carrousel1 = [{
         "cents": "99"
     },
     {
-        "picture": "03a",
+        "picture": "03A",
         "hover": "03B",
         "name": "Minecraft",
         "category": "Multiplayer",

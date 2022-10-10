@@ -19,7 +19,7 @@ let carrousel = [{
         "cents": ""
     },
     {
-        "picture": "03a",
+        "picture": "03A",
         "hover": "03B",
         "name": "Super Mario",
         "category": "Platformer",
