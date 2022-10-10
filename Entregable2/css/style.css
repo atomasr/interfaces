@@ -482,6 +482,7 @@ header {
 }
 
 .playButton:not(:hover) .vectorButton,
+.trailerButton:not(:hover) .vectorButton,
 .open:not(:hover) {
     transition-duration: 0.5s;
 }
@@ -608,7 +609,8 @@ header {
     background-color: var(--secondary0);
 }
 
-.playButton:hover .vectorButton {
+.playButton:hover .vectorButton,
+.trailerButton:hover .vectorButton {
     transform: scale(1.25);
     transition-duration: 1s;
 }
@@ -1206,24 +1208,24 @@ footer div {
 
 .hero img:first-child {
     position: relative;
-    z-index: -4;
+    z-index: -5;
     height: 1050px;
 }
 
 .hero img:nth-child(2) {
-    z-index: -3;
+    z-index: -4;
 }
 
 .hero img:nth-child(3) {
-    z-index: -2;
+    z-index: -3;
 }
 
 .hero img:nth-child(4) {
-    z-index: -1;
+    z-index: -2;
 }
 
 .hero img:nth-child(5) {
-    z-index: 0;
+    z-index: -1;
     box-shadow: 0px 0px 60px 110px #E9A457;
 }
 
