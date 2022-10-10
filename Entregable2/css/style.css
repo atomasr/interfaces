@@ -1374,17 +1374,27 @@ footer div {
 }
 
 .card-character .close img {
+    position: relative;
+    top: 0%;
     width: 250px;
     height: 250px;
 }
 
 .card-character .close h2 {
+    position: relative;
+    top: 0%;
     width: 306px;
     height: 133px;
     margin-top: 40px;
     font-size: 36px;
     text-shadow: none;
     font-weight: 300;
+}
+
+.card-character:hover .close>img,
+.card-character:hover .close>h2 {
+    transform: translateY(-500px);
+    transition: 1s;
 }
 
 .card-character .open {
@@ -1394,23 +1404,29 @@ footer div {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(180deg, #B1E4E3 0%, #4F9E9B 100%);
+    background: linear-gradient(180deg, #FFF2D4 0%, #B38FBF 100%);
+    overflow-y: hidden;
 }
 
 .card-character .open img {
+    position: relative;
     width: 212px;
     height: 212px;
+    top: 800px;
 }
 
 .card-character .open h2 {
+    position: relative;
     height: 68px;
     font-size: 36px;
     text-shadow: none;
     font-weight: 300;
     text-align: center;
+    top: 800px;
 }
 
 .card-character .open p {
+    position: relative;
     width: 212px;
     height: 242px;
     font-family: 'Roboto';
@@ -1418,6 +1434,19 @@ footer div {
     font-weight: 400;
     font-size: 18px;
     color: var(--primary-3);
+    top: 800px;
+}
+
+.card-character .open:hover>img,
+.card-character .open:hover>h2,
+.card-character .open:hover>p {
+    transform: translateY(-800px);
+    transition: 1s;
+}
+
+.card-character .open:hover {
+    background: linear-gradient(180deg, #B1E4E3 0%, #4F9E9B 100%);
+    transition: 1.5s;
 }
 
 @media screen and (min-width: 660px) {
