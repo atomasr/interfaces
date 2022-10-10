@@ -327,26 +327,94 @@ header {
     height: 100%;
     background-color: var(--secondary-3);
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading>img{
+   margin: 15px;
+   animation: load 2s infinite ease-in-out;
+}
+
+@keyframes load{
+    0%{
+        transform: rotate(0deg);
+        opacity: 0.1;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
 
 #progressBar{
     background-color: var(--secondary0);
     border-radius: 10px;
-    width: 300px;
-    height:20px;
-    position: absolute;
-    top:50vh;
-    left:35vw;
+    width: 200px;
+    height:10px;
     filter:blur(0px);
     z-index: 10;
 }
+
 #progressBar>div{
+    content:"0%";
     height:100%;
+    width: 100%;
     background-color: var(--secondary1);
     border-radius: 10px;
     text-align: center;
+    animation: scale 5s linear;
+    transform-origin: left;
+}
+@keyframes scale{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    } 
 }
 
+.progressPorcentage{
+    margin:5px;
+    text-align: center;
+}
+
+.progressPorcentage::before{
+    content: "0%";
+	animation: text 5s linear;
+}
+@keyframes text{
+    10%{
+        content:"10%";
+    }
+    25%{
+        content:"25%";
+    }
+    50%{
+        content:"50%";
+    }
+    75%{
+        content:"75%";
+    }
+    90%{
+        content:"90%";
+    }
+    100%{
+        content:"100%";
+    }
+}
 /* Home hero*/
 
 .home-release img {
@@ -1259,7 +1327,7 @@ footer div {
 }
 
 .gameFeature {
-    width: 240px;
+    width: 18vw;
     height: 290px;
     background-color: var(--primary-3);
     font-family: 'Roboto';
@@ -1341,6 +1409,20 @@ footer div {
     font-weight: 400;
     font-size: 18px;
     color: var(--primary-3);
+}
+
+
+@media screen and (min-width: 365px) {
+    footer nav ul {
+        padding: 10px 30px;
+    }
+
+}
+
+@media screen and (min-width: 482px) {
+    footer nav ul {
+        padding: 10px;
+    }
 }
 
 @media screen and (min-width: 660px) {
