@@ -10,8 +10,6 @@ function completeLoad() {
     bar.parentElement.style.opacity = "0";
 }
 
-loading();
-
 /*
 Progress bar con js
 function load() {
@@ -31,4 +29,3 @@ function load() {
             bar.innerHTML = width * 1 + '%';
         }
     }*/
-
