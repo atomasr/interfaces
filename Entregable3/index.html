@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="icon" href="img/logo/xsmall.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="loading">
+        <img src="img/logo/big.svg">
+        <span class="loader"></span>
+        <div id="progressBar">
+            <div></div>
+            <p class="bold progressPorcentage"></p>
+        </div>
+    </section>
+    <header>
+        <nav class="hamburguer-menu">
+            <img id="btn-menu" src="img/icons/menu.svg" alt="menu">
+            <ul class="menu-navegation small bold">
+                <div>
+                    <li>
+                        <div>
+                            <img src="img/icons/menu/Magnified.svg" alt="Search">
+                        </div>
+
+                    </li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/New.svg" alt="New">New</li>
+                    <li><img src="img/icons/menu/Favorite.svg" alt="Favorites">Favorites</li>
+                    <li><img src="img/icons/menu/Last seen.svg" alt="Last seen">Last seen</li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/Headphones.svg" alt="Multiplayer">Multiplayer</li>
+                    <li><img src="img/icons/menu/Puzzle.svg" alt="Puzzles">Puzzles</li>
+                    <li><img src="img/icons/menu/Dragon.svg" alt="Role-playing">Role-playing</li>
+                    <li><img src="img/icons/menu/Ball.svg" alt="Sports">Sports</li>
+                    <li><img src="img/icons/menu/Ghost.svg" alt="Survival">Survival</li>
+                    <li><img src="img/icons/menu/Castle.svg" alt="Platformer">Platformer</li>
+                    <li><img src="img/icons/menu/Brush.svg" alt="Art">Art</li>
+                    <li><img src="img/icons/menu/Car.svg" alt="Action">Action</li>
+                    <li><img src="img/icons/menu/Sword.svg" alt="Battle">Battle</li>
+                </div>
+                <li>
+                    <img src="img/icons/menu/Facebook.svg" alt="Facebook">
+                    <img src="img/icons/menu/Twitter.svg" alt="Twitter">
+                    <img src="img/icons/menu/Instagram.svg" alt="Instagram">
+                    <img src="img/icons/menu/Twitch.svg" alt="Twitch">
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html">
+            <picture>
+                <source media="(max-width: 660px)" srcset="img/logo/xsmall.svg">
+                <source media="(min-width: 660px)" srcset="img/logo/small.svg">
+                <img src="img/logo/xsmall.svg" alt="GameZone">
+            </picture>
+        </a>
+        <nav class="user-menu small bold">
+            <img id="btn-user" src="img/icons/user.svg" alt="user">
+            <ul class="menu-user">
+                <li>My account</li>
+                <li><img src="img/icons/menu/signOut.svg" alt="Sign out">Sign out</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home-release">
+            <a href="release.html">
+                <picture>
+                    <source media="(max-width: 660px)" srcset="img/home/hero/release-mobile.svg">
+                    <source media="(min-width: 660px)" srcset="img/home/hero/release-desktop.svg">
+                    <img src="img/home/hero/release-mobile.svg" alt="hero-release">
+                </picture>
+            </a>
+            <div class="countdown">
+                <div class="soon">
+                    <img src="img/icons/sparkles.svg">
+                    <p>Coming soon</p>
+                    <img src="img/icons/sparkles.svg">
+                </div>
+                <div class="timer">
+                    <div>
+                        <p>22</p>
+                        <p>Hours</p>
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <p>08</p>
+                        <p>Minutes</p>
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <p id="timer">27</p>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recommended">
+            <h3>Recommended for you</h3>
+            <div class="carrousel-container">
+                <img id="previous" class="btn-previous" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-recommended" id="slider">
+                </div>
+                <img id="next" class="btn-next" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+        <section class="carrousel">
+            <h3>Continue playing...</h3>
+            <div class="carrousel-container examples">
+                <img id="previous" class="btn-previous example" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-examples">
+                </div>
+                <img id="next" class="btn-next example" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+
+        <section class="carrousel">
+            <h3>Puzzles and party games</h3>
+            <div class="carrousel-container">
+                <img id="previous" class="btn-previous example" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-examples">
+                </div>
+                <img id="next" class="btn-next example" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+
+        <section class="carrousel">
+            <h3>Role-playing (RPG, ARPG, and More)</h3>
+            <div class="carrousel-container">
+                <img id="previous" class="btn-previous example" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-examples">
+                </div>
+                <img id="next" class="btn-next example" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+
+        <section class="carrousel">
+            <h3>Simulation and sports</h3>
+            <div class="carrousel-container">
+                <img id="previous" class="btn-previous example" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-examples">
+                </div>
+                <img id="next" class="btn-next example" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+
+        <section class="carrousel">
+            <h3>Survival and horror</h3>
+            <div class="carrousel-container">
+                <img id="previous" class="btn-previous example" src="img/icons/right-arrow.svg" alt="div-previous">
+                <div class="carrousel-examples">
+                </div>
+                <img id="next" class="btn-next example" src="img/icons/right-arrow.svg" alt="div-next">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <picture>
+                <source media="(max-width: 660px)" srcset="img/logo/small.svg">
+                <source media="(min-width: 660px)" srcset="img/logo/big.svg">
+                <img src="img/logo/small.svg" alt="GameZone">
+            </picture>
+            <nav class="small">
+                <ul>
+                    <li class="bold">Overview</li>
+                    <li>What is Game Zone?</li>
+                    <li>Developers</li>
+                    <li>About</li>
+                </ul>
+                <ul>
+                    <li class="bold">Community</li>
+                    <li>Community Central</li>
+                    <li>Support</li>
+                    <li>Help</li>
+                </ul>
+                <ul>
+                    <li class="bold">Contact</li>
+                    <li>Contact us</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                </ul>
+                <ul>
+                    <li class="bold">FAQs</li>
+                    <li>Terms of use</li>
+                    <li>Privacy Policy</li>
+                    <li>Do not sell my info</li>
+                    <li>Sitemap</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="slim-footer">
+            <p class="small bold">Copyright Ⓒ 2022. Game Zone is a Registered Trademark. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/menuNav.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/carrousel.js"></script>
+    <script type="text/javascript" src="js/carrouselSmall.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript" src="js/heartAnimation.js"></script>
+</body>
+
+</html>
