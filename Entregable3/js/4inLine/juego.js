@@ -22,12 +22,12 @@ function clearCanvas() {
 }
 
 function addChip() {
-    let chip = new Ficha(50.5, ctx);
+    let chip = new Ficha(100, 400, 50.5, ctx);
     chips.push(chip);
 }
 
 function drawChips() {
-    //clearCanvas();
+    clearCanvas();
     chips.forEach(chip => {
         chip.draw();
     });
@@ -42,7 +42,6 @@ function mouseDown(e) {
     let x = e.offsetX;
     let y = e.offsetY;
 
-
     if (chips[0].checkSelected(x, y)) {
         console.log('me clickearon');
         chips[0].setIsSelected(true);
@@ -56,9 +55,9 @@ function mouseDown(e) {
 function mouseMove(e) {
     let x = e.offsetX;
     let y = e.offsetY;
-    if (chips[0].isSelected())
+    if (chips[0].isSelected()) {
         chips[0].move(x, y);
-
+    }
 }
 
 function mouseUp() {
@@ -71,7 +70,7 @@ function init() {
     addChip();
     drawChips();
     initEvents();
-    //setInterval(drawChips, 20);
+    setInterval(drawChips, 20);
 }
 
 init();

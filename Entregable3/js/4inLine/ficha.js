@@ -2,21 +2,23 @@
 
 class Ficha {
 
-    constructor(r, ctx) {
+    constructor(posX, posY, r, ctx) {
         this.width = 2*r;
         this.height = 2*r;
-        this.posX = 100;
-        this.posY = 400;
-        ctx.beginPath();
-        ctx.arc(100, 400, r, 0, 2 * Math.PI);
+        this.r = r;
+        this.posX = posX;
+        this.posY = posY;
     }
-
-    draw(img = null) {
+    
+    draw(x, y, img = null) {
+        ctx.beginPath();
+        ctx.arc(this.posX, this.posY, this.r, 0, 2 * Math.PI);
         ctx.fillStyle = '00ff00';
         //img = document.getElementById('char1');
         //pattern = ctx.createPattern(img, 'no-repeat');
         //ctx.fillStyle = pattern;
         ctx.fill();
+        ctx.closePath();
     }
 
     checkSelected(x, y) {
@@ -24,7 +26,6 @@ class Ficha {
     }
 
     isSelected() {
-        console.log(this.selected);
         return this.selected;
     }
 
