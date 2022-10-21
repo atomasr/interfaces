@@ -34,9 +34,11 @@ class Ficha {
         this.selected = selected;
     }
 
-    move(x, y) {
-        this.posX = x;
-        this.posY = y;
+    move(x, y, e) {
+        if (x > this.r && x < (1024-this.r) && y > this.r && y<(530-this.r)) {
+            this.posX = x;
+            this.posY = y;
+        }
     }
 
 

@@ -1041,10 +1041,13 @@ footer div {
 
 .howToPlay,
 .theGame,
+.actualGame,
 .gameCover {
     position: relative;
 }
-
+.actualGame{
+    margin: 30px;
+}
 .theGame {
     height: 770px;
 }

@@ -23,7 +23,7 @@ function clearCanvas() {
 
 function addChip() {
     let src = 'img/gameDetail/characters/Chip (3).svg';
-    let chip = new Ficha(102, 102, 50.5, src);
+    let chip = new Ficha(200, 200, 24, src);
     chips.push(chip);
 }
 
@@ -56,8 +56,8 @@ function mouseDown(e) {
 function mouseMove(e) {
     let x = e.offsetX;
     let y = e.offsetY;
-    if (chips[0].isSelected()) {
-        chips[0].move(x, y);
+    if (chips[0].isSelected(e)) {
+        chips[0].move(x, y, e);
     }
 }
 
