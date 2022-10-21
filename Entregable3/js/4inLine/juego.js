@@ -18,7 +18,7 @@ let ctx = board.getContext('2d');
 let chips = [];
 
 function clearCanvas() {
-    ctx.clearRect(0, 0, 800, 680);
+    ctx.clearRect(0, 0, 1024, 530);
 }
 
 function addChip() {

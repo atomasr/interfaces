@@ -19,7 +19,7 @@ class Ficha {
         ctx.fill();
         ctx.stroke();
         ctx.closePath() */;
-        ctx.drawImage(this.char, this.posX - this.r, this.posY - this.r);
+        ctx.drawImage(this.char, this.posX - this.r, this.posY - this.r, 49, 49);
     }
 
     checkSelected(x, y) {
