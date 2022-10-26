@@ -2,8 +2,6 @@
 
 class Ficha {
 
-    board = document.getElementById('canvas');
-
     constructor(posX, posY, r, pic) {
         this.r = r;
         this.posX = posX;

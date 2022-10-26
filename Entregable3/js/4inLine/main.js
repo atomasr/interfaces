@@ -8,10 +8,11 @@ function clearCanvas() {
 
 var chips = [];
 
+var tableroView = [];
 
 function addChip(cant) {
     let src = 'img/gameDetail/characters/Chip (3).svg';
-    let x = 200;
+    let x = 50;
     let y = 50;
     let rows = cant / 11;
     let max = cant / rows;
@@ -21,25 +22,53 @@ function addChip(cant) {
             let chip = new Ficha(x, y, 24, src);
             y += 40;
             chips.push(chip);
-            console.log(chips);
         }
         y = 50;
         x += 60;
     }
 }
 
-function drawChips() {
+function addBoard(row, col) {
+    for (let index = 0; index < row; index++) {
+        let f = [];
+        for (let index = 0; index < col; index++) {
+            let img = new Image();
+            img.src = 'img/gameDetail/Fractal.svg';
+            f.push(img);
+        }
+        tableroView.push(f);
+    }
+}
+
+function draw() {
     clearCanvas();
+
+    //drawBoard
+    let posX = 250;
+    let posY = 50;
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            img = tableroView[i][j];
+            ctx.drawImage(img, posX, posY, 78, 78);
+            posX += 50;
+        }
+        posX = 250;
+        posY += 50;
+    }
+
+    //drawChips
     for (let index = this.cant - 1; index >= 0; index--) {
         chips[index].draw();
     }
 }
 
+
 function init() {
     addChip(cant = 27);
-    drawChips(cant = 27);
+    addBoard(row = 6, col = 7);
+    draw(cant = 27, row = 6, col = 7);
     initEvents();
-    setInterval(drawChips, 20);
+    setInterval(draw, 500);
 }
 
 init();
