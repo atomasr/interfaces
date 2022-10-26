@@ -12,13 +12,19 @@ var chips = [];
 function addChip(cant) {
     let src = 'img/gameDetail/characters/Chip (3).svg';
     let x = 200;
-    let y = 200;
-    for (let index = 0; index < cant; index++) {
-        let chip = new Ficha(x, y, 24, src);
-        y += 40;
-        chips.push(chip);
-        console.log(chips);
+    let y = 50;
+    let rows = cant / 11;
+    let max = cant / rows;
 
+    for (let i = 0; i < rows; i++) {
+        for (let index = 0; index < max; index++) {
+            let chip = new Ficha(x, y, 24, src);
+            y += 40;
+            chips.push(chip);
+            console.log(chips);
+        }
+        y = 50;
+        x += 60;
     }
 }
 
@@ -30,8 +36,8 @@ function drawChips() {
 }
 
 function init() {
-    addChip(cant = 4);
-    drawChips(cant = 4);
+    addChip(cant = 27);
+    drawChips(cant = 27);
     initEvents();
     setInterval(drawChips, 20);
 }
@@ -65,10 +71,10 @@ function mouseMove(e) {
     for (let i = 0; i < chips.length; i++) {
         if (chips[i].isSelected(e)) {
             console.log(e);
-            if (x > 0 && x < board.width && y > 0 && y < board.height){ //chequear esta condicion por las dudas
+            if (x > 0 && x < board.width && y > 0 && y < board.height) { //chequear esta condicion por las dudas
                 chips[i].move(x, y, e);
                 return;
-            }else{
+            } else {
                 mouseUp();
             }
         }
