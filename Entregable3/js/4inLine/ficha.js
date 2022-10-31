@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class Ficha {
 
@@ -11,13 +11,6 @@ class Ficha {
     }
 
     draw() {
-/*         ctx.beginPath();
-        ctx.arc(this.posX, this.posY, this.r, 0, 2 * Math.PI);
-        ctx.fillStyle = "rgba(255, 255, 255, 0)";
-        ctx.fill();
-        ctx.stroke();
-        ctx.closePath() */;
-      
         ctx.drawImage(this.char, this.posX - this.r, this.posY - this.r, 49, 49);
     }
 
@@ -34,12 +27,10 @@ class Ficha {
     }
 
     move(x, y, e) {
-        if (x > this.r && x < (1024-this.r) && y > this.r && y<(530-this.r)) {
+        if (x > this.r && x < (1024 - this.r) && y > this.r && y < (530 - this.r)) {
             this.posX = x;
             this.posY = y;
         }
     }
-
-
 
 }

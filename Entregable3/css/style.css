@@ -1045,9 +1045,19 @@ footer div {
 .gameCover {
     position: relative;
 }
-.actualGame{
+
+.actualGame {
     margin: 30px;
 }
+
+.actualGame canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .theGame {
     height: 770px;
 }
@@ -1145,6 +1155,7 @@ footer div {
     opacity: 1;
     transition-duration: 2s;
 }
+
 
 /*Community*/
 
