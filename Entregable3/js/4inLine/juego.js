@@ -43,13 +43,15 @@ class Juego {
         //drawBoard
         let posX = 250;
         let posY = 50;
-        for (let i = 0; i < this.num - 1; i++) {
-            for (let j = 0; j < this.num; j++) {
+        for (let j = 0; j < this.num; j++) {
+            console.log(posY + "primer for");
+            for (let i = 0; i < this.num - 1; i++) {
                 let img = tableroView[i][j];
-                img.onload = function() {
+                img.onload = function () {
                     ctx.drawImage(img, posX, posY, 78, 78);
+                    console.log(posX + "for anidado");
+                    posX += 50; //Hay que ajustar por acá. El for de afeura termina antes q esto
                 };
-                posX += 50;
             }
             posX = 250;
             posY += 50;
