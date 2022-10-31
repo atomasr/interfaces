@@ -13,10 +13,30 @@ class Ficha {
         this.char.src = pic;
     }
 
-    draw() {
-        //this.char.onload = function() {
-        ctx.drawImage(this.char, this.posX - this.r, this.posY - this.r, 49, 49);
-        //}
+    setPosX(x) {
+        this.posX = x;
+    }
+
+    setPosY(y) {
+        this.posY = y;
+    }
+
+    setSrc(pic) {
+        this.char.src = pic;
+    }
+
+    setR(r) {
+        this.r = r;
+    }
+
+    drawChip(x, y) {
+        let img = this.char;
+        img.src = this.char.src;
+        x = this.posX;
+        y = this.posY;
+        img.onload = function () {
+            ctx.drawImage(img, x, y, 49, 49);
+        }
     }
 
     checkSelected(x, y) {

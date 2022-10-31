@@ -2,8 +2,6 @@
 
 class Jugador {
 
-    img;
-    name;
     chips = [];
 
     contructor() {
@@ -30,11 +28,9 @@ class Jugador {
         let y = e.offsetY;
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].checkSelected(x, y)) {
-                console.log('me clickearon');
                 console.log(chips[i]);
                 this.chips[i].setSelected(true);
             } else {
-                console.log('no me clickearon');
                 this.chips[i].setSelected(false);
             }
         }
@@ -80,9 +76,8 @@ class Jugador {
 
     draw() {
         for (let index = this.chips.length - 1; index >= 0; index--) {
-            //this.chips[index].char.onload = function() {
-            this.chips[index].draw();
-            //}
+            let chip = this.chips[index];
+            chip.drawChip();
         }
     }
 
@@ -90,6 +85,6 @@ class Jugador {
         this.addChips(amountChips, x, y);
         this.draw();
         this.initEvents();
-        setInterval(this.draw(), 200);
+        //setInterval(this.draw(), 200);
     }
 }
