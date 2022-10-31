@@ -2,59 +2,45 @@
 
 let board = document.getElementById('canvas');
 let ctx = board.getContext('2d');
-let tableroView = [];
 
 class Juego {
-    player1;
-    player2;
-    num;
 
     constructor(img1, img2, name1, name2, num) {
         this.player1 = new Jugador(img1, name1, num);
         this.player2 = new Jugador(img2, name2, num);
         this.num = num;
         this.turner = this.player1.setTurn(true);
+        this.tableroView = [];
     }
 
     init() {
-        this.addBoard(this.num - 1, this.num);
-        this.draw();
+        this.draw(this.num - 1, this.num);
     }
 
-    addBoard(row, col) {
-        for (let index = 0; index < row; index++) {
-            let f = [];
-            for (let index = 0; index < col; index++) {
-                let img = new Image();
-                img.src = 'img/gameDetail/Fractal.svg';
-                f.push(img);
-            }
-            tableroView.push(f);
-        }
-    }
 
     clearCanvas() {
         ctx.clearRect(0, 0, 1024, 530);
     }
 
-    draw() {
+    draw(row, col) {
         this.clearCanvas();
 
         //drawBoard
         let posX = 250;
         let posY = 50;
-        for (let j = 0; j < this.num; j++) {
-            console.log(posY + "primer for");
-            for (let i = 0; i < this.num - 1; i++) {
-                let img = tableroView[i][j];
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                let img = new Image();
+                img.src = 'img/gameDetail/Fractal.svg';
                 img.onload = function () {
                     ctx.drawImage(img, posX, posY, 78, 78);
-                    console.log(posX + "for anidado");
-                    posX += 50; //Hay que ajustar por acá. El for de afeura termina antes q esto
-                };
+                    posX += 50;
+                    if (posX == 250 + 50 * col) {
+                        posX = 250;
+                        posY += 50;
+                    }
+                }
             }
-            posX = 250;
-            posY += 50;
         }
     }
 }
