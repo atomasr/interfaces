@@ -6,43 +6,36 @@ class Jugador {
     name;
     chips = [];
 
-    contructor(img, name, amountChips) {
-        this.img = img;
+    contructor() {
         this.turn = false;
+    }
+
+    setInfo(name, img) {
         this.name = name;
-        this.chips = loadChips(amountChips, img);
+        this.img = img;
     }
 
     setTurn(bool) {
         this.turn = bool;
     }
 
-    loadChips(amountChips, img) {
-        for (let index = 0; index < amountChips; index++) {
-            chip = new Ficha();
-            this.chips.push(chip);
-            chip.draw(img);
-        }
-    }
-
     initEvents() {
-        let board = document.getElementById('canvas');
-        board.onmousedown = this.mouseDown;
-        board.onmousemove = this.mouseMove;
-        board.onmouseup = this.mouseUp;
+        board.onmousedown = this.mouseDown(Event);
+        board.onmousemove = this.mouseMove(Event);
+        board.onmouseup = this.mouseUp();
     }
 
     mouseDown(e) {
         let x = e.offsetX;
         let y = e.offsetY;
-        for (let i = 0; i < chips.length; i++) {
-            if (chips[i].checkSelected(x, y)) {
+        for (let i = 0; i < this.chips.length; i++) {
+            if (this.chips[i].checkSelected(x, y)) {
                 console.log('me clickearon');
                 console.log(chips[i]);
-                chips[i].setSelected(true);
+                this.chips[i].setSelected(true);
             } else {
                 console.log('no me clickearon');
-                chips[i].setSelected(false);
+                this.chips[i].setSelected(false);
             }
         }
 
@@ -65,12 +58,12 @@ class Jugador {
     }
 
     mouseUp() {
-        chips.forEach(chip => {
+        this.chips.forEach(chip => {
             chip.setSelected(false);
         });
     }
 
-    addChip(cant, x, y) {
+    addChips(cant, x, y) {
         let rows = cant / 11;
         let max = cant / rows;
 
@@ -86,14 +79,17 @@ class Jugador {
     }
 
     draw() {
-        for (let index = this.cant - 1; index >= 0; index--) {
+        for (let index = this.chips.length - 1; index >= 0; index--) {
+            //this.chips[index].char.onload = function() {
             this.chips[index].draw();
+            //}
         }
     }
 
-    init(x, y) {
-        this.addChip(this.chips.length, x, y);
+    init(amountChips, x, y) {
+        this.addChips(amountChips, x, y);
         this.draw();
-        setInterval(this.draw, 200);
+        this.initEvents();
+        setInterval(this.draw(), 200);
     }
 }

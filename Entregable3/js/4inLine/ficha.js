@@ -1,5 +1,8 @@
 "use strict";
 
+let board = document.getElementById('canvas');
+let ctx = board.getContext('2d');
+
 class Ficha {
 
     constructor(posX, posY, r, pic) {
@@ -11,7 +14,9 @@ class Ficha {
     }
 
     draw() {
+        //this.char.onload = function() {
         ctx.drawImage(this.char, this.posX - this.r, this.posY - this.r, 49, 49);
+        //}
     }
 
     checkSelected(x, y) {

@@ -1,20 +1,21 @@
 "use strict";
 
-let board = document.getElementById('canvas');
-let ctx = board.getContext('2d');
-
 class Juego {
 
-    constructor(img1, img2, name1, name2, num) {
-        this.player1 = new Jugador(img1, name1, num);
-        this.player2 = new Jugador(img2, name2, num);
+    constructor(num) {
+        this.player1 = new Jugador();
+        this.player2 = new Jugador();
         this.num = num;
         this.turner = this.player1.setTurn(true);
         this.tableroView = [];
     }
 
-    init() {
+    init(img1, img2, name1, name2) {
+        this.player1.setInfo(name1, img1);
+        this.player2.setInfo(name2, img2);
         this.draw(this.num - 1, this.num);
+        this.player1.init((this.num * (this.num - 1)) / 2, 50, 50);
+        this.player2.init((this.num * (this.num - 1)) / 2, 800, 50);
     }
 
 
@@ -32,7 +33,7 @@ class Juego {
             for (let j = 0; j < col; j++) {
                 let img = new Image();
                 img.src = 'img/gameDetail/Fractal.svg';
-                img.onload = function () {
+                img.onload = function() {
                     ctx.drawImage(img, posX, posY, 78, 78);
                     posX += 50;
                     if (posX == 250 + 50 * col) {

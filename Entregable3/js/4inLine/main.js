@@ -1,5 +1,5 @@
 "use strict";
 
-let juego = new Juego('img/gameDetail/characters/Chip (3).svg', 'img/gameDetail/characters/Chip (2).svg', 'Sofía', 'Tomás', 7);
+let juego = new Juego(7);
 
-juego.init();
+juego.init('img/gameDetail/characters/Chip (3).svg', 'img/gameDetail/characters/Chip (2).svg', 'Sofía', 'Tomás');
