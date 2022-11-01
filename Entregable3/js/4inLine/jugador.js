@@ -38,7 +38,6 @@ class Jugador {
         let y = e.offsetY;
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].checkSelected(x, y)) {
-                console.log(this.chips[i]);
                 this.chips[i].setSelected(true);
             } else {
                 this.chips[i].setSelected(false);
@@ -52,7 +51,6 @@ class Jugador {
         let y = e.offsetY;
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].isSelected(e)) {
-                console.log(e);
                 if (x > 0 && x < board.width && y > 0 && y < board.height) { //chequear esta condicion por las dudas
                     this.chips[i].move(x, y, e);
                     return;
@@ -93,7 +91,6 @@ class Jugador {
 
     init(amountChips, x, y) {
         this.addChips(amountChips, x, y);
-        this.draw();
         this.initEvents();
     }
 }
