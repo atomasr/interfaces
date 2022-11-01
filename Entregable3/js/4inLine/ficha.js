@@ -9,8 +9,7 @@ class Ficha {
         this.r = r;
         this.posX = posX;
         this.posY = posY;
-        this.char = new Image();
-        this.char.src = pic;
+        this.char = pic;
     }
 
     setPosX(x) {
@@ -22,7 +21,7 @@ class Ficha {
     }
 
     setSrc(pic) {
-        this.char.src = pic;
+        this.char = pic;
     }
 
     setR(r) {
@@ -31,20 +30,11 @@ class Ficha {
 
     drawChip(x, y) {
         let img = this.char;
-        img.src = this.char.src;
-        x = this.posX;
-        y = this.posY;
-        img.onload = function () {
-            ctx.drawImage(img, x, y, 49, 49);
-        }
-    }
-    drawChipWithoutLoad(x, y) {
-        let img = this.char;
-        img.src = this.char.src;
         x = this.posX;
         y = this.posY;
         ctx.drawImage(img, x, y, 49, 49);
     }
+
 
     checkSelected(x, y) {
         return x > (this.posX - this.r) && x < (this.posX + this.r) && (y > this.posY - this.r) && y < (this.posY + this.r);
