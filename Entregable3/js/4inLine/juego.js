@@ -41,9 +41,11 @@ class Juego {
 
     generateMatrix(row, col) {
         for (let i = 0; i < row; i++) {
+            let row = [];
             for (let j = 0; j < col; j++) {
-                this.matrix[i][j] = null;
+                row[j] = null;
             }
+            this.matrix.push(row);
         }
     }
 
