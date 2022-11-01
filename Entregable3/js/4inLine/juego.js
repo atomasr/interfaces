@@ -67,7 +67,7 @@ class Juego {
             }
         }
         //drawFichas
-        this.player1.drawWithoutLoad();
-        this.player2.drawWithoutLoad();
+        this.player1.draw();
+        this.player2.draw();
     }
 }

@@ -12,11 +12,12 @@ let char8 = document.getElementById('char8');
 let char9 = document.getElementById('char9');
 let char10 = document.getElementById('char10');
 
-
-console.log(char1);
-
 let juego = new Juego(7);
 
 juego.init(char1, char2, 'Sofía', 'Tomás');
+
+setInterval(function() {
+    juego.draw();
+}, 200);
 
 });

@@ -18,9 +18,15 @@ class Jugador {
     }
 
     initEvents() {
-        board.onmousedown = (event) => { this.mouseDown(event); }; 
-        board.onmousemove = (event) => { this.mouseMove(event); }; 
-        board.onmouseup = this.mouseUp();
+        board.addEventListener("mousedown", (e) => {
+            this.mouseDown(e)
+        });
+        board.addEventListener("mousemove", (e) => {
+            this.mouseMove(e)
+        });
+        board.addEventListener("mouseup", (e) => {
+            this.mouseUp(e)
+        });
     }
 
     mouseDown(e) {
@@ -47,13 +53,13 @@ class Jugador {
                     this.chips[i].move(x, y, e);
                     return;
                 } else {
-                    this.mouseUp();
+                    this.mouseUp(e);
                 }
             }
         }
     }
 
-    mouseUp() {
+    mouseUp(e) {
         this.chips.forEach(chip => {
             chip.setSelected(false);
         });
@@ -78,13 +84,6 @@ class Jugador {
         for (let index = this.chips.length - 1; index >= 0; index--) {
             let chip = this.chips[index];
             chip.drawChip();
-        }
-    }
-
-    drawWithoutLoad() {
-        for (let index = this.chips.length - 1; index >= 0; index--) {
-            let chip = this.chips[index];
-            chip.drawChipWithoutLoad();
         }
     }
 

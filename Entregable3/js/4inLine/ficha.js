@@ -37,7 +37,7 @@ class Ficha {
 
 
     checkSelected(x, y) {
-        return x > (this.posX - this.r) && x < (this.posX + this.r) && (y > this.posY - this.r) && y < (this.posY + this.r);
+        return x > (this.posX - this.r*2) && x < (this.posX + this.r*2) && (y > this.posY - this.r*2) && y < (this.posY + this.r*2);
     }
 
     isSelected() {
@@ -50,8 +50,8 @@ class Ficha {
 
     move(x, y, e) {
         if (x > this.r && x < (1024 - this.r) && y > this.r && y < (530 - this.r)) {
-            this.posX = x;
-            this.posY = y;
+            this.posX = x - this.r;
+            this.posY = y - this.r;
         }
     }
 
