@@ -38,6 +38,13 @@ class Ficha {
             ctx.drawImage(img, x, y, 49, 49);
         }
     }
+    drawChipWithoutLoad(x, y) {
+        let img = this.char;
+        img.src = this.char.src;
+        x = this.posX;
+        y = this.posY;
+        ctx.drawImage(img, x, y, 49, 49);
+    }
 
     checkSelected(x, y) {
         return x > (this.posX - this.r) && x < (this.posX + this.r) && (y > this.posY - this.r) && y < (this.posY + this.r);

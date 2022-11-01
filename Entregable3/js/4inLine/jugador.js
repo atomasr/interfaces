@@ -18,8 +18,8 @@ class Jugador {
     }
 
     initEvents() {
-        board.onmousedown = this.mouseDown(Event);
-        board.onmousemove = this.mouseMove(Event);
+        board.onmousedown = (event) => { this.mouseDown(event); }; 
+        board.onmousemove = (event) => { this.mouseMove(event); }; 
         board.onmouseup = this.mouseUp();
     }
 
@@ -28,7 +28,7 @@ class Jugador {
         let y = e.offsetY;
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].checkSelected(x, y)) {
-                console.log(chips[i]);
+                console.log(this.chips[i]);
                 this.chips[i].setSelected(true);
             } else {
                 this.chips[i].setSelected(false);
@@ -81,10 +81,16 @@ class Jugador {
         }
     }
 
+    drawWithoutLoad() {
+        for (let index = this.chips.length - 1; index >= 0; index--) {
+            let chip = this.chips[index];
+            chip.drawChipWithoutLoad();
+        }
+    }
+
     init(amountChips, x, y) {
         this.addChips(amountChips, x, y);
         this.draw();
         this.initEvents();
-        //setInterval(this.draw(), 200);
     }
 }
