@@ -36,7 +36,7 @@ class Ficha {
     }
 
 
-    checkSelected(x, y) {
+    checkSelected(x, y) { //Revisar esto, le agregue el *2 para que agarre toda la ficha, no solo la mitad superior
         return x > (this.posX - this.r*2) && x < (this.posX + this.r*2) && (y > this.posY - this.r*2) && y < (this.posY + this.r*2);
     }
 
@@ -49,7 +49,7 @@ class Ficha {
     }
 
     move(x, y, e) {
-        if (x > this.r && x < (1024 - this.r) && y > this.r && y < (530 - this.r)) {
+        if (x > this.r && x < (1150 - this.r) && y > this.r && y < (530 - this.r)) {
             this.posX = x - this.r;
             this.posY = y - this.r;
         }

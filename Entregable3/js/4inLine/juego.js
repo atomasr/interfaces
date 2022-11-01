@@ -13,34 +13,26 @@ class Juego {
     init(img1, img2, name1, name2) {
         this.player1.setInfo(name1, img1);
         this.player2.setInfo(name2, img2);
-        this.drawBoard(this.num - 1, this.num);
-        this.player1.init((this.num * (this.num - 1)) / 2, 50, 50);
-        this.player2.init((this.num * (this.num - 1)) / 2, 800, 50);
+        this.generateBoard(this.num - 1, this.num);
+        this.player1.init((this.num * (this.num - 1)) / 2, 12, 50);
+        let columnasFichas = (((this.num * (this.num - 1)) / 2)/11);
+        let inicioFichas2 = board.width - (columnasFichas * 50) - (columnasFichas * 24);
+        this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
     }
 
 
     clearCanvas() {
-        ctx.clearRect(0, 0, 1024, 530);
+        ctx.clearRect(0, 0, 1150, 530);
     }
 
-    drawBoard(row, col) {
+    generateBoard(row, col) {
         this.clearCanvas();
 
-        //drawBoard
-        let posX = 250;
-        let posY = 50;
+        //generateBoard
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
                 let img = new Image();
                 img.src = 'img/gameDetail/Fractal.svg';
-                img.onload = function() {
-                    ctx.drawImage(img, posX, posY, 78, 78);
-                    posX += 50;
-                    if (posX == 250 + 50 * col) {
-                        posX = 250;
-                        posY += 50;
-                    }
-                }
                 this.tableroView.push(img);
             }
         }
@@ -48,8 +40,13 @@ class Juego {
 
     draw() {
         this.clearCanvas();
+        //drawNames
+        ctx.font = "15px Arial";
+        ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
+        ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
         //drawBoard
-        let posX = 250;
+        let mitadTablero = (this.num/2) * 50;
+        let posX = (board.width/2) - mitadTablero - 12;
         let posY = 50;
         let row = this.num - 1;
         let col = this.num;
@@ -59,8 +56,8 @@ class Juego {
                 let img = this.tableroView[pos];
                 ctx.drawImage(img, posX, posY, 78, 78);
                 posX += 50;
-                if (posX == 250 + 50 * col) {
-                    posX = 250;
+                if (posX == (board.width/2) - mitadTablero - 12 + 50 * col) {
+                    posX = (board.width/2) - mitadTablero - 12;
                     posY += 50;
                 }
                 pos++;

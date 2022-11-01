@@ -13,6 +13,10 @@ class Jugador {
         this.img = img;
     }
 
+    getName() {
+        return this.name;
+    }
+
     setTurn(bool) {
         this.turn = bool;
     }

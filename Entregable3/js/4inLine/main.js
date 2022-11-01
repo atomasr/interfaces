@@ -12,7 +12,7 @@ let char8 = document.getElementById('char8');
 let char9 = document.getElementById('char9');
 let char10 = document.getElementById('char10');
 
-let juego = new Juego(7);
+let juego = new Juego(10);
 
 juego.init(char1, char2, 'Sofía', 'Tomás');
 
