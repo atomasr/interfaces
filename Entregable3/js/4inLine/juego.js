@@ -33,7 +33,7 @@ class Juego {
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
                 let img = new Image();
-                img.src = 'img/gameDetail/Fractal.svg';
+                img.src = 'img/gameDetail/Fractal.png';
                 this.tableroView.push(img);
             }
         }
