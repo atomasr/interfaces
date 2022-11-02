@@ -20,6 +20,7 @@ class Juego {
         let columnasFichas = (((this.num * (this.num - 1)) / 2) / 11);
         let inicioFichas2 = board.width - (columnasFichas * 50) - (columnasFichas * 24);
         this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
+        this.initEvents();
     }
 
 
@@ -50,20 +51,25 @@ class Juego {
     }
 
     addToMatrix(ficha, col, player) {
-        for (let i = row - 1; i >= 0; i--) {
-            if (this.matrix[i][col] == null) {
-                this.matrix[i][col] = ficha;
-                this.winner = this.checkWinner(ficha, i, col);
+        let fila = col - 1;
+        let insertado = false;
+        while (fila >= 0 && !insertado) {
+            if (this.matrix[fila][col] == null) {
+                this.matrix[fila][col] = ficha;
+                console.log("fila: " + fila + " y col: " + col);
+                insertado = true;
+                /**this.winner = this.checkWinner(ficha, i, col);
                 if (winner)
                     endGame(player);
                 else
                     this.turner = player.setTurn(true);
-                return;
-            }
+                **/
+            } 
+            fila--;
         }
     }
 
-    checkWinner(i, col) { //falta poner limites por bordes
+    checkWinner(ficha, i, col) { //falta poner limites por bordes
         let count = 0;
         for (let index = col - 3; index <= col + 3; index++) {
             if (this.matrix[index][col] == ficha) { //Aca hay q establecer la igualdad
@@ -140,5 +146,26 @@ class Juego {
         //drawFichas
         this.player1.draw();
         this.player2.draw();
+    }
+
+    initEvents() {
+        board.addEventListener("mouseup", (e) => {
+            this.mouseUp(e)
+        });
+    }
+
+    mouseUp(e) {
+        for (let index = 0; index < this.player1.chips.length; index++) {
+            if (this.player1.chips[index].getCol() != -1 && !this.player1.chips[index].enMatriz) {
+                this.player1.chips[index].setEnMatriz();
+                this.addToMatrix(this.player1.chips[index].getFicha(), this.player1.chips[index].getCol(), this.player1);
+            } 
+        }
+        for (let index = 0; index < this.player2.chips.length; index++) {
+            if (this.player2.chips[index].getCol() != -1 && !this.player2.chips[index].enMatriz) {
+                this.player1.chips[index].setEnMatriz();
+                this.addToMatrix(this.player2.chips[index].getFicha(), this.player2.chips[index].getCol(), this.player2);
+            } 
+        }
     }
 }

@@ -40,6 +40,7 @@ class Jugador {
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].checkSelected(x, y)) {
                 this.chips[i].setSelected(true);
+                console.log(this.chips[i]);
             } else {
                 this.chips[i].setSelected(false);
             }
@@ -69,15 +70,17 @@ class Jugador {
         let inicioTablero = (board.width/2) - mitadTablero;
         let finalTablero = (board.width/2) + mitadTablero;
         this.chips.forEach(chip => {
-            if (chip.isSelected(e)) {
+            if (chip.isSelected()&&!chip.isUsada()) {
+                console.log(chip);
                 if (x > inicioTablero && x < finalTablero && y > 0 && y < 65) {
-                    console.log("en zona");
+                    //console.log("en zona");
                     let columna = false;
                     let posCol = inicioTablero;
                     let i = 0;
                     while (!columna) {
                         if (x > posCol && x < posCol + 50) {
                             console.log("ficha insertada en col " + i);
+                            chip.setCol(i);
                             chip.setUso(true);
                             columna = true;
                         } else {

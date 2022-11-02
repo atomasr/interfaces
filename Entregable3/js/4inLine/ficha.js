@@ -13,13 +13,31 @@ class Ficha {
         this.oldPosY = posY;
         this.char = pic;
         this.usada = false;
+        this.col = -1;
+        this.enMatriz = false;
+    }
+
+    getFicha() {
+        return this;
+    }
+
+    getCol() {
+        return this.col;
     }
 
     returnToPos() {
         this.posX = this.oldPosX;
         this.posY = this.oldPosY;
     }
-    
+
+    setEnMatriz() {
+        this.enMatriz = true;
+    }
+
+    setCol(col) {
+        this.col = col;
+    }
+
     setPosX(x) {
         this.posX = x;
     }
