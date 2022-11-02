@@ -58,6 +58,7 @@ class Juego {
                 this.matrix[fila][col] = ficha;
                 console.log("fila: " + fila + " y col: " + col);
                 insertado = true;
+                this.refreshBoard(ficha, fila, col, player);
                 /**this.winner = this.checkWinner(ficha, i, col);
                 if (winner)
                     endGame(player);
@@ -67,6 +68,16 @@ class Juego {
             } 
             fila--;
         }
+    }
+
+    refreshBoard(ficha, fila, col, player) {
+        let mitadTablero = (this.num/2) * 50;
+        let inicioTablero = (board.width/2) - mitadTablero;
+        let pos = player.chips.indexOf(ficha);
+        let posX = inicioTablero + (col * 50) + 2;
+        let posY = 65 + (fila * 50);
+        player.chips[pos].setPosX(posX);
+        player.chips[pos].setPosY(posY);
     }
 
     checkWinner(ficha, i, col) { //falta poner limites por bordes
