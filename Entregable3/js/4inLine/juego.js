@@ -12,8 +12,8 @@ class Juego {
     }
 
     init(img1, img2, name1, name2) {
-        this.player1.setInfo(name1, img1);
-        this.player2.setInfo(name2, img2);
+        this.player1.setInfo(name1, img1, this.num);
+        this.player2.setInfo(name2, img2, this.num);
         this.generateBoard(this.num - 1, this.num);
         this.generateMatrix(this.num - 1, this.num);
         this.player1.init((this.num * (this.num - 1)) / 2, 12, 50);

@@ -9,9 +9,17 @@ class Ficha {
         this.r = r;
         this.posX = posX;
         this.posY = posY;
+        this.oldPosX = posX;
+        this.oldPosY = posY;
         this.char = pic;
+        this.usada = false;
     }
 
+    returnToPos() {
+        this.posX = this.oldPosX;
+        this.posY = this.oldPosY;
+    }
+    
     setPosX(x) {
         this.posX = x;
     }
@@ -28,6 +36,10 @@ class Ficha {
         this.r = r;
     }
 
+    setUso(usada) {
+        this.usada = usada;
+    }
+
     drawChip(x, y) {
         let img = this.char;
         x = this.posX;
@@ -42,6 +54,10 @@ class Ficha {
 
     isSelected() {
         return this.selected;
+    }
+
+    isUsada() {
+        return this.usada;
     }
 
     setSelected(selected) {

@@ -8,9 +8,10 @@ class Jugador {
         this.turn = false;
     }
 
-    setInfo(name, img) {
+    setInfo(name, img, num) {
         this.name = name;
         this.img = img;
+        this.num = num;
     }
 
     getName() {
@@ -50,7 +51,7 @@ class Jugador {
         let x = e.offsetX;
         let y = e.offsetY;
         for (let i = 0; i < this.chips.length; i++) {
-            if (this.chips[i].isSelected(e)) {
+            if (this.chips[i].isSelected(e) && !this.chips[i].isUsada()) {
                 if (x > 0 && x < board.width && y > 0 && y < board.height) { //chequear esta condicion por las dudas
                     this.chips[i].move(x, y, e);
                     return;
@@ -62,7 +63,32 @@ class Jugador {
     }
 
     mouseUp(e) {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let mitadTablero = (this.num/2) * 50;
+        let inicioTablero = (board.width/2) - mitadTablero;
+        let finalTablero = (board.width/2) + mitadTablero;
         this.chips.forEach(chip => {
+            if (chip.isSelected(e)) {
+                if (x > inicioTablero && x < finalTablero && y > 0 && y < 65) {
+                    console.log("en zona");
+                    let columna = false;
+                    let posCol = inicioTablero;
+                    let i = 0;
+                    while (!columna) {
+                        if (x > posCol && x < posCol + 50) {
+                            console.log("ficha insertada en col " + i);
+                            chip.setUso(true);
+                            columna = true;
+                        } else {
+                            posCol += 50;
+                            i++;
+                        }
+                    }
+                } else {
+                    chip.returnToPos();
+                }
+            }
             chip.setSelected(false);
         });
     }
