@@ -40,7 +40,7 @@ class Jugador {
         for (let i = 0; i < this.chips.length; i++) {
             if (this.chips[i].checkSelected(x, y)) {
                 this.chips[i].setSelected(true);
-                console.log(this.chips[i]);
+                //console.log(this.chips[i]);
                 return;
             } else {
                 this.chips[i].setSelected(false);
