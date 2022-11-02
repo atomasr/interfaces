@@ -62,12 +62,12 @@ class Juego {
                 console.log("fila: " + fila + " y col: " + col);
                 insertado = true;
                 this.refreshBoard(ficha, fila, col, player);
-                /**this.winner = this.checkWinner(ficha, i, col);
+                this.winner = this.checkWinner(ficha, fila, col);
                 if (winner)
                     endGame(player);
-                else
+                /**else
                     this.turner = player.setTurn(true);
-                **/
+                    */
             } 
             fila--;
         }
@@ -86,43 +86,43 @@ class Juego {
     checkWinner(ficha, i, col) { //falta poner limites por bordes
         let count = 0;
         for (let index = col - 3; index <= col + 3; index++) {
-            if (this.matrix[index][col] == ficha) { //Aca hay q establecer la igualdad
+            if (this.matrix[index][col].char == ficha.char) { //Aca hay q establecer la igualdad
                 count++;
-                if (count == 4) //Aca hay q traer el num segun el juego
+                if (count == this.num -3) //Aca hay q traer el num segun el juego
                     return true;
             } else {
-                return false;
+                return count = 0;
             }
         }
         for (let index = i - 3; index <= i + 3; index++) {
-            if (this.matrix[index][i] == ficha) { //Aca hay q establecer la igualdad
+            if (this.matrix[index][i].char == ficha.char) { //Aca hay q establecer la igualdad
                 count++;
-                if (count == 4) //Aca hay q traer el num segun el juego
+                if (count == this.num -3) //Aca hay q traer el num segun el juego
                     return true;
             } else {
-                return false;
+                return count = 0;
             }
         }
         for (let index = i - 3; index <= i + 3; index++) {
             for (let j = col - 3; j <= col + 3; j++) {
-                if (this.matrix[index][j] == ficha) { //Aca hay q establecer la igualdad
+                if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
                     count++;
-                    if (count == 4) //Aca hay q traer el num segun el juego
+                    if (count == this.num -3) //Aca hay q traer el num segun el juego
                         return true;
                 }
                 else
-                    return false;
+                    return count = 0;
             }
         }
         for (let index = i - 3; index <= i + 3; index++) {
             for (let j = col + 3; j >= col - 3; j--) {
-                if (this.matrix[index][j] == ficha) { //Aca hay q establecer la igualdad
+                if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
                     count++;
-                    if (count == 4) //Aca hay q traer el num segun el juego
+                    if (count == this.num -3) //Aca hay q traer el num segun el juego
                         return true;
                 }
                 else
-                    return false;
+                    return count = 0;
             }
         }
 
@@ -130,6 +130,8 @@ class Juego {
 
     endGame(player) {
         this.clearCanvas();
+        ctx.font = "35px Arial";
+        ctx.fillText("Player " + player.getName() + " is the winner.", 500, 300);
     }
 
     draw() {
