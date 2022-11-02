@@ -80,7 +80,7 @@ class Jugador {
                     let i = 0;
                     while (!columna) {
                         if (x > posCol && x < posCol + 50 && !chip.pasadaAJuego) {
-                            console.log("ficha insertada en col " + i);
+                            //console.log("ficha insertada en col " + i);
                             chip.setCol(i);
                             chip.setUso(true);
                             chip.setPasadaAJuego();

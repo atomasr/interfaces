@@ -54,6 +54,9 @@ class Juego {
         let fila = this.num - 2;
         let insertado = false;
         while (fila >= 0 && !insertado) {
+            if (this.matrix[0][col] != null) {
+                ficha.returnToPos();
+            }
             if (this.matrix[fila][col] == null) {
                 this.matrix[fila][col] = ficha;
                 console.log("fila: " + fila + " y col: " + col);
