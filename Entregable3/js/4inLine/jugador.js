@@ -72,17 +72,18 @@ class Jugador {
         let finalTablero = (board.width/2) + mitadTablero;
         this.chips.forEach(chip => {
             if (chip.isSelected()&&!chip.isUsada()) {
-                console.log(chip);
+                //console.log(chip);
                 if (x > inicioTablero && x < finalTablero && y > 0 && y < 65) {
                     //console.log("en zona");
                     let columna = false;
                     let posCol = inicioTablero;
                     let i = 0;
                     while (!columna) {
-                        if (x > posCol && x < posCol + 50) {
+                        if (x > posCol && x < posCol + 50 && !chip.pasadaAJuego) {
                             console.log("ficha insertada en col " + i);
                             chip.setCol(i);
                             chip.setUso(true);
+                            chip.setPasadaAJuego();
                             columna = true;
                         } else {
                             posCol += 50;

@@ -51,7 +51,7 @@ class Juego {
     }
 
     addToMatrix(ficha, col, player) {
-        let fila = col - 1;
+        let fila = this.num - 2;
         let insertado = false;
         while (fila >= 0 && !insertado) {
             if (this.matrix[fila][col] == null) {
@@ -155,15 +155,17 @@ class Juego {
     }
 
     mouseUp(e) {
+        //Fichas Matriz Player 1
         for (let index = 0; index < this.player1.chips.length; index++) {
-            if (this.player1.chips[index].getCol() != -1 && !this.player1.chips[index].enMatriz) {
+            if (this.player1.chips[index].getCol() != -1 && this.player1.chips[index].enMatriz == false) {
                 this.player1.chips[index].setEnMatriz();
                 this.addToMatrix(this.player1.chips[index].getFicha(), this.player1.chips[index].getCol(), this.player1);
             } 
         }
+        //Fichas Matriz Player 2
         for (let index = 0; index < this.player2.chips.length; index++) {
-            if (this.player2.chips[index].getCol() != -1 && !this.player2.chips[index].enMatriz) {
-                this.player1.chips[index].setEnMatriz();
+            if (this.player2.chips[index].getCol() != -1 && this.player2.chips[index].enMatriz == false) {
+                this.player2.chips[index].setEnMatriz();
                 this.addToMatrix(this.player2.chips[index].getFicha(), this.player2.chips[index].getCol(), this.player2);
             } 
         }
