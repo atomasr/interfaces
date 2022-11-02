@@ -21,8 +21,36 @@ class Juego {
         let inicioFichas2 = board.width - (columnasFichas * 50) - (columnasFichas * 24);
         this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
         this.initEvents();
+        this.initCounter();
     }
 
+    initCounter() {
+        let counterSeg = document.getElementById("counterSeg");
+        let seg = 59;
+        let counterMin = document.getElementById("counterMin");
+        let min = 1;
+        let player = null;
+        setInterval(function () {
+            counterSeg.innerText = seg;
+            if (seg == 0) {
+                seg = 59;
+            } else {
+                counterSeg.innerText = seg;
+                seg--;
+            }
+        }, 1000);
+
+        setInterval(function () {
+            counterMin.innerText = min;
+            counterMin.innerText = min;
+            min--;
+        }, 60000);
+
+        if (min == 0 && seg == 0) {
+            this.endGame(player);
+        }
+
+    }
 
     clearCanvas() {
         ctx.clearRect(0, 0, 1150, 530);
@@ -71,14 +99,14 @@ class Juego {
                 /**else
                     this.turner = player.setTurn(true);
                     */
-            } 
+            }
             fila--;
         }
     }
 
     refreshBoard(ficha, fila, col, player) {
-        let mitadTablero = (this.num/2) * 50;
-        let inicioTablero = (board.width/2) - mitadTablero;
+        let mitadTablero = (this.num / 2) * 50;
+        let inicioTablero = (board.width / 2) - mitadTablero;
         let pos = player.chips.indexOf(ficha);
         let posX = inicioTablero + (col * 50) + 2;
         let posY = 65 + (fila * 50);
@@ -93,7 +121,7 @@ class Juego {
         while (fila1 <= this.num - 2) {
             if (this.matrix[fila1][col].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num -3)
+                if (count == this.num - 3)
                     return true;
             } else {
                 count = 0;
@@ -110,7 +138,7 @@ class Juego {
         while (col1 <= this.num - 1 && this.matrix[fila][col1] != null) {
             if (this.matrix[fila][col1].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num -3)
+                if (count == this.num - 3)
                     return true;
             } else {
                 count = 0;
@@ -150,7 +178,10 @@ class Juego {
     endGame(player) {
         this.clearCanvas();
         ctx.font = "30px Arial";
-        ctx.fillText("Player " + player.getName() + " is the winner.", 400, 300);
+        if (player != null)
+            ctx.fillText("Player " + player.getName() + " is the winner.", 400, 300);
+        else
+            ctx.fillText("GAME OVER.", 400, 300);
     }
 
     draw() {
@@ -197,14 +228,14 @@ class Juego {
             if (this.player1.chips[index].getCol() != -1 && this.player1.chips[index].enMatriz == false) {
                 this.player1.chips[index].setEnMatriz(true);
                 this.addToMatrix(this.player1.chips[index].getFicha(), this.player1.chips[index].getCol(), this.player1);
-            } 
+            }
         }
         //Fichas Matriz Player 2
         for (let index = 0; index < this.player2.chips.length; index++) {
             if (this.player2.chips[index].getCol() != -1 && this.player2.chips[index].enMatriz == false) {
                 this.player2.chips[index].setEnMatriz(true);
                 this.addToMatrix(this.player2.chips[index].getFicha(), this.player2.chips[index].getCol(), this.player2);
-            } 
+            }
         }
     }
 }
