@@ -2,6 +2,8 @@
 addEventListener('DOMContentLoaded', (event) => {
 
     let play = document.getElementById('btnGame');
+    let section = document.querySelector('.theGame');
+
     play.addEventListener('click', () => {
         let form = document.getElementById('gameForm');
         let data = new FormData(form);
@@ -39,6 +41,8 @@ addEventListener('DOMContentLoaded', (event) => {
         setInterval(function () {
             juego.draw();
         }, 200);
+
+        section.classList.add('hide');
 
     })
 

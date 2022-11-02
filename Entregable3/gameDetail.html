@@ -143,109 +143,130 @@
                 </div>
             </div>
         </section>
-        <section class="actualGame">
-            <canvas id="canvas" width="1150" height="530">
-            </canvas>
-        </section>
-        <section class="theGame">
+        <section class="FourInLine">
             <h3>The Game</h3>
-            <a name="gameOnLine"></a>
-            <div class="gameOnLine">
-                <img src="img/gameDetail/Game.png" alt="Breaking Bad: 4 in a line">
-            </div>
-            <form id="gameForm" action="">
+            <section class="actualGame">
+                <canvas id="canvas" width="1150" height="530">
+                </canvas>
+            </section>
+            <section class="theGame">
+                <a name="gameOnLine"></a>
+                <div class="gameOnLine">
+                    <img src="img/gameDetail/Game.png" alt="Breaking Bad: 4 in a line">
+                </div>
+                <form id="gameForm" action="">
 
-                <h2>Choose your game</h2>
-                <select name="gameType" id="gameType">
-                    <option value="7" selected>4 in a Line</option>
-                    <option value="8">5 in a Line</option>
-                    <option value="9">6 in a Line</option>
-                    <option value="10">7 in a Line</option>
-                    <option value="11">8 in a Line</option>
-                </select>
+                    <h2>Choose your game</h2>
+                    <select name="gameType" id="gameType">
+                        <option value="7" selected>4 in a Line</option>
+                        <option value="8">5 in a Line</option>
+                        <option value="9">6 in a Line</option>
+                        <option value="10">7 in a Line</option>
+                        <option value="11">8 in a Line</option>
+                    </select>
 
-                <div class="playerSetter">
-                    <div>
-                        <h3>Player 1</h3>
-                        <label for="name1">Name</label>
-                        <input type="text" id="name1" name="name1">
-
+                    <div class="playerSetter">
                         <div>
-                            <input type="radio" name="char1" id="char1-10" value="img/gameDetail/characters/Chip (9).png">
-                            <label for="char1-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+                            <h3>Player 1</h3>
+                            <label for="name1">Name</label>
+                            <input type="text" id="name1" name="name1">
 
-                            <input type="radio" name="char1" id="char1-9" value="img/gameDetail/characters/Chip (8).png">
-                            <label for="char1-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+                            <div>
+                                <input type="radio" name="char1" id="char1-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char1-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
 
-                            <input type="radio" name="char1" id="char1-8" value="img/gameDetail/characters/Chip (7).png">
-                            <label for="char1-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+                                <input type="radio" name="char1" id="char1-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char1-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
 
-                            <input type="radio" name="char1" id="char1-7" value="img/gameDetail/characters/Chip (6).png">
-                            <label for="char1-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+                                <input type="radio" name="char1" id="char1-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char1-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
 
-                            <input type="radio" name="char1" id="char1-6" value="img/gameDetail/characters/Chip (5).png">
-                            <label for="char1-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+                                <input type="radio" name="char1" id="char1-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char1-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
 
-                            <input type="radio" name="char1" id="char1-5" value="img/gameDetail/characters/Chip (4).png">
-                            <label for="char1-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+                                <input type="radio" name="char1" id="char1-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char1-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
 
-                            <input type="radio" name="char1" id="char1-4" value="img/gameDetail/characters/Chip (3).png">
-                            <label for="char1-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+                                <input type="radio" name="char1" id="char1-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char1-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
 
-                            <input type="radio" name="char1" id="char1-3" value="img/gameDetail/characters/Chip (2).png">
-                            <label for="char1-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+                                <input type="radio" name="char1" id="char1-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char1-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
 
-                            <input type="radio" name="char1" id="char1-2" value="img/gameDetail/characters/Chip (1).png">
-                            <label for="char1-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+                                <input type="radio" name="char1" id="char1-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char1-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
 
-                            <input type="radio" name="char1" id="char1-1" value="img/gameDetail/characters/Chip.png">
-                            <label for="char1-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                                <input type="radio" name="char1" id="char1-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char1-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char1" id="char1-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char1-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Player 2</h3>
+                            <label for="name2">Name</label>
+                            <input type="text" id="name2" name="name2">
+
+                            <div>
+                                <input type="radio" name="char2" id="char2-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char2-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+
+                                <input type="radio" name="char2" id="char2-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char2-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+
+                                <input type="radio" name="char2" id="char2-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char2-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+
+                                <input type="radio" name="char2" id="char2-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char2-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+
+                                <input type="radio" name="char2" id="char2-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char2-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+
+                                <input type="radio" name="char2" id="char2-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char2-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+
+                                <input type="radio" name="char2" id="char2-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char2-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+
+                                <input type="radio" name="char2" id="char2-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char2-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+
+                                <input type="radio" name="char2" id="char2-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char2-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char2" id="char2-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char2-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <h3>Player 2</h3>
-                        <label for="name2">Name</label>
-                        <input type="text" id="name2" name="name2">
-
-                        <div>
-                            <input type="radio" name="char2" id="char2-10" value="img/gameDetail/characters/Chip (9).png">
-                            <label for="char2-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
-
-                            <input type="radio" name="char2" id="char2-9" value="img/gameDetail/characters/Chip (8).png">
-                            <label for="char2-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
-
-                            <input type="radio" name="char2" id="char2-8" value="img/gameDetail/characters/Chip (7).png">
-                            <label for="char2-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
-
-                            <input type="radio" name="char2" id="char2-7" value="img/gameDetail/characters/Chip (6).png">
-                            <label for="char2-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
-
-                            <input type="radio" name="char2" id="char2-6" value="img/gameDetail/characters/Chip (5).png">
-                            <label for="char2-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
-
-                            <input type="radio" name="char2" id="char2-5" value="img/gameDetail/characters/Chip (4).png">
-                            <label for="char2-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
-
-                            <input type="radio" name="char2" id="char2-4" value="img/gameDetail/characters/Chip (3).png">
-                            <label for="char2-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
-
-                            <input type="radio" name="char2" id="char2-3" value="img/gameDetail/characters/Chip (2).png">
-                            <label for="char2-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
-
-                            <input type="radio" name="char2" id="char2-2" value="img/gameDetail/characters/Chip (1).png">
-                            <label for="char2-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
-
-                            <input type="radio" name="char2" id="char2-1" value="img/gameDetail/characters/Chip.png">
-                            <label for="char2-1"><img src="img/gameDetail/characters/Chip.png"></label>
-                        </div>
+                    <div class="divBtn">
+                        <img src="img/gameDetail/Play.svg" id="btnGame" alt="Play button">
                     </div>
-                </div>
-                <div class="divBtn">
-                    <img src="img/gameDetail/Play.svg" id="btnGame" alt="Play button">
-                </div>
-            </form>
+                </form>
+            </section>
         </section>
-
         <section class="fanCarrousel">
             <div>
                 <img src="img/gameDetail/fanCarrousel/Image 1.svg">

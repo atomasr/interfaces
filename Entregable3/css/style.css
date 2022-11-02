@@ -945,9 +945,12 @@ footer div {
 
 .gameOnLine {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
     filter: blur(3px);
+    position: absolute;
+    top: 10%
 }
 
 #gameForm {
@@ -956,8 +959,8 @@ footer div {
     justify-content: space-evenly;
     width: 80%;
     position: absolute;
-    top: 25%;
     left: 10%;
+    margin-top: 100px;
     align-items: center;
     border-radius: 10px;
     background-color: var(--secondary-3);
@@ -1097,14 +1100,26 @@ form select{
 }
 
 .howToPlay,
-.theGame,
-.actualGame,
-.gameCover {
+.FourInLine,
+.gameCover, 
+.fanCarrousel,
+#community {
     position: relative;
 }
 
+.FourInLine{
+    height: 770px;    
+}
+
+.hide{
+    z-index: -100;
+    opacity: 0;
+}
 .actualGame {
     margin: 30px;
+    margin-bottom: 0;
+    position: absolute; 
+    height: 700px;  
 }
 
 .actualGame canvas {
@@ -1116,7 +1131,8 @@ form select{
 }
 
 .theGame {
-    height: 770px;
+    position: absolute;
+    width: 100%;
 }
 
 .howToPlay,
@@ -1180,10 +1196,6 @@ form select{
     padding: 4px 0;
     width: 105px;
     text-align: center;
-}
-
-.fanCarrousel {
-    position: relative;
 }
 
 .fanCarrousel div {
