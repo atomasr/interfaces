@@ -31,12 +31,12 @@ class Ficha {
         this.posY = this.oldPosY;
     }
 
-    setPasadaAJuego() {
-        this.pasadaAJuego = true;
+    setPasadaAJuego(pasada) {
+        this.pasadaAJuego = pasada;
     }
 
-    setEnMatriz() {
-        this.enMatriz = true;
+    setEnMatriz(enMatriz) {
+        this.enMatriz = enMatriz;
     }
 
     setCol(col) {

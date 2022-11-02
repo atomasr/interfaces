@@ -56,6 +56,10 @@ class Juego {
         while (fila >= 0 && !insertado) {
             if (this.matrix[0][col] != null) {
                 ficha.returnToPos();
+                ficha.setCol(-1);
+                ficha.setUso(false);
+                ficha.setPasadaAJuego(false);
+                ficha.setEnMatriz(false);
             }
             if (this.matrix[fila][col] == null) {
                 this.matrix[fila][col] = ficha;
@@ -85,24 +89,32 @@ class Juego {
 
     checkWinner(ficha, i, col) { //falta poner limites por bordes
         let count = 0;
+        //Columna
         for (let index = col - 3; index <= col + 3; index++) {
-            if (this.matrix[index][col].char == ficha.char) { //Aca hay q establecer la igualdad
-                count++;
-                if (count == this.num -3) //Aca hay q traer el num segun el juego
-                    return true;
-            } else {
-                return count = 0;
+            if (index >= 0 && index < this.num - 1 && this.matrix[index][col] != null) {
+                if (this.matrix[index][col].char == ficha.char) { //Aca hay q establecer la igualdad
+                    count++;
+                    if (count == this.num -3) //Aca hay q traer el num segun el juego
+                        return true;
+                } else {
+                    return count = 0;
+                }
             }
         }
+        //Fila
         for (let index = i - 3; index <= i + 3; index++) {
-            if (this.matrix[index][i].char == ficha.char) { //Aca hay q establecer la igualdad
-                count++;
-                if (count == this.num -3) //Aca hay q traer el num segun el juego
-                    return true;
-            } else {
-                return count = 0;
+            if (index >= 0 && index < this.num - 1 && this.matrix[index][col] != null) {
+                if (this.matrix[index][i].char == ficha.char) { //Aca hay q establecer la igualdad
+                    count++;
+                    if (count == this.num -3) //Aca hay q traer el num segun el juego
+                        return true;
+                } else {
+                    return count = 0;
+                }
             }
         }
+        /** 
+        //Diagonal
         for (let index = i - 3; index <= i + 3; index++) {
             for (let j = col - 3; j <= col + 3; j++) {
                 if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
@@ -114,6 +126,7 @@ class Juego {
                     return count = 0;
             }
         }
+        //Diagonal
         for (let index = i - 3; index <= i + 3; index++) {
             for (let j = col + 3; j >= col - 3; j--) {
                 if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
@@ -125,6 +138,7 @@ class Juego {
                     return count = 0;
             }
         }
+        */
 
     }
 
@@ -174,14 +188,14 @@ class Juego {
         //Fichas Matriz Player 1
         for (let index = 0; index < this.player1.chips.length; index++) {
             if (this.player1.chips[index].getCol() != -1 && this.player1.chips[index].enMatriz == false) {
-                this.player1.chips[index].setEnMatriz();
+                this.player1.chips[index].setEnMatriz(true);
                 this.addToMatrix(this.player1.chips[index].getFicha(), this.player1.chips[index].getCol(), this.player1);
             } 
         }
         //Fichas Matriz Player 2
         for (let index = 0; index < this.player2.chips.length; index++) {
             if (this.player2.chips[index].getCol() != -1 && this.player2.chips[index].enMatriz == false) {
-                this.player2.chips[index].setEnMatriz();
+                this.player2.chips[index].setEnMatriz(true);
                 this.addToMatrix(this.player2.chips[index].getFicha(), this.player2.chips[index].getCol(), this.player2);
             } 
         }

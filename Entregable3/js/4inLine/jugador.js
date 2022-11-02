@@ -83,7 +83,7 @@ class Jugador {
                             //console.log("ficha insertada en col " + i);
                             chip.setCol(i);
                             chip.setUso(true);
-                            chip.setPasadaAJuego();
+                            chip.setPasadaAJuego(true);
                             columna = true;
                         } else {
                             posCol += 50;
