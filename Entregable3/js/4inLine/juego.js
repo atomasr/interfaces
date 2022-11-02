@@ -63,12 +63,11 @@ class Juego {
             }
             if (this.matrix[fila][col] == null) {
                 this.matrix[fila][col] = ficha;
-                console.log("fila: " + fila + " y col: " + col);
                 insertado = true;
                 this.refreshBoard(ficha, fila, col, player);
                 this.winner = this.checkWinner(ficha, fila, col);
-                if (winner)
-                    endGame(player);
+                if (this.winner)
+                    this.endGame(player);
                 /**else
                     this.turner = player.setTurn(true);
                     */
@@ -87,33 +86,39 @@ class Juego {
         player.chips[pos].setPosY(posY);
     }
 
-    checkWinner(ficha, i, col) { //falta poner limites por bordes
+    checkWinner(ficha, fila, col) { //falta poner limites por bordes
         let count = 0;
         //Columna
-        for (let index = col - 3; index <= col + 3; index++) {
-            if (index >= 0 && index < this.num - 1 && this.matrix[index][col] != null) {
-                if (this.matrix[index][col].char == ficha.char) { //Aca hay q establecer la igualdad
-                    count++;
-                    if (count == this.num -3) //Aca hay q traer el num segun el juego
-                        return true;
-                } else {
-                    return count = 0;
-                }
+        let fila1 = fila;
+        while (fila1 <= this.num - 2) {
+            if (this.matrix[fila1][col].char.src == ficha.char.src) {
+                count++;
+                if (count == this.num -3)
+                    return true;
+            } else {
+                count = 0;
+                fila1 = this.num;
             }
+            fila1++;
         }
         //Fila
-        for (let index = i - 3; index <= i + 3; index++) {
-            if (index >= 0 && index < this.num - 1 && this.matrix[index][col] != null) {
-                if (this.matrix[index][i].char == ficha.char) { //Aca hay q establecer la igualdad
-                    count++;
-                    if (count == this.num -3) //Aca hay q traer el num segun el juego
-                        return true;
-                } else {
-                    return count = 0;
-                }
-            }
+        count = 0;
+        let col1 = col;
+        while (col1 >= 0 && this.matrix[fila][col1 - 1] != null && this.matrix[fila][col1 - 1].char.src == ficha.char.src) {
+            col1--;
         }
-        /** 
+        while (col1 <= this.num - 1 && this.matrix[fila][col1] != null) {
+            if (this.matrix[fila][col1].char.src == ficha.char.src) {
+                count++;
+                if (count == this.num -3)
+                    return true;
+            } else {
+                count = 0;
+                col1 = this.num;
+            }
+            col1++;
+        }
+        /**
         //Diagonal
         for (let index = i - 3; index <= i + 3; index++) {
             for (let j = col - 3; j <= col + 3; j++) {
@@ -144,38 +149,40 @@ class Juego {
 
     endGame(player) {
         this.clearCanvas();
-        ctx.font = "35px Arial";
-        ctx.fillText("Player " + player.getName() + " is the winner.", 500, 300);
+        ctx.font = "30px Arial";
+        ctx.fillText("Player " + player.getName() + " is the winner.", 400, 300);
     }
 
     draw() {
-        this.clearCanvas();
-        //drawNames
-        ctx.font = "15px Arial";
-        ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
-        ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
-        //drawBoard
-        let mitadTablero = (this.num / 2) * 50;
-        let posX = (board.width / 2) - mitadTablero - 12;
-        let posY = 50;
-        let row = this.num - 1;
-        let col = this.num;
-        let pos = 0;
-        for (let i = 0; i < row; i++) {
-            for (let j = 0; j < col; j++) {
-                let img = this.tableroView[pos];
-                ctx.drawImage(img, posX, posY, 78, 78);
-                posX += 50;
-                if (posX == (board.width / 2) - mitadTablero - 12 + 50 * col) {
-                    posX = (board.width / 2) - mitadTablero - 12;
-                    posY += 50;
+        if (!this.winner) {
+            this.clearCanvas();
+            //drawNames
+            ctx.font = "15px Arial";
+            ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
+            ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
+            //drawBoard
+            let mitadTablero = (this.num / 2) * 50;
+            let posX = (board.width / 2) - mitadTablero - 12;
+            let posY = 50;
+            let row = this.num - 1;
+            let col = this.num;
+            let pos = 0;
+            for (let i = 0; i < row; i++) {
+                for (let j = 0; j < col; j++) {
+                    let img = this.tableroView[pos];
+                    ctx.drawImage(img, posX, posY, 78, 78);
+                    posX += 50;
+                    if (posX == (board.width / 2) - mitadTablero - 12 + 50 * col) {
+                        posX = (board.width / 2) - mitadTablero - 12;
+                        posY += 50;
+                    }
+                    pos++;
                 }
-                pos++;
             }
+            //drawFichas
+            this.player1.draw();
+            this.player2.draw();
         }
-        //drawFichas
-        this.player1.draw();
-        this.player2.draw();
     }
 
     initEvents() {
