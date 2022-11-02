@@ -6,6 +6,7 @@ class Jugador {
 
     contructor() {
         this.turn = false;
+        this.winner = false;
     }
 
     setInfo(name, img, num) {
@@ -18,6 +19,9 @@ class Jugador {
         return this.name;
     }
 
+    setWinner() {
+        this.winner = true;
+    }
     setTurn(bool) {
         this.turn = bool;
     }

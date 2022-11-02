@@ -38,10 +38,12 @@ addEventListener('DOMContentLoaded', (event) => {
 
         juego.init(img1, img2, name1, name2);
 
-        setInterval(function () {
+        let interval = setInterval(function () {
+            if (juego.winner) {
+                clearInterval(interval);
+            }
             juego.draw();
-        }, 200);
-
+        }, 20);
         section.classList.add('hide');
 
     })

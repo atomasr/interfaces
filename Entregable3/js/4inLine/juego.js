@@ -9,7 +9,10 @@ class Juego {
         this.turner = this.player1.setTurn(true);
         this.tableroView = [];
         this.matrix = [];
+        this.winner = false;
     }
+
+
 
     init(img1, img2, name1, name2) {
         this.player1.setInfo(name1, img1, this.num);
@@ -95,7 +98,7 @@ class Juego {
                 this.refreshBoard(ficha, fila, col, player);
                 this.winner = this.checkWinner(ficha, fila, col);
                 if (this.winner)
-                    this.endGame(player);
+                    player.setWinner();
                 /**else
                     this.turner = player.setTurn(true);
                     */
@@ -121,8 +124,9 @@ class Juego {
         while (fila1 <= this.num - 2) {
             if (this.matrix[fila1][col].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num - 3)
+                if (count == this.num - 3){
                     return true;
+                }
             } else {
                 count = 0;
                 fila1 = this.num;
@@ -146,37 +150,54 @@ class Juego {
             }
             col1++;
         }
-        /**
-        //Diagonal
-        for (let index = i - 3; index <= i + 3; index++) {
-            for (let j = col - 3; j <= col + 3; j++) {
-                if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
-                    count++;
-                    if (count == this.num -3) //Aca hay q traer el num segun el juego
-                        return true;
-                }
-                else
-                    return count = 0;
-            }
-        }
-        //Diagonal
-        for (let index = i - 3; index <= i + 3; index++) {
-            for (let j = col + 3; j >= col - 3; j--) {
-                if (this.matrix[index][j].char == ficha.char) { //Aca hay q establecer la igualdad
-                    count++;
-                    if (count == this.num -3) //Aca hay q traer el num segun el juego
-                        return true;
-                }
-                else
-                    return count = 0;
-            }
-        }
-        */
 
+        //Diagonal
+        count = 0;
+        let col3 = col;
+        let fila3 = fila;
+        while (col3 - 1 >= 0 && fila3 + 1 <= this.num - 2 && this.matrix[fila3+1][col3 - 1] != null && this.matrix[fila3+1][col3 - 1].char.src == ficha.char.src) {
+            col3--;
+            fila3++;
+        }
+        
+        while (col3 <= this.num - 1 && fila3 >= 0 && this.matrix[fila3][col3] != null) {
+            if (this.matrix[fila3][col3].char.src == ficha.char.src) {
+                count++;
+                if (count == this.num -3)
+                    return true;
+            } else {
+                count = 0;
+                col3 = this.num;
+                fila3 = this.num;
+            }
+            col3++;
+            fila3--;
+        }
+
+        //Diagonal
+        count = 0;
+        let col2 = col;
+        let fila2 = fila;
+        while (col2 >= 0 && fila2>=0 && this.matrix[fila2-1][col2 - 1] != null && this.matrix[fila2-1][col2 - 1].char.src == ficha.char.src) {
+            col2--;
+            fila2--;
+        }
+        
+        while (col2 <= this.num - 1 && fila2 <= this.num -2 && this.matrix[fila2][col2] != null) {
+            if (this.matrix[fila2][col2].char.src == ficha.char.src) {
+                count++;
+                if (count == this.num -3)
+                    return true;
+            } else {
+                return false;
+            }
+            col2++;
+            fila2++;
+        }
+    
     }
 
     endGame(player) {
-        this.clearCanvas();
         ctx.font = "30px Arial";
         if (player != null)
             ctx.fillText("Player " + player.getName() + " is the winner.", 400, 300);
@@ -185,35 +206,41 @@ class Juego {
     }
 
     draw() {
-        if (!this.winner) {
-            this.clearCanvas();
-            //drawNames
-            ctx.font = "15px Arial";
-            ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
-            ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
-            //drawBoard
-            let mitadTablero = (this.num / 2) * 50;
-            let posX = (board.width / 2) - mitadTablero - 12;
-            let posY = 50;
-            let row = this.num - 1;
-            let col = this.num;
-            let pos = 0;
-            for (let i = 0; i < row; i++) {
-                for (let j = 0; j < col; j++) {
-                    let img = this.tableroView[pos];
-                    ctx.drawImage(img, posX, posY, 78, 78);
-                    posX += 50;
-                    if (posX == (board.width / 2) - mitadTablero - 12 + 50 * col) {
-                        posX = (board.width / 2) - mitadTablero - 12;
-                        posY += 50;
-                    }
-                    pos++;
+        this.clearCanvas();
+        //drawNames
+        ctx.font = "15px Arial";
+        ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
+        ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
+        //drawBoard
+        let mitadTablero = (this.num / 2) * 50;
+        let posX = (board.width / 2) - mitadTablero - 12;
+        let posY = 50;
+        let row = this.num - 1;
+        let col = this.num;
+        let pos = 0;
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                let img = this.tableroView[pos];
+                ctx.drawImage(img, posX, posY, 78, 78);
+                posX += 50;
+                if (posX == (board.width / 2) - mitadTablero - 12 + 50 * col) {
+                    posX = (board.width / 2) - mitadTablero - 12;
+                    posY += 50;
                 }
+                pos++;
             }
-            //drawFichas
-            this.player1.draw();
-            this.player2.draw();
         }
+        //drawFichas
+        this.player1.draw();
+        this.player2.draw();
+
+        if (this.winner) {
+            if (this.player1.winner) 
+                this.endGame(this.player1);
+            else 
+                this.endGame(this.player2);
+        }
+
     }
 
     initEvents() {
@@ -238,4 +265,8 @@ class Juego {
             }
         }
     }
+
+
+
+    
 }
