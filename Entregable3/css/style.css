@@ -945,8 +945,8 @@ footer div {
 
 .gameOnLine {
     display: flex;
-    justify-content: space-evenly;
-    width: 98%;
+    justify-content: center;
+    width: 100%;
     filter: blur(3px);
 }
 
@@ -956,11 +956,12 @@ footer div {
     justify-content: space-evenly;
     width: 80%;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 10%;
     align-items: center;
     border-radius: 10px;
     background-color: var(--secondary-3);
+    border: 3px solid var(--secondary3);
 }
 
 .playerSetter{
