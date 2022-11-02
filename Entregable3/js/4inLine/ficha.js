@@ -14,6 +14,7 @@ class Ficha {
         this.char = pic;
         this.usada = false;
         this.col = -1;
+        this.pasadaAJuego = false;
         this.enMatriz = false;
     }
 
@@ -28,6 +29,10 @@ class Ficha {
     returnToPos() {
         this.posX = this.oldPosX;
         this.posY = this.oldPosY;
+    }
+
+    setPasadaAJuego() {
+        this.pasadaAJuego = true;
     }
 
     setEnMatriz() {
