@@ -21,7 +21,7 @@ class Juego {
         this.generateMatrix(this.num - 1, this.num);
         this.player1.init((this.num * (this.num - 1)) / 2, 12, 50);
         let columnasFichas = (((this.num * (this.num - 1)) / 2) / 11);
-        let inicioFichas2 = board.width - (columnasFichas * 50) - (columnasFichas * 24);
+        let inicioFichas2 = board.width - (columnasFichas * 48) - ((columnasFichas-1) * 7)-12;
         this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
         this.initEvents();
         this.initCounter();
@@ -56,7 +56,7 @@ class Juego {
     }
 
     clearCanvas() {
-        ctx.clearRect(0, 0, 1150, 530);
+        ctx.clearRect(0, 0, 1150, 580);
     }
 
     generateBoard(row, col) {
@@ -198,9 +198,12 @@ class Juego {
     }
 
     endGame(player) {
-        ctx.font = "30px Arial";
+        ctx.font = "40px Roboto";
+        ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
+        ctx.fillRect(175, 120, 800, 320);
+        ctx.fillStyle = "rgba(113, 58, 130, 1)";
         if (player != null)
-            ctx.fillText("Player " + player.getName() + " is the winner.", 400, 300);
+            ctx.fillText(player.getName() + " is the winner.", 400, 290);
         else
             ctx.fillText("GAME OVER.", 400, 300);
     }
@@ -208,9 +211,9 @@ class Juego {
     draw() {
         this.clearCanvas();
         //drawNames
-        ctx.font = "15px Arial";
-        ctx.fillText("Player 1: " + this.player1.getName(), 110, 25);
-        ctx.fillText("Player 2: " + this.player2.getName(), board.width - 240, 25);
+        ctx.font = "15px Roboto";
+        ctx.fillText(this.player1.getName(), 110, 25);
+        ctx.fillText(this.player2.getName(), board.width - 240, 25);
         //drawBoard
         let mitadTablero = (this.num / 2) * 50;
         let posX = (board.width / 2) - mitadTablero - 12;

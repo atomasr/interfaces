@@ -112,7 +112,7 @@ class Jugador {
                 this.chips.push(chip);
             }
             y = 50;
-            x += 60;
+            x += 55;
         }
     }
 

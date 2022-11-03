@@ -88,7 +88,7 @@ class Ficha {
     }
 
     move(x, y, e) {
-        if (x > this.r && x < (1150 - this.r) && y > this.r && y < (530 - this.r)) {
+        if (x > this.r && x < (1150 - this.r) && y > this.r && y < (580 - this.r)) {
             this.posX = x - this.r;
             this.posY = y - this.r;
         }

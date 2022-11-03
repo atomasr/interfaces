@@ -11,8 +11,10 @@ addEventListener('DOMContentLoaded', (event) => {
         let num = data.get('gameType');
 
         let name1 = data.get('name1');
+        name1 = `Player 1: ${name1}`;
 
-        let name2 = data.get('name2');
+        let name2 = data.get('name2');        
+        name2 = `Player 2: ${name2}`;
    
 
         let charPlayer1 = data.get('char1');
