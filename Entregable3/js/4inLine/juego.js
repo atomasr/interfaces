@@ -11,6 +11,7 @@ class Juego {
         this.tableroView = [];
         this.matrix = [];
         this.winner = false;
+        this.hayTiempo = true;
     }
 
 
@@ -30,29 +31,37 @@ class Juego {
 
     initCounter() {
         let counterSeg = document.getElementById("counterSeg");
-        let seg = 59;
+        let seg = 22;
         let counterMin = document.getElementById("counterMin");
-        let min = 1;
+        let min = 2;
+        counterSeg.innerText = seg;
+        counterMin.innerText = min;
         let player = null;
-        setInterval(function () {
-            counterSeg.innerText = seg;
-            if (seg == 0) {
-                seg = 59;
+        let self = this;
+
+        let interval = setInterval(function () {
+            if (min >= 0) {
+                if (seg == 0) {
+                    min--;
+                    seg = 59;
+                    if (min >= 0 && seg >= 0) {
+                        counterMin.innerText = min;
+                        counterSeg.innerText = seg;
+                    }
+                } else {
+                    seg--;
+                    counterSeg.innerText = seg;
+                }
             } else {
-                counterSeg.innerText = seg;
-                seg--;
+                self.hayTiempo = false;
+                if (counterMin.innerHTML == 0 && counterSeg.innerHTML == 0) {
+                    setTimeout(() => {
+                        self.endGame(player); 
+                    }, 20);
+                }
+                clearInterval(interval);
             }
         }, 1000);
-
-        setInterval(function () {
-            counterMin.innerText = min;
-            counterMin.innerText = min;
-            min--;
-        }, 60000);
-
-        if (min == 0 && seg == 0) {
-            this.endGame(player);
-        }
 
     }
 

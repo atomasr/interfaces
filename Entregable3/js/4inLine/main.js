@@ -3,6 +3,7 @@ addEventListener('DOMContentLoaded', (event) => {
 
     let play = document.getElementById('btnGame');
     let section = document.querySelector('.theGame');
+    let restart =  document.getElementById('restartButton');
 
     play.addEventListener('click', () => {
         let form = document.getElementById('gameForm');
@@ -41,7 +42,7 @@ addEventListener('DOMContentLoaded', (event) => {
         juego.init(img1, img2, name1, name2);
 
         let interval = setInterval(function () {
-            if (juego.winner) {
+            if (juego.winner || !juego.hayTiempo) {
                 clearInterval(interval);
             }
             juego.draw();
@@ -50,5 +51,7 @@ addEventListener('DOMContentLoaded', (event) => {
 
     })
 
-
+    restart.addEventListener('click', ()=> {
+        section.classList.remove('hide');
+    });
 });
