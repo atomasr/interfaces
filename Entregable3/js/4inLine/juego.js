@@ -14,8 +14,6 @@ class Juego {
         this.hayTiempo = true;
     }
 
-
-
     init(img1, img2, name1, name2) {
         this.player1.setInfo(name1, img1, this.num);
         this.player2.setInfo(name2, img2, this.num);
@@ -40,27 +38,32 @@ class Juego {
         let self = this;
 
         let interval = setInterval(function () {
-            if (min >= 0) {
-                if (seg == 0) {
-                    min--;
-                    seg = 59;
-                    if (min >= 0 && seg >= 0) {
-                        counterMin.innerText = min;
+            if (self.hayTiempo) {
+                if (min >= 0) {
+                    if (seg == 0) {
+                        min--;
+                        seg = 59;
+                        if (min >= 0 && seg >= 0) {
+                            counterMin.innerText = min;
+                            counterSeg.innerText = seg;
+                        }
+                    } else {
+                        seg--;
                         counterSeg.innerText = seg;
                     }
                 } else {
-                    seg--;
-                    counterSeg.innerText = seg;
+                    self.hayTiempo = false;
+                    if (counterMin.innerHTML == 0 && counterSeg.innerHTML == 0) {
+                        setTimeout(() => {
+                            self.endGame(player); 
+                        }, 20);
+                    }
+                    clearInterval(interval);
                 }
             } else {
-                self.hayTiempo = false;
-                if (counterMin.innerHTML == 0 && counterSeg.innerHTML == 0) {
-                    setTimeout(() => {
-                        self.endGame(player); 
-                    }, 20);
-                }
                 clearInterval(interval);
             }
+            
         }, 1000);
 
     }
@@ -107,8 +110,10 @@ class Juego {
                 insertado = true;
                 this.refreshBoard(ficha, fila, col, player);
                 this.winner = this.checkWinner(ficha, fila, col);
-                if (this.winner)
+                if (this.winner) {
                     player.setWinner();
+                    this.hayTiempo = false;
+                }
                 else {
                     if (this.player1.turn) {
                         //console.log("turno del 2");

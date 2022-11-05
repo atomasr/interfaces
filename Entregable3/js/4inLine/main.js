@@ -42,16 +42,16 @@ addEventListener('DOMContentLoaded', (event) => {
         juego.init(img1, img2, name1, name2);
 
         let interval = setInterval(function () {
+            restart.addEventListener('click', ()=> {
+                juego.hayTiempo = false;
+                clearInterval(interval);
+                section.classList.remove('hide');
+            });
             if (juego.winner || !juego.hayTiempo) {
                 clearInterval(interval);
             }
             juego.draw();
         }, 20);
         section.classList.add('hide');
-
     })
-
-    restart.addEventListener('click', ()=> {
-        section.classList.remove('hide');
-    });
 });
