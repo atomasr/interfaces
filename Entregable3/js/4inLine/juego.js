@@ -6,7 +6,8 @@ class Juego {
         this.player1 = new Jugador();
         this.player2 = new Jugador();
         this.num = num;
-        this.turner = this.player1.setTurn(true);
+        this.player1.setTurn(true);
+        this.player2.setTurn(false);
         this.tableroView = [];
         this.matrix = [];
         this.winner = false;
@@ -99,9 +100,17 @@ class Juego {
                 this.winner = this.checkWinner(ficha, fila, col);
                 if (this.winner)
                     player.setWinner();
-                /**else
-                    this.turner = player.setTurn(true);
-                    */
+                else {
+                    if (this.player1.turn) {
+                        //console.log("turno del 2");
+                        this.player1.setTurn(false);
+                        this.player2.setTurn(true);
+                    } else {
+                        //console.log("turno del 1");
+                        this.player2.setTurn(false);
+                        this.player1.setTurn(true);
+                    }
+                }
             }
             fila--;
         }
