@@ -501,6 +501,8 @@ header {
 .timer.game{
     background-color: var(--primary-3);
     border-color: 2px solid var(--primary0);
+    width: 200px;
+    height:45px;
 }
 
 .timer p {
@@ -526,6 +528,8 @@ header {
 
 .timer.game div p:first-child {
     background-color: var(--primary3);
+    width: 45px;
+    height: 45px;
 }
 
 .timer div p:nth-child(2) {
@@ -533,6 +537,16 @@ header {
     line-height: 15px;
     position: relative;
     top: -8px;
+}
+
+.timer.game div p:nth-child(2) {
+    line-height: 11px;
+    position: relative;
+    top: -10px;
+}
+
+.timer.game p{
+    font-size: 24px;
 }
 
 
@@ -1154,6 +1168,11 @@ form select{
     
     background-color: var(--primary0);
     border-radius: 10px;
+}
+
+.actualGame>div{
+    display: flex;
+    align-items: flex-end;
 }
 
 .theGame {
