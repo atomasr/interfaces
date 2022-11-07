@@ -3,7 +3,7 @@ addEventListener('DOMContentLoaded', (event) => {
 
     let play = document.getElementById('btnGame');
     let section = document.querySelector('.theGame');
-    let restart =  document.getElementById('restartButton');
+    let restart = document.getElementById('restartButton');
 
     play.addEventListener('click', () => {
         let form = document.getElementById('gameForm');
@@ -12,11 +12,14 @@ addEventListener('DOMContentLoaded', (event) => {
         let num = data.get('gameType');
 
         let name1 = data.get('name1');
-        name1 = `Player 1: ${name1}`;
+        if (name1 == '') {
+            name1 = 'Player 1';
+        }
 
-        let name2 = data.get('name2');        
-        name2 = `Player 2: ${name2}`;
-   
+        let name2 = data.get('name2');
+        if (name2 == '') {
+            name2 = 'Player 2';
+        }
 
         let charPlayer1 = data.get('char1');
         let img1 = new Image();
@@ -42,7 +45,7 @@ addEventListener('DOMContentLoaded', (event) => {
         juego.init(img1, img2, name1, name2);
 
         let interval = setInterval(function () {
-            restart.addEventListener('click', ()=> {
+            restart.addEventListener('click', () => {
                 juego.hayTiempo = false;
                 clearInterval(interval);
                 section.classList.remove('hide');

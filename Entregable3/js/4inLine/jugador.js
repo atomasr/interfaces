@@ -74,11 +74,11 @@ class Jugador {
         if (this.turn) {
             let x = e.offsetX;
             let y = e.offsetY;
-            let mitadTablero = (this.num/2) * 50;
-            let inicioTablero = (board.width/2) - mitadTablero;
-            let finalTablero = (board.width/2) + mitadTablero;
+            let mitadTablero = (this.num / 2) * 50;
+            let inicioTablero = (board.width / 2) - mitadTablero;
+            let finalTablero = (board.width / 2) + mitadTablero;
             this.chips.forEach(chip => {
-                if (chip.isSelected()&&!chip.isUsada()) {
+                if (chip.isSelected() && !chip.isUsada()) {
                     //console.log(chip);
                     if (x > inicioTablero && x < finalTablero && y > 0 && y < 65) {
                         //console.log("en zona");
@@ -109,12 +109,16 @@ class Jugador {
     addChips(cant, x, y) {
         let rows = cant / 11;
         let max = cant / rows;
+        let counter = 0;
 
         for (let i = 0; i < rows; i++) {
             for (let index = 0; index < max; index++) {
-                let chip = new Ficha(x, y, 24, this.img);
-                y += 40;
-                this.chips.push(chip);
+                if (counter < cant) {
+                    let chip = new Ficha(x, y, 24, this.img);
+                    y += 40;
+                    this.chips.push(chip);
+                    counter++;
+                } else return;
             }
             y = 50;
             x += 55;

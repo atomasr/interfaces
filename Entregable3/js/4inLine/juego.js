@@ -20,7 +20,7 @@ class Juego {
         this.generateBoard(this.num - 1, this.num);
         this.generateMatrix(this.num - 1, this.num);
         this.player1.init((this.num * (this.num - 1)) / 2, 12, 50);
-        let columnasFichas = (((this.num * (this.num - 1)) / 2) / 11);
+        let columnasFichas = Math.ceil(((this.num * (this.num - 1)) / 2) / 11);
         let inicioFichas2 = board.width - (columnasFichas * 48) - ((columnasFichas-1) * 7)-12;
         this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
         this.initEvents();
@@ -228,7 +228,8 @@ class Juego {
         if (player != null)
             ctx.fillText(player.getName() + " is the winner.", 400, 290);
         else
-            ctx.fillText("GAME OVER.", 400, 300);
+            ctx.fillText("GAME OVER", 400, 250);
+            ctx.fillText("Time out", 400, 300);
     }
 
     draw() {
