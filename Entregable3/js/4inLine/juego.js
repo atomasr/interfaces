@@ -228,8 +228,8 @@ class Juego {
         if (player != null)
             ctx.fillText(player.getName() + " is the winner.", 400, 290);
         else
-            ctx.fillText("GAME OVER", 400, 250);
-            ctx.fillText("Time out", 400, 300);
+            ctx.fillText("GAME OVER", 450, 300);
+            ctx.fillText("Time out", 480, 250);
     }
 
     draw() {
