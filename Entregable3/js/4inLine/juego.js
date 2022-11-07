@@ -21,7 +21,7 @@ class Juego {
         this.generateMatrix(this.num - 1, this.num);
         this.player1.init((this.num * (this.num - 1)) / 2, 12, 50);
         let columnasFichas = Math.ceil(((this.num * (this.num - 1)) / 2) / 11);
-        let inicioFichas2 = board.width - (columnasFichas * 48) - ((columnasFichas-1) * 7)-12;
+        let inicioFichas2 = board.width - (columnasFichas * 48) - ((columnasFichas - 1) * 7) - 12;
         this.player2.init((this.num * (this.num - 1)) / 2, Math.floor(inicioFichas2), 50);
         this.initEvents();
         this.initCounter();
@@ -55,7 +55,7 @@ class Juego {
                     self.hayTiempo = false;
                     if (counterMin.innerHTML == 0 && counterSeg.innerHTML == 0) {
                         setTimeout(() => {
-                            self.endGame(player); 
+                            self.endGame(player);
                         }, 20);
                     }
                     clearInterval(interval);
@@ -63,7 +63,7 @@ class Juego {
             } else {
                 clearInterval(interval);
             }
-            
+
         }, 1000);
 
     }
@@ -147,7 +147,7 @@ class Juego {
         while (fila1 <= this.num - 2) {
             if (this.matrix[fila1][col].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num - 3){
+                if (count == this.num - 3) {
                     return true;
                 }
             } else {
@@ -178,15 +178,15 @@ class Juego {
         count = 0;
         let col3 = col;
         let fila3 = fila;
-        while (col3 - 1 >= 0 && fila3 + 1 <= this.num - 2 && this.matrix[fila3+1][col3 - 1] != null && this.matrix[fila3+1][col3 - 1].char.src == ficha.char.src) {
+        while (col3 - 1 >= 0 && fila3 + 1 <= this.num - 2 && this.matrix[fila3 + 1][col3 - 1] != null && this.matrix[fila3 + 1][col3 - 1].char.src == ficha.char.src) {
             col3--;
             fila3++;
         }
-        
+
         while (col3 <= this.num - 1 && fila3 >= 0 && this.matrix[fila3][col3] != null) {
             if (this.matrix[fila3][col3].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num -3)
+                if (count == this.num - 3)
                     return true;
             } else {
                 count = 0;
@@ -201,15 +201,15 @@ class Juego {
         count = 0;
         let col2 = col;
         let fila2 = fila;
-        while (col2 >= 0 && fila2>=0 && this.matrix[fila2-1][col2 - 1] != null && this.matrix[fila2-1][col2 - 1].char.src == ficha.char.src) {
+        while (col2 >= 0 && fila2 >= 0 && this.matrix[fila2 - 1][col2 - 1] != null && this.matrix[fila2 - 1][col2 - 1].char.src == ficha.char.src) {
             col2--;
             fila2--;
         }
-        
-        while (col2 <= this.num - 1 && fila2 <= this.num -2 && this.matrix[fila2][col2] != null) {
+
+        while (col2 <= this.num - 1 && fila2 <= this.num - 2 && this.matrix[fila2][col2] != null) {
             if (this.matrix[fila2][col2].char.src == ficha.char.src) {
                 count++;
-                if (count == this.num -3)
+                if (count == this.num - 3)
                     return true;
             } else {
                 return false;
@@ -217,23 +217,22 @@ class Juego {
             col2++;
             fila2++;
         }
-    
+
     }
 
     endGame(player) {
-        endGame(player) {
-            ctx.font = "40px Roboto";
-            ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
-            ctx.fillRect(175, 120, 800, 320);
-            ctx.fillStyle = "rgba(113, 58, 130, 1)";
-            if (player != null) {
-                ctx.fillText("WINNER", 480, 250);
-                ctx.fillText(player.getName(), 480, 300);
-            } else {
-                ctx.fillText("GAME OVER", 450, 300);
-                ctx.fillText("Time out", 480, 250);
-            }
+        ctx.font = "40px Roboto";
+        ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
+        ctx.fillRect(175, 120, 800, 320);
+        ctx.fillStyle = "rgba(113, 58, 130, 1)";
+        if (player != null) {
+            ctx.fillText("WINNER", 480, 250);
+            ctx.fillText(player.getName(), 480, 300);
+        } else {
+            ctx.fillText("GAME OVER", 450, 300);
+            ctx.fillText("Time out", 480, 250);
         }
+    }
 
     draw() {
         this.clearCanvas();
@@ -265,9 +264,9 @@ class Juego {
         this.player2.draw();
 
         if (this.winner) {
-            if (this.player1.winner) 
+            if (this.player1.winner)
                 this.endGame(this.player1);
-            else 
+            else
                 this.endGame(this.player2);
         }
 
@@ -298,5 +297,5 @@ class Juego {
 
 
 
-    
+
 }
