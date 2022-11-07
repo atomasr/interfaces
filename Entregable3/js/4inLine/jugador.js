@@ -36,6 +36,9 @@ class Jugador {
         board.addEventListener("mouseup", (e) => {
             this.mouseUp(e)
         });
+        board.addEventListener("mouseout", (e) => {
+            this.mouseUp(e)
+        });
     }
 
     mouseDown(e) {
