@@ -9,23 +9,29 @@ class Jugador {
         this.winner = false;
     }
 
+    //Setea los atributos name (nombre), img (imagen de la ficha) y num (cantidad de fichas)
     setInfo(name, img, num) {
         this.name = name;
         this.img = img;
         this.num = num;
     }
 
+    //Retorna el atributo name
     getName() {
         return this.name;
     }
 
+    //Setea el jugador como ganador
     setWinner() {
         this.winner = true;
     }
+
+    //Setea el turno de jugada
     setTurn(bool) {
         this.turn = bool;
     }
 
+    //Inicializa los eventos durante el turno del jugador
     initEvents() {
         board.addEventListener("mousedown", (e) => {
             this.mouseDown(e)
@@ -41,6 +47,7 @@ class Jugador {
         });
     }
 
+    //Setea una ficha como seleccionada según las coordenadas x e y donde se haga mouse down
     mouseDown(e) {
         if (this.turn) {
             let x = e.offsetX;
@@ -56,7 +63,8 @@ class Jugador {
         }
     }
 
-    mouseMove(e) {
+    //Recorre las fichas del jugador y si alguna está marcada como seleccionada, la mueve según
+    mouseMove(e) {   //las coordenadas x e y del evento mouse move
         if (this.turn) {
             let x = e.offsetX;
             let y = e.offsetY;
@@ -73,7 +81,8 @@ class Jugador {
         }
     }
 
-    mouseUp(e) {
+    //Recorre el arreglo de fichas del jugador y, si alguna está seleccionada, establece su posición
+    mouseUp(e) {  //al hacer mouse up
         if (this.turn) {
             let x = e.offsetX;
             let y = e.offsetY;
@@ -82,7 +91,6 @@ class Jugador {
             let finalTablero = (board.width / 2) + mitadTablero;
             this.chips.forEach(chip => {
                 if (chip.isSelected() && !chip.isUsada()) {
-                    //console.log(chip);
                     if (x > inicioTablero && x < finalTablero && y > 0 && y < 65) {
                         //console.log("en zona");
                         let columna = false;
@@ -109,6 +117,7 @@ class Jugador {
         }
     }
 
+    //Agrega las fichas disponibles al inicio del juego en forma de columnas
     addChips(cant, x, y) {
         let rows = cant / 11;
         let max = cant / rows;
@@ -128,6 +137,7 @@ class Jugador {
         }
     }
 
+    //Dibuja las fichas del jugador
     draw() {
         for (let index = this.chips.length - 1; index >= 0; index--) {
             let chip = this.chips[index];
@@ -135,6 +145,7 @@ class Jugador {
         }
     }
 
+    //Inicializa la instancia del Jugador
     init(amountChips, x, y) {
         this.addChips(amountChips, x, y);
         this.initEvents();
