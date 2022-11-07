@@ -500,10 +500,21 @@ header {
 }
 
 .timer.game{
-    background-color: var(--primary-3);
+    background-color: var(--primary3);
     border-color: 2px solid var(--primary0);
     width: 200px;
-    height:45px;
+    height:48px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.timer.game p {
+    top:0;
+    color: var(--atention-3);
+}
+.timer.game div p {
+    top: 0px!important;
+    box-shadow: none!important;
 }
 
 .timer p {
