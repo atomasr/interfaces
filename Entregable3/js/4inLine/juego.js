@@ -221,16 +221,19 @@ class Juego {
     }
 
     endGame(player) {
-        ctx.font = "40px Roboto";
-        ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
-        ctx.fillRect(175, 120, 800, 320);
-        ctx.fillStyle = "rgba(113, 58, 130, 1)";
-        if (player != null)
-            ctx.fillText(player.getName() + " is the winner.", 400, 290);
-        else
-            ctx.fillText("GAME OVER", 450, 300);
-            ctx.fillText("Time out", 480, 250);
-    }
+        endGame(player) {
+            ctx.font = "40px Roboto";
+            ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
+            ctx.fillRect(175, 120, 800, 320);
+            ctx.fillStyle = "rgba(113, 58, 130, 1)";
+            if (player != null) {
+                ctx.fillText("WINNER", 480, 250);
+                ctx.fillText(player.getName(), 480, 300);
+            } else {
+                ctx.fillText("GAME OVER", 450, 300);
+                ctx.fillText("Time out", 480, 250);
+            }
+        }
 
     draw() {
         this.clearCanvas();
