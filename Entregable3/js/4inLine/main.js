@@ -5,6 +5,7 @@ addEventListener('DOMContentLoaded', (event) => {
     let section = document.querySelector('.theGame');
     let restart = document.getElementById('restartButton');
 
+    //Al hacer click en el botón de play se inicializa el juego mediante el form
     play.addEventListener('click', () => {
         let form = document.getElementById('gameForm');
         let data = new FormData(form);
@@ -44,6 +45,8 @@ addEventListener('DOMContentLoaded', (event) => {
 
         juego.init(img1, img2, name1, name2);
 
+        //En el caso de que haya ganador, se termine el tiempo, o se clickee 
+        //en el botón de reinicio se corta el intervalo que dibuja el juego. 
         let interval = setInterval(function () {
             restart.addEventListener('click', () => {
                 juego.hayTiempo = false;
