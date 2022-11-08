@@ -1,6 +1,3 @@
-"use strict";
-addEventListener('DOMContentLoaded', (event) => {
-
     let play = document.getElementById('btnGame');
     let section = document.querySelector('.theGame');
     let restart = document.getElementById('restartButton');
@@ -57,4 +54,3 @@ addEventListener('DOMContentLoaded', (event) => {
         }, 20);
         section.classList.add('hide');
     })
-});
