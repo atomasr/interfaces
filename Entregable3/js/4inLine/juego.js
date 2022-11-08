@@ -14,6 +14,7 @@ class Juego {
         this.hayTiempo = true;
     }
 
+    //Inicializa el objeto
     init(img1, img2, name1, name2) {
         this.player1.setInfo(name1, img1, this.num);
         this.player2.setInfo(name2, img2, this.num);
@@ -27,11 +28,12 @@ class Juego {
         this.initCounter();
     }
 
+    //Inicializa el timer, el cual se corta cuando termina el tiempo o gana un jugador
     initCounter() {
         let counterSeg = document.getElementById("counterSeg");
-        let seg = 22;
+        let seg = 11;
         let counterMin = document.getElementById("counterMin");
-        let min = 2;
+        let min = 5;
         counterSeg.innerText = seg;
         counterMin.innerText = min;
         let player = null;
@@ -68,13 +70,14 @@ class Juego {
 
     }
 
+    //Limpia el canvas
     clearCanvas() {
         ctx.clearRect(0, 0, 1150, 580);
     }
 
+    //Crea el tablero con una imagen de la casilla en cada posición
     generateBoard(row, col) {
         this.clearCanvas();
-        //generateBoard
         for (let i = 0; i < row; i++) {
             for (let j = 0; j < col; j++) {
                 let img = new Image();
@@ -84,6 +87,7 @@ class Juego {
         }
     }
 
+    //Crea la matriz de fichas insertadas y la inicializa en null
     generateMatrix(row, col) {
         for (let i = 0; i < row; i++) {
             let row = [];
@@ -94,6 +98,9 @@ class Juego {
         }
     }
 
+    //Agrega una ficha a la matriz en caso de que la columna tenga casillas vacias
+    //en la columna determinada, y luego de insertarla verifica si el jugador gano.
+    //En caso de que no haya ganado, cambia de turno para el otro jugador.
     addToMatrix(ficha, col, player) {
         let fila = this.num - 2;
         let insertado = false;
@@ -130,6 +137,7 @@ class Juego {
         }
     }
 
+    //Cada vez que se inserta una ficha, se actualiza la posicion de esta con este metodo
     refreshBoard(ficha, fila, col, player) {
         let mitadTablero = (this.num / 2) * 50;
         let inicioTablero = (board.width / 2) - mitadTablero;
@@ -140,9 +148,10 @@ class Juego {
         player.chips[pos].setPosY(posY);
     }
 
-    checkWinner(ficha, fila, col) { //falta poner limites por bordes
+    //Verifica si un jugador gano segun la ultima ficha que inserto en la matriz
+    checkWinner(ficha, fila, col) {
         let count = 0;
-        //Columna
+        //Verificación por columna
         let fila1 = fila;
         while (fila1 <= this.num - 2) {
             if (this.matrix[fila1][col].char.src == ficha.char.src) {
@@ -156,7 +165,7 @@ class Juego {
             }
             fila1++;
         }
-        //Fila
+        //Verificación por fila
         count = 0;
         let col1 = col;
         while (col1 >= 0 && this.matrix[fila][col1 - 1] != null && this.matrix[fila][col1 - 1].char.src == ficha.char.src) {
@@ -174,7 +183,7 @@ class Juego {
             col1++;
         }
 
-        //Diagonal
+        //Verificación por diagonal desde abajo hacia arriba
         count = 0;
         let col3 = col;
         let fila3 = fila;
@@ -197,7 +206,7 @@ class Juego {
             fila3--;
         }
 
-        //Diagonal
+        //Verificación por diagonal desde arriba hacia abajo
         count = 0;
         let col2 = col;
         let fila2 = fila;
@@ -220,10 +229,11 @@ class Juego {
 
     }
 
+    //Si hay ganador o termina el tiempo del juego, dibuja un mensaje de aviso en el canvas
     endGame(player) {
         ctx.font = "40px Roboto";
         ctx.fillStyle = "rgba(214, 191, 221, 0.8)";
-        ctx.fillRect(175, 120, 800, 320);
+        ctx.fillRect(0, 0, 1150, 580);
         ctx.fillStyle = "rgba(113, 58, 130, 1)";
         if (player != null) {
             ctx.fillText("WINNER", 480, 250);
@@ -234,6 +244,7 @@ class Juego {
         }
     }
 
+    //Dibuja el juego: nombres, tablero y fichas
     draw() {
         this.clearCanvas();
         //drawNames
@@ -272,12 +283,16 @@ class Juego {
 
     }
 
+    //Inicializa el evento mouseup en el canvas
     initEvents() {
         board.addEventListener("mouseup", (e) => {
             this.mouseUp(e)
         });
     }
 
+    //Verifica cual de las fichas de cada jugador fue la ultima insertada.
+    //Es la insertada si su posicion en columna no es igual a -1 y su atributo enMatriz se encuentra como falso.
+    //Luego de verificar que cumpla esas condiciones, la agrega a la matriz y enMatriz se vuelve verdadero.
     mouseUp(e) {
         //Fichas Matriz Player 1
         for (let index = 0; index < this.player1.chips.length; index++) {

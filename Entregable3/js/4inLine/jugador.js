@@ -100,8 +100,8 @@ class Jugador {
                             if (x > posCol && x < posCol + 50 && !chip.pasadaAJuego) {
                                 //console.log("ficha insertada en col " + i);
                                 chip.setCol(i);
-                                chip.setUso(true);
-                                chip.setPasadaAJuego(true);
+                                chip.setUso(true); //a partir de setear esto en true no se puede mover mas la ficha
+                                chip.setPasadaAJuego(true); //este atributo es para saber cuales ya fueron insertadas en la zona
                                 columna = true;
                             } else {
                                 posCol += 50;
