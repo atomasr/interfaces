@@ -34,10 +34,12 @@ class Ficha {
         this.posY = this.oldPosY;
     }
 
+    //Setea el atributo que define si una ficha se solto en la zona para insertar fichas en la matriz
     setPasadaAJuego(pasada) {
         this.pasadaAJuego = pasada;
     }
 
+    //Setea el atributo que define si una ficha se encuentra en la matriz de fichas insertadas
     setEnMatriz(enMatriz) {
         this.enMatriz = enMatriz;
     }
