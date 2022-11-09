@@ -451,13 +451,13 @@ header {
     width: 62px;
     height: 78px;
     background: url(../img/release/sprite.png);
-    animation: walk 1s steps(12) infinite;
+    animation: walk 2s steps(12) 0s infinite alternate;
     
 }
 
 @keyframes walk {
     0% { background-position: 0px; }
-    100% { background-position: -786px; }    
+    100% { background-position: -786px; }   
 }
 
 .home-release img {
