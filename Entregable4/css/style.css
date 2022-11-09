@@ -447,6 +447,18 @@ header {
 
 
 /* Home hero*/
+#sprite{
+    width: 62px;
+    height: 78px;
+    background: url(../img/release/sprite.png);
+    animation: walk 1s steps(12) infinite;
+    
+}
+
+@keyframes walk {
+    0% { background-position: 0px; }
+    100% { background-position: -786px; }    
+}
 
 .home-release img {
     width: 100%;
@@ -1420,13 +1432,13 @@ form select{
 
 
 /* ------------------ Release ------------------------- */
+
 .hero {
     position: relative;
     z-index: 0;
     width: 100%;
     text-align: center;
 }
-
 
 .hero .limitedEdition {
     color: var(--tertiary3);

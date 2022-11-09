@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="icon" href="img/logo/xsmall.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav class="hamburguer-menu">
+            <img id="btn-menu" src="img/icons/menu.svg" alt="menu">
+            <ul class="menu-navegation small bold">
+                <div>
+                    <li>
+                        <div>
+                            <img src="img/icons/menu/Magnified.svg" alt="Search">
+                        </div>
+
+                    </li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/New.svg" alt="New">New</li>
+                    <li><img src="img/icons/menu/Favorite.svg" alt="Favorites">Favorites</li>
+                    <li><img src="img/icons/menu/Last seen.svg" alt="Last seen">Last seen</li>
+                </div>
+                <div>
+                    <li><img src="img/icons/menu/Headphones.svg" alt="Multiplayer">Multiplayer</li>
+                    <li><img src="img/icons/menu/Puzzle.svg" alt="Puzzles">Puzzles</li>
+                    <li><img src="img/icons/menu/Dragon.svg" alt="Role-playing">Role-playing</li>
+                    <li><img src="img/icons/menu/Ball.svg" alt="Sports">Sports</li>
+                    <li><img src="img/icons/menu/Ghost.svg" alt="Survival">Survival</li>
+                    <li><img src="img/icons/menu/Castle.svg" alt="Platformer">Platformer</li>
+                    <li><img src="img/icons/menu/Brush.svg" alt="Art">Art</li>
+                    <li><img src="img/icons/menu/Car.svg" alt="Action">Action</li>
+                    <li><img src="img/icons/menu/Sword.svg" alt="Battle">Battle</li>
+                </div>
+                <li>
+                    <img src="img/icons/menu/Facebook.svg" alt="Facebook">
+                    <img src="img/icons/menu/Twitter.svg" alt="Twitter">
+                    <img src="img/icons/menu/Instagram.svg" alt="Instagram">
+                    <img src="img/icons/menu/Twitch.svg" alt="Twitch">
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html">
+            <picture>
+                <source media="(max-width: 660px)" srcset="img/logo/xsmall.svg">
+                <source media="(min-width: 660px)" srcset="img/logo/small.svg">
+                <img src="img/logo/xsmall.svg" alt="GameZone">
+            </picture>
+        </a>
+        <nav class="user-menu small bold">
+            <img id="btn-user" src="img/icons/user.svg" alt="user">
+            <ul class="menu-user">
+                <li>My account</li>
+                <li><img src="img/icons/menu/signOut.svg" alt="Sign out">Sign out</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="breadcrumb">
+            <a href="index.html">GameZone</a><img src="img/icons/chevron.svg" alt="chevron">
+            <a href="">Classic</a><img src="img/icons/chevron.svg" alt="chevron">
+            <p class="bold">Breaking Bad: 4 in a line</p>
+        </section>
+        <section class="gameCover">
+            <div class="priceDetail">
+                <h2 class="bold">Free</h2>
+            </div>
+            <div class="gameInfo">
+                <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="fav">
+                <h1>Breaking Bad: 4 in a line</h1>
+                <a href="#gameOnLine" class="playButton btnBig gradient-border">
+                    <p class="btn txtBig">Play</p>
+                    <div class="iconPlay iconBig">
+                        <img src="img/icons/play.svg" alt="Play">
+                    </div>
+                </a>
+            </div>
+            <div class="shareNav">
+                <img src="img/icons/Share.svg" alt="Share">
+                <img src="img/icons/Publish.svg" alt="Publish">
+                <img src="img/icons/Mail.svg" alt="Mail">
+                <img src="img/icons/More.svg" alt="More">
+            </div>
+        </section>
+        <section class="howToPlay">
+            <h3>How to play</h3>
+            <ul>
+                <li>Take turns dropping chips into the columns in order to get four in a row.</li>
+                <li>To drop a chip, click on a column on the board or click and drag your chip into a column.</li>
+                <li>Connect 4 pieces horizontally, vertically or diagonally to win the match.</li>
+            </ul>
+        </section>
+        <section class="whoWillYouBe">
+            <h3>How will you be this time?</h3>
+            <div class="charDetail">
+                <div>
+                    <img id="char1" src="img/gameDetail/characters/Chip.png" alt="Heisenberg">
+                    <p>Heisenberg</p>
+                </div>
+                <div>
+                    <img id="char2" src="img/gameDetail/characters/Chip (1).png" alt="Gus Future">
+                    <p>Gus Future</p>
+                </div>
+                <div>
+                    <img id="char3" src="img/gameDetail/characters/Chip (2).png" alt="Jessie Lab">
+                    <p>Jessie Lab</p>
+                </div>
+                <div>
+                    <img id="char4" src="img/gameDetail/characters/Chip (3).png" alt="Jessie Dark">
+                    <p>Jessie Dark</p>
+                </div>
+                <div>
+                    <img id="char5" src="img/gameDetail/characters/Chip (4).png" alt="Saul Goodman">
+                    <p>Saul Goodman</p>
+                </div>
+                <div>
+                    <img id="char6" src="img/gameDetail/characters/Chip (5).png" alt="Mike">
+                    <p>Mike</p>
+                </div>
+                <div>
+                    <img id="char7" src="img/gameDetail/characters/Chip (6).png" alt="Hank">
+                    <p>Hank</p>
+                </div>
+                <div>
+                    <img id="char8" src="img/gameDetail/characters/Chip (7).png" alt="Walter White">
+                    <p>Walter White</p>
+                </div>
+                <div>
+                    <img id="char9" src="img/gameDetail/characters/Chip (8).png" alt="Marie">
+                    <p>Marie</p>
+                </div>
+                <div>
+                    <img id="char10" src="img/gameDetail/characters/Chip (9).png" alt="Gus Doc">
+                    <p>Gus Doc</p>
+                </div>
+            </div>
+        </section>
+        <section class="FourInLine">
+            <h3>The Game</h3>
+            <section class="actualGame">
+                <div>
+                    <div class="timer game">
+                        <div>
+                            <p id="counterMin"></p>
+                        </div>
+                        <p>:</p>
+                        <div>
+                            <p id="counterSeg"></p>
+                        </div>
+                    </div>
+                    <button class="btn" id="restartButton">RESTART</button>
+                </div>
+                <canvas id="canvas" width="1150" height="580">
+                </canvas>
+            </section>
+            <section class="theGame">
+                <a name="gameOnLine"></a>
+                <div class="gameOnLine">
+                    <img src="img/gameDetail/Game.png" alt="Breaking Bad: 4 in a line">
+                </div>
+                <form id="gameForm" action="">
+
+                    <h2>Choose your game</h2>
+                    <select name="gameType" id="gameType">
+                        <option value="7" selected>4 in a Line</option>
+                        <option value="8">5 in a Line</option>
+                        <option value="9">6 in a Line</option>
+                        <option value="10">7 in a Line</option>
+                        <option value="11">8 in a Line</option>
+                    </select>
+
+                    <div class="playerSetter">
+                        <div>
+                            <h3>Player 1</h3>
+                            <label for="name1">Name</label>
+                            <input type="text" id="name1" name="name1">
+
+                            <div>
+                                <input type="radio" name="char1" id="char1-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char1-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+
+                                <input type="radio" name="char1" id="char1-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char1-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+
+                                <input type="radio" name="char1" id="char1-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char1-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+
+                                <input type="radio" name="char1" id="char1-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char1-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+
+                                <input type="radio" name="char1" id="char1-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char1-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+
+                                <input type="radio" name="char1" id="char1-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char1-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+
+                                <input type="radio" name="char1" id="char1-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char1-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+
+                                <input type="radio" name="char1" id="char1-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char1-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+
+                                <input type="radio" name="char1" id="char1-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char1-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char1" id="char1-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char1-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Player 2</h3>
+                            <label for="name2">Name</label>
+                            <input type="text" id="name2" name="name2">
+
+                            <div>
+                                <input type="radio" name="char2" id="char2-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char2-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+
+                                <input type="radio" name="char2" id="char2-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char2-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+
+                                <input type="radio" name="char2" id="char2-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char2-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+
+                                <input type="radio" name="char2" id="char2-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char2-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+
+                                <input type="radio" name="char2" id="char2-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char2-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+
+                                <input type="radio" name="char2" id="char2-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char2-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+
+                                <input type="radio" name="char2" id="char2-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char2-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+
+                                <input type="radio" name="char2" id="char2-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char2-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+
+                                <input type="radio" name="char2" id="char2-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char2-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char2" id="char2-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char2-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divBtn">
+                        <img src="img/gameDetail/Play.svg" id="btnGame" alt="Play button">
+                    </div>
+                </form>
+            </section>
+        </section>
+        <section class="fanCarrousel">
+            <div>
+                <img src="img/gameDetail/fanCarrousel/Image 1.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 2.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 3.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 4.svg">
+            </div>
+            <div>
+
+                <img src="img/gameDetail/fanCarrousel/Image 5.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 6.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 7.svg">
+                <img src="img/gameDetail/fanCarrousel/Image 8.svg">
+            </div>
+        </section>
+
+        <section id="community">
+            <h3>Community</h3>
+            <div class="commentForm">
+                <div class="commentInput">
+                    <p>Leave a comment</p>
+                    <div>
+                        <img src="img/icons/Smiley.svg" alt="Smiley">
+                        <img src="img/icons/Archive.svg" alt="Archive">
+                    </div>
+                </div>
+                <button class="btn playButton">
+                    <img src="img/icons/Publish.svg" alt="Publish">
+                    Publish
+                </button>
+            </div>
+            <div class="comment">
+                <img src="img/gameDetail/userPhoto/User's Photo.svg" alt="user photo">
+                <div>
+                    <p class="bold">Fran180703</p>
+                    <p>che alguien sabe por donde puedo ver la serie gratis y completa???? gracias :)</p>
+                    <p class="small">1 hour ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment reply">
+                <img src="img/gameDetail/userPhoto/User's Photo (7).svg" alt="user photo">
+                <div>
+                    <p class="bold">MePikaPika</p>
+                    <p>Siiii yo, te paso link por privado</p>
+                    <p class="small">22 minutes ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment reply">
+                <img src="img/gameDetail/userPhoto/User's Photo (2).svg" alt="user photo">
+                <div>
+                    <p class="bold">JEJORGITO123</p>
+                    <p>LO VIVO JUGANDO CON AMIGOSSS!!</p>
+                    <p class="small">2 hours ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="img/gameDetail/userPhoto/User's Photo (3).svg" alt="user photo">
+                <div>
+                    <p class="bold">goku_gamer</p>
+                    <p>mee lo podes pasar ami tmb?? xfa</p>
+                    <p class="small">22 minutes ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="img/gameDetail/userPhoto/User's Photo (4).svg" alt="user photo">
+                <div>
+                    <p class="bold">ZeldaWarrior</p>
+                    <p>Ay no me gusto para nada este juegoooo</p>
+                    <p class="small">3 hours ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment reply">
+                <img src="img/gameDetail/userPhoto/User's Photo (5).svg" alt="user photo">
+                <div>
+                    <p class="bold">BreakingBad4Ever</p>
+                    <p>No todas las personas nacen con buen gusto...</p>
+                    <p class="small">2 hours ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment reply">
+                <img src="img/gameDetail/userPhoto/User's Photo (6).svg" alt="user photo">
+                <div>
+                    <p class="bold">ElPeluca88</p>
+                    <p>Safa</p>
+                    <p class="small">8 hours ago</p>
+                </div>
+                <div class="commentIcons">
+                    <img class="vectorHeart" src="img/icons/heart-regular.svg" alt="">
+                    <div>
+                        <img src="img/icons/IconReply.svg" alt="Reply">
+                        <p class="btn txtMedium">Reply</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="slim-footer">
+        <a href="index.html"><img src="img/logo/xsmall.svg"></a>
+        <p>Copyright Ⓒ 2022. Game Zone is a Registered Trademark. All Rights Reserved.</p>
+    </footer>
+    <script type="text/javascript" src="js/heartAnimation.js"></script>
+    <script type="text/javascript" src="js/menuNav.js"></script>
+    <script type="text/javascript" src="js/fanCarrousel.js"></script>
+    <script type="text/javascript" src="js/4inLine/Ficha.js"></script>
+    <script type="text/javascript" src="js/4inLine/Jugador.js"></script>
+    <script type="text/javascript" src="js/4inLine/Juego.js"></script>
+    <script type="text/javascript" src="js/4inLine/main.js"></script>
+</body>
+
+</html>
