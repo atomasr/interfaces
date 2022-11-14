@@ -249,9 +249,11 @@ header {
     justify-content: center;
     position: absolute;
     top: 61px;
-    left:0;
 }
 
+.menu-navegation.show{
+    left:0;
+}
 
 .menu-user.show {
     right: 0;
@@ -260,18 +262,19 @@ header {
     border-bottom: 3px solid var(--secondary2);
 }
 
-.menu-navegation.show li,
-.menu-user.show li {
+.menu-navegation.show li, .menu-user.show li {
     display: flex;
     align-items: center;
     width: 185px;
     height: auto;
+}
+.menu-navegation.show li{
     border-width: 0px 2px 0px 0px;
     border-style: solid;
     border-color: var(--primary3); 
     background: var(--primary0); 
-}
 
+}
 .menu-navegation.show .one{
     animation: enter 0.5s linear;
 }
@@ -305,7 +308,6 @@ header {
     width: 150px;
     height: 37px;
     justify-content: center;
-    opacity: 0;
 }
 
 .menu-user.show li:first-child {
@@ -911,7 +913,7 @@ header {
     background: var(--secondary3);
     position: absolute;
     display: inline-block;
-    content: '';hambur
+    content: '';
 }
 .hamburger span {
     top: 25px;
