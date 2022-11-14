@@ -1701,6 +1701,11 @@ form select{
     transition: 1.5s;
 }
 
+.gameFeatures {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 @media screen and (min-width: 365px) {
     footer nav ul {
         padding: 10px 30px;
