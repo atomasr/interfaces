@@ -1555,22 +1555,50 @@ form select{
 }
 
 .gameStory {
-    background-color: var(--secondary3);
-    box-shadow: 0px 0px 20px 50px #713A82;
-    text-align: center;
-    margin: 100px 0px 100px 0px;
-    padding: 20px 0px 20px 0px;
+    height: 300vh;
+    display: flex;
+    margin: 70px 0 70px 0;
+}
+
+.photoStory {
+    width: 50%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky; 
+    top: 0;
+    overflow: hidden
 }
-
-.gameStory p {
+.photoStory img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.textStory {
+    width: 50%;
+}
+.textStory div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.textStory div:nth-child(1) {
+    background-color: var(--primary-3);
+}
+.textStory div:nth-child(2) {
+    background-color: var(--primary-2);
+}
+.textStory div:nth-child(3) {
+    background-color: var(--primary-3);
+}
+.textStory div p {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 100;
     font-size: 30px;
-    color: var(--tertiary-3);
     width: 50%;
 }
 
