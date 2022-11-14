@@ -1,9 +1,10 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', function () {
-    let btnMenu = document.querySelector("#btn-menu");
+    let btnMenu = document.querySelector('.hamburger');
     let btnUser = document.querySelector('#btn-user');
 
-    btnMenu.addEventListener("click", event => {
+    btnMenu.addEventListener("click", function() {
+        btnMenu.classList.toggle("active");
         document.querySelector(".menu-navegation").classList.toggle("show");
     });
 
