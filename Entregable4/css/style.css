@@ -234,8 +234,6 @@ header {
 
 .show {
     visibility: visible;
-    transform: translate(0%);
-    transition-duration: 10s;
 }
 
 .menu-navegation,
@@ -261,6 +259,7 @@ header {
     border-width: 0px 2px 2px 0px;
     border-style: solid;
     border-color: var(--primary3);
+    animation: enter 1s;    
 }
 
 .menu-user.show {
@@ -277,10 +276,39 @@ header {
     width: 185px;
 }
 
+.menu-navegation.show .one, .menu-navegation.show .one li{
+    animation: enter 1s linear;
+}
+
+.menu-navegation.show .two, .menu-navegation.show .two li{
+    animation: enter 1.5s linear;
+}
+
+.menu-navegation.show .three, .menu-navegation.show .three li{
+    animation: enter 2s linear;
+}
+
+.menu-navegation.show .four{
+    animation: enter 3.5s linear;
+}
+
+
+@keyframes enter {
+    0%{
+        width: 0px;
+        opacity: 0;
+    }
+    100%{
+        width: 185px;
+        opacity: 1;
+    }    
+}
+
 .menu-user.show li {
     width: 150px;
     height: 37px;
     justify-content: center;
+    opacity: 0;
 }
 
 .menu-user.show li:first-child {
@@ -886,7 +914,7 @@ header {
     background: var(--secondary3);
     position: absolute;
     display: inline-block;
-    content: '';
+    content: '';hambur
 }
 .hamburger span {
     top: 25px;
