@@ -248,19 +248,10 @@ header {
     align-items: flex-start;
     justify-content: center;
     position: absolute;
-    top: 60px;
+    top: 61px;
+    left:0;
 }
 
-.menu-navegation.show {
-    left: 0;
-    background: var(--primary0);
-    height: auto;
-    gap: 2px;
-    border-width: 0px 2px 2px 0px;
-    border-style: solid;
-    border-color: var(--primary3);
-    animation: enter 1s;    
-}
 
 .menu-user.show {
     right: 0;
@@ -274,34 +265,40 @@ header {
     display: flex;
     align-items: center;
     width: 185px;
+    height: auto;
+    border-width: 0px 2px 0px 0px;
+    border-style: solid;
+    border-color: var(--primary3); 
+    background: var(--primary0); 
 }
 
-.menu-navegation.show .one, .menu-navegation.show .one li{
-    animation: enter 1s linear;
+.menu-navegation.show .one{
+    animation: enter 0.5s linear;
 }
 
 .menu-navegation.show .two, .menu-navegation.show .two li{
-    animation: enter 1.5s linear;
+    animation: enter 1s linear;
 }
 
 .menu-navegation.show .three, .menu-navegation.show .three li{
-    animation: enter 2s linear;
+    animation: enter 1.5s linear;
 }
 
 .menu-navegation.show .four{
-    animation: enter 3.5s linear;
+    animation: enter 2s linear;
 }
-
 
 @keyframes enter {
     0%{
         width: 0px;
         opacity: 0;
+        background: var(--primary-3);
     }
     100%{
         width: 185px;
+        background: var(--primary0);
         opacity: 1;
-    }    
+    }   
 }
 
 .menu-user.show li {
