@@ -1649,11 +1649,12 @@ form select{
     width: 50%;
 }
 .textStory div {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 100vh;
+    padding: 15px 0;
 }
 .textStory div:nth-child(1) {
     background-color: var(--primary-3);
@@ -1669,7 +1670,7 @@ form select{
     font-style: normal;
     font-weight: 100;
     font-size: 30px;
-    width: 50%;
+    width: 35vw;
 }
 
 .rowFeatures {
