@@ -491,7 +491,42 @@ header {
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 60px 90px #E9A358;
+}   
+
+#parallax0, #parallax1,#parallax2,#parallax3,#parallax4{
+    height: 1050px;
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
 }
+
+#parallax0{
+    background-image: url(../img/release/hero/front.svg);
+    z-index: -1;
+    position: relative;
+}
+
+#parallax1{
+    background-image: url(../img/release/hero/middle.svg);
+    z-index: -2;
+}
+
+#parallax2{
+    background-image: url(../img/release/hero/nameGame.svg);
+    z-index: -3;
+}
+#parallax3{
+    background-image: url(../img/release/hero/background.svg);
+    z-index: -4;
+}
+
+#parallax4{
+    background-image: url(../img/release/hero/backgroundColor.svg);
+    z-index: -5;
+}
+
 
 .countdown {
     display: flex;
@@ -1519,36 +1554,6 @@ form select{
     position: absolute;
     width: 100%;
     top: 68%;
-}
-
-.hero img {
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-}
-
-.hero img:first-child {
-    position: relative;
-    z-index: -5;
-    height: 1050px;
-}
-
-.hero img:nth-child(2) {
-    z-index: -4;
-}
-
-.hero img:nth-child(3) {
-    z-index: -3;
-}
-
-.hero img:nth-child(4) {
-    z-index: -2;
-}
-
-.hero img:nth-child(5) {
-    z-index: -1;
-    box-shadow: 0px 0px 60px 110px #E9A457;
 }
 
 .trailerButton {
