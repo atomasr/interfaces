@@ -289,6 +289,7 @@ header {
 
 .menu-navegation.show .four{
     animation: enter 2s linear;
+    border-width: 0px 2px 2px 0px
 }
 
 @keyframes enter {
@@ -494,33 +495,36 @@ header {
 }   
 
 #parallax0, #parallax1,#parallax2,#parallax3{
-    height: 980px;
+    height: 100vh;
     width: 100vw;
     top: 0px;
     left: 0px;
     position: absolute;
+    overflow: hidden;
 }
 @keyframes scale1 {
     0%{
-        scale: 1;
+        scale: 1.1;
         transform: translateX(0%);
         transform: translateY(-6%);
     }   
     100%{
-        scale: 0.9;        
+        scale: 1;        
         transform: translateX(3%);
         transform: translateY(-9%);
     }
 }
 #parallax0{
     background-image: url(../img/release/hero/front.svg);
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     z-index: -1;
     position: relative;
-    scale: 0.9;
+    scale: 1;
     transform: translateX(3%);
     transform: translateY(-9%);
     animation: scale1 15s;
+    
+    box-shadow: 0px 0px 60px 200px #E9A358;
 }
 
 
@@ -546,7 +550,7 @@ header {
 #parallax2{
     background-image: url(../img/release/hero/nameGame.svg);
     z-index: -3;
-    animation: vanish 15s alternate-reverse;
+    animation: vanish 5s alternate-reverse;
 }
 
 @keyframes vanish {
@@ -1586,11 +1590,12 @@ form select{
 .hero {
     position: relative;
     z-index: 0;
-    width: 100vw;
     height: 100vh;
 
     text-align: center;
-    overflow: hidden;
+    overflow: clip;
+    
+    box-shadow: 0px 0px 50px 50px #E9A358;
 }
 
 .hero .limitedEdition {
@@ -1601,7 +1606,7 @@ form select{
     font-size: 50px;
     position: absolute;
     width: 100%;
-    top: 40%;
+    top: 25%;
 }
 
 .trailerButton {
@@ -1617,8 +1622,9 @@ form select{
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
-    top: 85%;
-    left: 65%;
+    top: 90%;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
 }
