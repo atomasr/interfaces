@@ -279,11 +279,11 @@ header {
     animation: enter 0.5s linear;
 }
 
-.menu-navegation.show .two, .menu-navegation.show .two li{
+.menu-navegation.show .two{
     animation: enter 1s linear;
 }
 
-.menu-navegation.show .three, .menu-navegation.show .three li{
+.menu-navegation.show .three{
     animation: enter 1.5s linear;
 }
 
@@ -293,12 +293,12 @@ header {
 
 @keyframes enter {
     0%{
-        width: 0px;
+        transform: translateX(-100%);
         opacity: 0;
         background: var(--primary-3);
     }
     100%{
-        width: 185px;
+        transform: translateX(0);
         background: var(--primary0);
         opacity: 1;
     }   
