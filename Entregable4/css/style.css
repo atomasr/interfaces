@@ -480,7 +480,7 @@ header {
     height: 78px;
     background: url(../img/release/sprite2.png);
     animation: walk 2s steps(12) 0s infinite alternate;
-    
+    margin-right: 10px;
 }
 
 @keyframes walk {
@@ -1784,6 +1784,10 @@ form select{
 }
 }
 
+.spriteTitle {
+    display: flex;
+    align-items: center;
+}
 .gameStory {
     height: 300vh;
     display: flex;
