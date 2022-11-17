@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnMenu.addEventListener("click", function() {
         btnMenu.classList.toggle("active");
+        document.querySelector(".menu-navegation").classList.remove("no-animation");
         document.querySelector(".menu-navegation").classList.toggle("show");
     });
 

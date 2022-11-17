@@ -236,12 +236,15 @@ header {
     visibility: visible;
 }
 
-.menu-navegation,
 .menu-user {
     display: none;
 }
 
-.menu-navegation.show,
+.menu-navegation {
+    display: flex;
+}
+
+.menu-navegation,
 .menu-user.show {
     display: flex;
     flex-direction: column;
@@ -251,7 +254,7 @@ header {
     top: 61px;
 }
 
-.menu-navegation.show{
+.menu-navegation{
     left:0;
 }
 
@@ -262,19 +265,62 @@ header {
     border-bottom: 3px solid var(--secondary2);
 }
 
-.menu-navegation.show li, .menu-user.show li {
+.menu-navegation li, .menu-user.show li {
     display: flex;
     align-items: center;
     width: 185px;
     height: auto;
 }
-.menu-navegation.show li{
+.menu-navegation li{
     border-width: 0px 2px 0px 0px;
     border-style: solid;
     border-color: var(--primary3); 
     background: var(--primary0); 
 
 }
+.menu-navegation.no-animation .one,
+.menu-navegation.no-animation .two,
+.menu-navegation.no-animation .three,
+.menu-navegation.no-animation .four {
+    animation-duration: 0s;
+}
+.menu-navegation .one{
+    animation: leave 2s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+.menu-navegation .two{
+    animation: leave 1.5s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+.menu-navegation .three{
+    animation: leave 1s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+
+.menu-navegation .four{
+    animation: leave 0.5s linear;
+    animation-fill-mode: forwards;
+    border-width: 0px 2px 2px 0px;
+    visibility: visible;
+}
+@keyframes leave {
+    0%{
+        transform: translateX(0);
+        background: var(--primary0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100%);
+        opacity: 0;
+        background: var(--primary-3); 
+    }   
+}
+
 .menu-navegation.show .one{
     animation: enter 0.5s linear;
 }
@@ -315,16 +361,16 @@ header {
     border-bottom: 1px solid var(--secondary2);
 }
 
-.menu-navegation.show li:hover,
+.menu-navegation li:hover,
 .menu-user.show li:hover {
     background: var(--primary-1);
 }
 
-.menu-navegation.show li:hover {
+.menu-navegation li:hover {
     border-right: 6px solid var(--secondary2);
 }
 
-.menu-navegation.show li div {
+.menu-navegation li div {
     background: var(--primary-3);
     border-radius: 5px;
     margin: 9px;
@@ -334,7 +380,7 @@ header {
     justify-content: flex-end;
 }
 
-.menu-navegation.show>div {
+.menu-navegation>div {
     border-bottom: 1px solid var(--primary3);
 }
 
@@ -342,7 +388,7 @@ header {
     padding-right: 12px;
 }
 
-.menu-navegation.show li img {
+.menu-navegation li img {
     padding: 3px 12px;
     width: 48px;
 }
