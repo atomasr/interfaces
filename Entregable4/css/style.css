@@ -970,7 +970,7 @@ header {
     top: 25px;
 }
 .hamburger span:before {
-    top: -10px; 
+    top: -10px;
 }
 .hamburger span:after {
     bottom: -10px;
@@ -1580,6 +1580,18 @@ form select{
 
 
 /* ------------------ Release ------------------------- */
+.scrollEffect{
+    will-change: opacity;
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.spriteTitle {
+    padding: 90px 0 20px 20px;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
 
 .hero {
     position: relative;
@@ -1857,10 +1869,6 @@ form select{
 }
 }
 
-.spriteTitle {
-    display: flex;
-    align-items: center;
-}
 .gameStory {
     height: 300vh;
     display: flex;
