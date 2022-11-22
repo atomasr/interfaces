@@ -232,6 +232,10 @@ header {
     transition: top 0.3s;
 }
 
+header a{
+    height: 45px;
+}
+
 .show {
     visibility: visible;
 }
@@ -251,7 +255,7 @@ header {
     align-items: flex-start;
     justify-content: center;
     position: absolute;
-    top: 61px;
+    top: 58px;
 }
 
 .menu-navegation{
