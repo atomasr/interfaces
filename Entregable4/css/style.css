@@ -524,14 +524,14 @@ header {
 #sprite{
     width: 62px;
     height: 78px;
-    background: url(../img/release/sprite2.png);
-    animation: walk 2s steps(12) 0s infinite alternate;
+    background: url(../img/release/sprite3.png);
+    animation: walk 2s steps(10) 0s infinite alternate;
     margin-right: 10px;
 }
 
 @keyframes walk {
     0% { background-position: 0px; }
-    100% { background-position: -786px; }   
+    100% { background-position: -655px; }   
 }
 
 .home-release img {
