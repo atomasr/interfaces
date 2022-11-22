@@ -1599,7 +1599,7 @@ form select{
 
 .hero {
     position: relative;
-    z-index: -2;
+    z-index: 0;
     height: 110vh;
     text-align: center;
     overflow: clip;
@@ -1610,6 +1610,7 @@ form select{
 
 #mainRelease{
     position: relative;
+    z-index: 1;
 }
 .hero .limitedEdition {
     color: var(--tertiary3);
@@ -1787,7 +1788,6 @@ form select{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
     background-color: rgba(113, 58, 130, 0.85);
     display: flex;
     justify-content: center;
@@ -1795,6 +1795,7 @@ form select{
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s;
+    z-index: -1;
 }
 
 .video-container .closeButton {
@@ -1803,12 +1804,14 @@ form select{
     right: 25%;
     font-size: 20px;
     cursor: pointer;
+    z-index: 1;
     filter: invert(93%) sepia(13%) saturate(189%) hue-rotate(144deg) brightness(108%) contrast(96%);
 }
 
 .video-container.show {
     pointer-events: all;
     opacity: 1;
+    z-index: 1;
 }
 
 /*Animations On Scroll*/
