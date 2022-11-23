@@ -1986,6 +1986,38 @@ form select{
     margin-left: 10px;
     margin-right: 10px;
     display: none;
+    transition: all 0.5s ease;
+}
+
+.animation-carousel-right {
+    animation: moveScreenshotRight 0.5s linear;
+}
+
+.animation-carousel-left {
+    animation: moveScreenshotLeft 0.5s linear;
+}
+
+@keyframes moveScreenshotRight {
+    0%{
+        transform: translateX(100%) skew(0deg, 0deg);
+    }
+    50% {
+        transform: skew(0deg, 5deg);
+    }
+    100%{
+        transform: translateX(0) skew(0deg, 0deg);
+    }   
+}
+@keyframes moveScreenshotLeft {
+    0%{
+        transform: translateX(-100%) skew(0deg, 0deg);
+    }
+    50% {
+        transform: skew(0deg, -5deg);
+    }
+    100%{
+        transform: translateX(0) skew(0deg, 0deg);
+    }   
 }
 .child img {
     height: 170px;

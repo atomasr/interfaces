@@ -35,12 +35,19 @@ addEventListener('DOMContentLoaded', (event) => {
     function moveLeft() {
         if (left > leftMin) {
             document.getElementById("screenshot"+right).style.display="none";
+            document.getElementById("screenshot"+right).classList.remove("animation-carousel-left");
             left-=1;
             right-=1;
             for (let index = left; index <= right; index++) {
-                document.getElementById("screenshot"+index).style.display="inline-block";   
+                document.getElementById("screenshot"+index).style.display="inline-block"; 
+                document.getElementById("screenshot"+index).classList.add("animation-carousel-left");  
             }
             checkButtons();
+            setTimeout(function() {
+                for (let index = left; index <= right; index++) {
+                    document.getElementById("screenshot"+index).classList.remove("animation-carousel-left");  
+                }
+            }, 500);
         } else {
             return;
         }
@@ -48,12 +55,19 @@ addEventListener('DOMContentLoaded', (event) => {
     function moveRight() {
         if (right < rightMax) {
             document.getElementById("screenshot"+left).style.display="none";
+            document.getElementById("screenshot"+left).classList.remove("animation-carousel-right");
             left+=1;
             right+=1;
             for (let index = left; index <= right; index++) {
-                document.getElementById("screenshot"+index).style.display="inline-block";   
+                document.getElementById("screenshot"+index).style.display="inline-block";  
+                document.getElementById("screenshot"+index).classList.add("animation-carousel-right");  
             }
             checkButtons();
+            setTimeout(function() {
+                for (let index = left; index <= right; index++) {
+                    document.getElementById("screenshot"+index).classList.remove("animation-carousel-right");  
+                }
+            }, 500);
         } else {
             return;
         }
