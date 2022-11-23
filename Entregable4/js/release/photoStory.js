@@ -1,18 +1,24 @@
 "use strict";
 
-let pic = document.getElementById('picStory');
-
 let paths =
 [ "img/release/story1.jpg",
 "img/release/story2.jpg",
-"img/release/story3.jpg",
-"img/release/story4.jpg",
-"img/release/story5.jpg"];
+"img/release/story3.jpg"];
 
-let i = 0;
-let timer = setInterval(function(){
-  if(i >= paths.length){
-    i = 0;
+
+let picture = document.getElementById("picStory");
+
+
+window.addEventListener('scroll',()=> {
+  console.log(window.scrollY);
+  if (window.scrollY > 0 && window.scrollY <= 2500) {
+    picture.src = paths[0];
   }
-  pic.src = paths[i++];
-}, 3000);
+  if (window.scrollY > 2950 && window.scrollY <= 3300) {
+    picture.src = paths[1];
+  }
+  if (window.scrollY > 3700) {
+    picture.src = paths[2];
+  }
+}
+);
