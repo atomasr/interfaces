@@ -249,6 +249,8 @@ header a{
     justify-content: center;
     position: absolute;
     top: 58px;
+    
+    visibility: hidden;
 }
 
 .menu-navegation{
@@ -1971,6 +1973,33 @@ form select{
     align-items: center;
     margin-top: 35px;
 }
+
+/*Carousel Gameplay*/
+.gameplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+.child {
+    width: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+}
+.child img {
+    height: 170px;
+    width: 100%;
+}
+#leftArrow, #rightArrow {
+    margin-left: 12px;
+    width: 3%;
+    display: inline-block;
+}
+#leftArrow button, #rightArrow button {
+    cursor: pointer;
+}
+
 
 .gameFeatures h2,
 .characterCards h2:first-child {
