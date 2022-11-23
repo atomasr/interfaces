@@ -1990,14 +1990,24 @@ form select{
 .child img {
     height: 170px;
     width: 100%;
+    border-radius: 2.5%;
 }
 #leftArrow, #rightArrow {
     margin-left: 12px;
+    margin-right: 12px;
     width: 3%;
     display: inline-block;
 }
 #leftArrow button, #rightArrow button {
     cursor: pointer;
+    background-color: var(--secondary2);
+    color: var(--atention-3);
+    padding: 5px;
+    border-radius: 100%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
 }
 
 
