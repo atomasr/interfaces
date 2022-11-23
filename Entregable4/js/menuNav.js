@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btnUser.addEventListener("click", event => {
+        btnUser.classList.toggle("active");
+        document.querySelector(".menu-user").classList.remove("no-animation");
         document.querySelector(".menu-user").classList.toggle("show");
     });
 
@@ -36,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
             btnHam.style.visibility = 'hidden';
             btnUser.style.visibility = 'hidden';
             navbar.style.top = "-30px";
+            btnMenu.classList.remove("active");
+            document.querySelector(".menu-navegation").classList.remove("show");
             document.querySelector(".menu-user").classList.remove("show");
         }
         scrollPos = currentScroll;

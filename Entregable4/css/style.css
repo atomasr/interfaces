@@ -240,16 +240,9 @@ header a{
     visibility: visible;
 }
 
-.menu-user {
-    display: none;
-}
-
-.menu-navegation {
-    display: flex;
-}
 
 .menu-navegation,
-.menu-user.show {
+.menu-user {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -262,40 +255,56 @@ header a{
     left:0;
 }
 
-.menu-user.show {
+.menu-user {
     right: 0;
-    background: var(--secondary-3);
-    border: 1px solid var(--secondary2);
-    border-bottom: 3px solid var(--secondary2);
 }
 
-.menu-navegation li, .menu-user.show li {
+.menu-navegation li, .menu-user li {
     display: flex;
     align-items: center;
     width: 185px;
     height: auto;
-}
-.menu-navegation li{
-    border-width: 0px 2px 0px 0px;
     border-style: solid;
     border-color: var(--primary3); 
     background: var(--primary0); 
 
 }
+
+.menu-navegation li {
+    border-width: 0px 2px 0px 0px;
+}
+.menu-user li {
+    border-width: 0px 0px 2px 2px;
+}
+
+
 .menu-navegation.no-animation .one,
 .menu-navegation.no-animation .two,
 .menu-navegation.no-animation .three,
-.menu-navegation.no-animation .four {
+.menu-navegation.no-animation .four,
+.menu-user.no-animation .one,
+.menu-user.no-animation .two {
     animation-duration: 0s;
 }
-.menu-navegation .one{
+.menu-navegation .one {
     animation: leave 2s linear;
     animation-fill-mode: forwards;
     visibility: visible;
 }
+.menu-user .one {
+    animation: leaveUser 2s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
 
-.menu-navegation .two{
+
+.menu-navegation .two {
     animation: leave 1.5s linear;
+    animation-fill-mode: forwards;
+    visibility: visible;
+}
+.menu-user .two {
+    animation: leaveUser 1.5s linear;
     animation-fill-mode: forwards;
     visibility: visible;
 }
@@ -324,13 +333,31 @@ header a{
         background: var(--primary-3); 
     }   
 }
+@keyframes leaveUser {
+    0%{
+        transform: translateX(0);
+        background: var(--primary0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+        background: var(--primary-3); 
+    }   
+}
 
 .menu-navegation.show .one{
     animation: enter 0.5s linear;
 }
+.menu-user.show .one {
+    animation: enterUser 0.5s linear;
+}
 
 .menu-navegation.show .two{
     animation: enter 1s linear;
+}
+.menu-user.show .two{
+    animation: enterUser 1s linear;
 }
 
 .menu-navegation.show .three{
@@ -354,14 +381,26 @@ header a{
         opacity: 1;
     }   
 }
+@keyframes enterUser {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        background: var(--primary-3);
+    }
+    100%{
+        transform: translateX(0);
+        background: var(--primary0);
+        opacity: 1;
+    }   
+}
 
-.menu-user.show li {
+.menu-user li {
     width: 150px;
     height: 37px;
     justify-content: center;
 }
 
-.menu-user.show li:first-child {
+.menu-user li:first-child {
     border-bottom: 1px solid var(--secondary2);
 }
 
@@ -388,7 +427,7 @@ header a{
     border-bottom: 1px solid var(--primary3);
 }
 
-.menu-user.show li img {
+.menu-user li img {
     padding-right: 12px;
 }
 
@@ -1591,7 +1630,7 @@ form select{
 }
 
 .spriteTitle {
-    padding: 90px 0 20px 20px;
+    padding: 95px 0 20px 20px;
     display: flex;
     align-items: center;
     position:relative;
@@ -1879,7 +1918,7 @@ form select{
 .gameStory {
     height: 300vh;
     display: flex;
-    margin: 70px 0 70px 0;
+    margin: 130px 0 35px 0;
 }
 
 .photoStory {
