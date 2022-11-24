@@ -13,10 +13,7 @@ let txt = document.getElementById("text1");
 window.addEventListener('scroll',()=> {
   let top = Number(txt.offsetTop);
   let height = Number(txt.clientHeight);
-  console.log(window.scrollY);
-  console.log(top);
-  console.log(height);
-  console.log(top+height);
+
   if (window.scrollY > 0 && window.scrollY <= (top + 1.5*height)) {
     picture.src = paths[0];
   }
