@@ -7,17 +7,23 @@ let paths =
 
 
 let picture = document.getElementById("picStory");
+let txt = document.getElementById("text1");
 
 
 window.addEventListener('scroll',()=> {
+  let top = Number(txt.offsetTop);
+  let height = Number(txt.clientHeight);
   console.log(window.scrollY);
-  if (window.scrollY > 0 && window.scrollY <= 2500) {
+  console.log(top);
+  console.log(height);
+  console.log(top+height);
+  if (window.scrollY > 0 && window.scrollY <= (top + 1.5*height)) {
     picture.src = paths[0];
   }
-  if (window.scrollY > 2950 && window.scrollY <= 3300) {
+  if (window.scrollY > (top + 1.5*height) && window.scrollY <= (top + 2.5*height)) {
     picture.src = paths[1];
   }
-  if (window.scrollY > 3700) {
+  if (window.scrollY > (top + 2.5*height)) {
     picture.src = paths[2];
   }
 }
