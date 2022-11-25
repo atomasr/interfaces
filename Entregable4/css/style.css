@@ -2045,7 +2045,10 @@ form select{
     display: none;
     transition: all 0.5s ease;
 }
-
+#btnRight-gamePlay{
+    transform: rotate(180deg);
+    right: 0;
+}
 .animation-carousel-right {
     animation: moveScreenshotRight 0.5s linear;
 }
@@ -2103,18 +2106,16 @@ form select{
     width: 3%;
     display: inline-block;
 }
-#leftArrow button, #rightArrow button {
+#btnLeft-gamePlay, #btnRight-gamePlay {
     cursor: pointer;
-    background-color: var(--secondary2);
-    color: var(--atention-3);
-    padding: 5px;
-    border-radius: 100%;
     border: none;
     width: 40px;
     height: 40px;
-    font-size: 20px;
 }
 
+#btnLeft-gamePlay:hover, #btnRight-gamePlay:hover {
+    filter: invert(26%) sepia(50%) saturate(818%) hue-rotate(241deg) brightness(91%) contrast(88%);
+}
 
 .gameFeatures h2,
 .characterCards h2:first-child {
