@@ -1886,6 +1886,18 @@ form select{
 .active.fade-right {
     animation: fade-right 1s ease-in;
 }
+.active.fade {
+    animation: fade 1s ease-in;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fade-up {
 0% {
     transform: translateY(50px);
