@@ -23,7 +23,7 @@ window.addEventListener('scroll',()=> {
       picture.classList.add("active");
     }, 50);
   }
-  if (window.scrollY > (top + 1.5*height) && window.scrollY <= (top + 2.5*height) && (i != 2)) {
+  if (window.scrollY > (top + 2*height) && window.scrollY <= (top + 2.5*height) && (i != 2)) {
     i = 2;
     picture.classList.remove("active");
     setTimeout( function() {
@@ -31,7 +31,7 @@ window.addEventListener('scroll',()=> {
       picture.classList.add("active");
     }, 50);
   }
-  if (window.scrollY > (top + 2.5*height) && (i != 3)) {
+  if (window.scrollY > (top + 3*height) && (i != 3)) {
     i = 3;
     picture.classList.remove("active");
     setTimeout( function() {
