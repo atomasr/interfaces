@@ -1988,6 +1988,7 @@ form select{
     align-items: center;
     position: sticky; 
     top: 0;
+    background-color: var(--atention-3);
 }
 .photoStory img {
     width: 100%;
@@ -2092,7 +2093,7 @@ form select{
     }   
 }
 .child img {
-    height: 170px;
+    height: 100%;
     width: 100%;
     border-radius: 2.5%;
 }
