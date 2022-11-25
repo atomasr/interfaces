@@ -2153,7 +2153,7 @@ form select{
 
 .card-character .close {
     width: 306px;
-    height: 590px;
+    height: 560px;
     background: linear-gradient(180deg, #FFF2D4 0%, #B38FBF 100%);
     box-shadow: none;
     justify-content: center;
@@ -2186,13 +2186,14 @@ form select{
 
 .card-character .open {
     width: 306px;
-    height: 590px;
+    height: 560px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background: linear-gradient(180deg, #FFF2D4 0%, #B38FBF 100%);
     overflow-y: hidden;
+    padding: 20px 0;
 }
 
 .card-character .open img {
@@ -2221,7 +2222,7 @@ form select{
     font-weight: 400;
     font-size: 18px;
     color: var(--primary-3);
-    top: 800px;
+    top: 820px;
 }
 
 .card-character .open:hover>img,
