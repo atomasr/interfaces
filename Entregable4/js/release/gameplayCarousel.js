@@ -19,6 +19,7 @@ addEventListener('DOMContentLoaded', (event) => {
         
     }
 
+    /** Show/hide left/right GamePlay carousel buttons */
     function checkButtons () {
         if (left == leftMin) {
             leftButton.style.visibility="hidden";
@@ -32,6 +33,7 @@ addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    /*Adds animation while shifting visible cards backwards on GamePlay carousel*/
     function moveLeft() {
         if (left > leftMin) {
             document.getElementById("screenshot"+right).style.display="none";
@@ -52,6 +54,7 @@ addEventListener('DOMContentLoaded', (event) => {
             return;
         }
     }
+    /*Adds animation while shifting visible cards forwards on GamePlay carousel*/
     function moveRight() {
         if (right < rightMax) {
             document.getElementById("screenshot"+left).style.display="none";

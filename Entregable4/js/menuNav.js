@@ -7,18 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let logoNav = document.getElementById("logoNav");
     var scrollPos = window.pageYOffset;
 
+    /*Adds animation to hamburguer menu while opening/closing*/
     btnMenu.addEventListener("click", function() {
         btnMenu.classList.toggle("active");
         document.querySelector(".menu-navegation").classList.remove("no-animation");
         document.querySelector(".menu-navegation").classList.toggle("show");
     });
 
+    /*Adds animation to user menu while opening/closing*/
     btnUser.addEventListener("click", event => {
         btnUser.classList.toggle("active");
         document.querySelector(".menu-user").classList.remove("no-animation");
         document.querySelector(".menu-user").classList.toggle("show");
     });
 
+    /** Changes header look and feel on scroll */
     window.onscroll = function () {
         var currentScroll = window.pageYOffset;
         if (scrollPos > currentScroll) {

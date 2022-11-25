@@ -1,5 +1,5 @@
 "use strict";
-
+/*"Cooming soon" Timer for hero release*/
 function countdown() {
     let timer = document.getElementById("timer");
     let i = 27;

@@ -1,5 +1,6 @@
 "use strict";
 
+/*Adds animation on scroll to Game Features cards*/
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   

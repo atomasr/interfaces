@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   var card = document.querySelectorAll(".card-character");
 
+  /*Animation on scroll for section titles in release page */
+
   function scrollTitle() {
     var aos = document.querySelectorAll(".aos");
 
@@ -11,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var elementTop = aos[i].getBoundingClientRect().top;
       var elementVisible = 150;
 
+      /*Animation on scroll for cards within the characters carousel*/
       if (elementTop < windowHeight - elementVisible) {
         aos[i].classList.add("active");
 

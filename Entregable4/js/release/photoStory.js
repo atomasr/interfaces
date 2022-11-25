@@ -10,6 +10,8 @@ let picture = document.getElementById("picStory");
 let txt = document.getElementById("text1");
 let i = 0;
 
+/*Animation for Game Story section: text scrolls on the right column while
+ related img change on the left column  */
 
 window.addEventListener('scroll',()=> {
   let top = Number(txt.offsetTop);

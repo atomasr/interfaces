@@ -566,6 +566,8 @@ header a{
 
 
 /* Home hero*/
+
+/** Spritesheet animation for release page*/
 #sprite{
     width: 62px;
     height: 78px;
@@ -993,6 +995,8 @@ header a{
 #btn-user {
     cursor: pointer;
 }
+
+/*Hamburguer menu change to cross with keyframe animation */
 .hamburger{
     height: 42px;
     width: 42px;
@@ -1664,6 +1668,7 @@ form select{
     top: 25%;
 }
 
+/**Parallax animation for hero section in release page */
 
 #parallax0, #parallax1, #parallax3{
     height: 100vh;
@@ -1855,7 +1860,7 @@ form select{
     z-index: 1;
 }
 
-/*Animations On Scroll*/
+/*Animations On Scroll for Game features and section titles*/
 .reveal {
     position: relative;
     opacity: 0;
