@@ -1870,9 +1870,6 @@ form select{
 .reveal.active {
     opacity: 1;
 }
-.active.fade-up {
-    animation: fade-up 1s ease-in;
-}
 
 .active.fade-up-down {
     animation: fade-up-down 2s ease-in;
@@ -1882,6 +1879,9 @@ form select{
     animation: fade-up-bounce 2s ease-in;
 }
 
+.active.fade-up {
+    animation: fade-up 1s ease-in;
+}
 .active.fade-down {
     animation: fade-down 1s ease-in;
 }

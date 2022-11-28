@@ -19,7 +19,7 @@ addEventListener('DOMContentLoaded', (event) => {
         
     }
 
-    /** Show/hide left/right GamePlay carousel buttons */
+    /** Mostrar/ocultar botones izquierdo/derecho de carrusel de GamePlay */
     function checkButtons () {
         if (left == leftMin) {
             leftButton.style.visibility="hidden";
@@ -33,7 +33,7 @@ addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    /*Adds animation while shifting visible cards backwards on GamePlay carousel*/
+    /*Agrega animación al mover las cartas visibles hacia atrás en el carrusel de GamePlay*/
     function moveLeft() {
         if (left > leftMin) {
             document.getElementById("screenshot"+right).style.display="none";
@@ -54,7 +54,7 @@ addEventListener('DOMContentLoaded', (event) => {
             return;
         }
     }
-    /*Adds animation while shifting visible cards forwards on GamePlay carousel*/
+    /*Agrega animación al mover las cartas visibles hacia adelante en el carrusel de GamePlay*/
     function moveRight() {
         if (right < rightMax) {
             document.getElementById("screenshot"+left).style.display="none";
